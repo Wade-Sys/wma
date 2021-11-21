@@ -24,3 +24,5 @@ ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=WND_SR_MEAN_R
 ggplot(subset(df_wma_wetter_2,(Geschlecht=='W')), aes(y=S_KM_FN, x=WND_SR_MEAN_RND)) + geom_point() + labs(y="Laufzeiten", x="Windstärke (m/s)", title = "Laufzeiten / Windstärke (Frauen)") + scale_y_continuous(breaks = seq(7000,11000,200)) + scale_x_continuous(breaks = seq(0,12,1))
 ggplot(df_wma_wetter_2, aes(y=S_KM_FN, x=WND_SR_MEAN_RND,color=Geschlecht, fill=Geschlecht)) + geom_point() + labs(y="Laufzeiten", x="Windstärke (m/s)", title = "Laufzeiten / Windstärke (Männer & Frauen)") + scale_y_continuous(breaks = seq(7000,11000,200)) + scale_x_continuous(breaks = seq(0,12,1))
 
+corrplot(df_wetter_3_cor_matrix_rnd,type = "upper", order = "hclust", method = "color", addCoef.col = "white", cl.ratio = 0.5, tl.srt = 45)
+
