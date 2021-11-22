@@ -24,5 +24,62 @@ ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=WND_SR_MEAN_R
 ggplot(subset(df_wma_wetter_2,(Geschlecht=='W')), aes(y=S_KM_FN, x=WND_SR_MEAN_RND)) + geom_point() + labs(y="Laufzeiten", x="Windstärke (m/s)", title = "Laufzeiten / Windstärke (Frauen)") + scale_y_continuous(breaks = seq(7000,11000,200)) + scale_x_continuous(breaks = seq(0,12,1))
 ggplot(df_wma_wetter_2, aes(y=S_KM_FN, x=WND_SR_MEAN_RND,color=Geschlecht, fill=Geschlecht)) + geom_point() + labs(y="Laufzeiten", x="Windstärke (m/s)", title = "Laufzeiten / Windstärke (Männer & Frauen)") + scale_y_continuous(breaks = seq(7000,11000,200)) + scale_x_continuous(breaks = seq(0,12,1))
 
+library(corrplot)
 corrplot(df_wetter_3_cor_matrix_rnd,type = "upper", order = "hclust", method = "color", addCoef.col = "white", cl.ratio = 0.5, tl.srt = 45)
+
+ggplot(df_wetter_3, aes(sample=scale(TMP_MEAN_RND))) + stat_qq() + stat_qq_line() + 
+  labs(title = "QQ-Plot (z-scaled) - Temperatur", x="theoretische Quantile", y="tatsächliche Quantile")
+ggsave(filename = "plt_qq_tmp.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(df_wetter_3, aes(sample=scale(DEW_MEAN_RND))) + stat_qq() + stat_qq_line() + 
+  labs(title = "QQ-Plot (z-scaled) - Taupunkt", x="theoretische Quantile", y="tatsächliche Quantile")
+ggsave(filename = "plt_qq_dew.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(df_wetter_3, aes(sample=scale(WND_SR_MEAN_RND))) + stat_qq() + stat_qq_line() + 
+  labs(title = "QQ-Plot (z-scaled) - Windstärke", x="theoretische Quantile", y="tatsächliche Quantile")
+ggsave(filename = "plt_qq_wnd_sr.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(subset(df_wma_2, (Geschlecht=='M') ), aes(sample=scale(S_KM_FN))) + stat_qq() + stat_qq_line() + 
+  labs(title = "QQ-Plot (z-scaled) - Finale Zeiten (Männer)", x="theoretische Quantile", y="tatsächliche Quantile")
+ggsave(filename = "plt_qq_skmfn_m.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(subset(df_wma_2, (Geschlecht=='W') ), aes(sample=scale(S_KM_FN))) + stat_qq() + stat_qq_line() + 
+  labs(title = "QQ-Plot (z-scaled) - Finale Zeiten (Frauen)", x="theoretische Quantile", y="tatsächliche Quantile")
+ggsave(filename = "plt_qq_skmfn_w.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+model_skmfn_tmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M')), formula = S_KM_FN ~ TMP_MEAN_RND)
+summary(model_skmfn_tmr_m)
+
+model_skmfn_wsmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M')), formula = S_KM_FN ~ WND_SR_MEAN_RND)
+summary(model_skmfn_wsmr_m)
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, TMP_MEAN_RND)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~x) +
+  labs(title = "LR: Laufzeiten(m) ~ Temperatur (gerundet)", x="Temperatur (°C)", y="Zeiten (sek)")
+ggsave(filename = "plt_lr_tmp_zeiten_m.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, WND_SR_MEAN_RND)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~x) +
+  labs(title = "LR: Laufzeiten(m) ~ Windstärke (gerundet)", x="Windstärke (m/s)", y="Zeiten (sek)")
+ggsave(filename = "plt_lr_wndsr_zeiten_m.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+model_skmfn_tmp_wsmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M')), formula = S_KM_FN ~ TMP_MEAN_RND + WND_SR_MEAN_RND)
+summary(model_skmfn_tmp_wsmr_m)
+
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, TMP_MEAN_RND)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
+  labs(title = "LR: Laufzeiten(m) ~ Temperatur^2 (gerundet)", x="Temperatur (°C)", y="Zeiten (sek)")
+ggsave(filename = "plt_lr_poly2_tmp_zeiten_m.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+model_poly2_skmfn_tmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M')), formula = S_KM_FN ~ poly(TMP_MEAN_RND,2))
+summary(model_poly2_skmfn_tmr_m)
+
+model_poly2_skmfn_tmr_wsmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M')), 
+                              formula = S_KM_FN ~ poly(TMP_MEAN_RND,2) + WND_SR_MEAN_RND)
+summary(model_poly2_skmfn_tmr_wsmr_m)
+
+
+
+
 
