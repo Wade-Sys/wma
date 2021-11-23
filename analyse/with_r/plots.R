@@ -80,6 +80,45 @@ model_poly2_skmfn_tmr_wsmr_m <- lm(data = subset(df_wma_wetter_2,(Geschlecht=='M
 summary(model_poly2_skmfn_tmr_wsmr_m)
 
 
+qqnorm(rstandard(model_skmfn_tmr_m))
+qqline(rstandard(model_skmfn_tmr_m))
+
+qqnorm(rstandard(model_skmfn_wsmr_m))
+qqline(rstandard(model_skmfn_wsmr_m))
+
+qqnorm(rstandard(model_skmfn_tmp_wsmr_m))
+qqline(rstandard(model_skmfn_tmp_wsmr_m))
+
+qqnorm(rstandard(model_poly2_skmfn_tmr_wsmr_m))
+qqline(rstandard(model_poly2_skmfn_tmr_wsmr_m))
+
+qqnorm(rstandard(model_poly2_skmfn_tmr_m))
+qqline(rstandard(model_poly2_skmfn_tmr_m))
+
+plot(fitted.values(model_poly2_skmfn_tmr_wsmr_m), residuals(model_poly2_skmfn_tmr_wsmr_m))
+plot(fitted.values(model_poly2_skmfn_tmr_wsmr_m), rstandard(model_poly2_skmfn_tmr_wsmr_m))
+plot(model_poly2_skmfn_tmr_wsmr_m,1)
+
+durbinWatsonTest(model_poly2_skmfn_tmr_wsmr_m)
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=TMP_MEAN_RND, color=Ort)) + geom_point(alpha=0.5, size=2) + 
+  labs(y="Laufzeiten", x="Temperatur (°C)", title = "Laufzeiten / Temperatur (Männer)") + 
+  scale_y_continuous(breaks = seq(7000,9000,100)) + 
+  scale_x_continuous(breaks = seq(0,26,1))
+ggsave(filename = "plt_skmfn_temp_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=WND_SR_MEAN_RND, color=Ort)) + geom_point(alpha=0.5, size=2) + 
+  labs(y="Laufzeiten", x="Windstärke (m/s)", title = "Laufzeiten / Windstärke (Männer)") + 
+  scale_y_continuous(breaks = seq(7000,11000,200)) + 
+  scale_x_continuous(breaks = seq(0,12,1))
+ggsave(filename = "plt_skmfn_wndsr_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
 
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=TMP_MEAN_RND, x=WND_SR_MEAN_RND, color=Ort)) + 
+  geom_point(aes(size=S_KM_FN)) + 
+  labs(y="Temperatur (°C)", x="Windstärke (m/s)", title = "Temperatur (°C) / Windstärke / Laufzeit (Männer)") + 
+  scale_y_continuous(breaks = seq(0,26,1)) + 
+  scale_x_continuous(breaks = seq(0,12,1)) +
+  scale_size_continuous(range = c(1,8))
+ggsave(filename = "plt_tmp_wndsr_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
