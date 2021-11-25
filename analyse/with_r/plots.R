@@ -122,3 +122,34 @@ ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=TMP_MEAN_RND, x=WND_SR_M
   scale_size_continuous(range = c(1,8))
 ggsave(filename = "plt_tmp_wndsr_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
+
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=TMP_MEAN_RND, color=Ort, alpha=0.2)) + 
+  geom_point(aes(size=WND_SR_MEAN_RND)) + 
+  labs(y="Laufzeit", x="Temperatur (°C)", title = "Temperatur (°C) / Windstärke / Laufzeit (Männer)") + 
+  scale_y_continuous(breaks = seq(7000,9000,100)) + 
+  scale_x_continuous(breaks = seq(0,26,1)) +
+  scale_size_continuous(range = c(1,3))
+ggsave(filename = "plt_lfz_tmp_wndsr_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+# t-Test
+t.test(x=subset(df_wma_wetter_2, (Ort=='Berlin'), select = c(S_KM_FN)), 
+       y=subset(df_wma_wetter_2, (Ort=='Tokyo'), select = c(S_KM_FN)),
+       paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "less"
+       )
+
+#install.packages("psych")
+#library(psych)
+
+df_wma_ort_skm_m <- subset(df_wma_2, (Geschlecht=='M'), select = c(S_KM_FN, Ort))
+
+describeBy(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort)
+
+anova_skmfn_ort_m_training <- aov(df_wma_ort_skm_m$S_KM_FN ~ df_wma_ort_skm_m$Ort)
+summary(anova_skmfn_ort_m_training)
+pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort, p.adjust.method = "bonferroni")
+pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort)
+
+qqnorm(rstandard(anova_skmfn_ort_training))
+qqline(rstandard(anova_skmfn_ort_training))
+
+
