@@ -131,6 +131,12 @@ ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=TMP_MEAN_RND,
   scale_size_continuous(range = c(1,3))
 ggsave(filename = "plt_lfz_tmp_wndsr_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
+ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot() +
+  labs(y="Laufzeit", x="Ort", title = "Laufzeit (Männer) / Ort")
+ggsave(filename = "plt_box_lfz_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
+
+
 #install.packages("psych")
 #library(psych)
 
@@ -147,9 +153,24 @@ qqline(rstandard(anova_skmfn_ort_m_training))
 
 # Varinaz analyse
 leveneTest(S_KM_FN ~ Ort, df_wma_ort_skm_m)
-# post-hoc test
-pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort, p.adjust.method = "bonferroni", paired = FALSE, pool.sd = FALSE)
+
+# one-way-test
 oneway.test(S_KM_FN ~ Ort,  data = df_wma_ort_skm_m, var.equal = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: two.sided
+pairwise.t.test(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
 
 # var-test
 var.test(x=unlist(subset(df_wma_ort_skm_m, (Ort=='Berlin'), select = c(S_KM_FN))), 
@@ -157,10 +178,19 @@ var.test(x=unlist(subset(df_wma_ort_skm_m, (Ort=='Berlin'), select = c(S_KM_FN))
        conf.level = 0.95
 )
 
-# t-Test
+# t-Test - Berlin ~ NewYork
 t.test(x=subset(df_wma_ort_skm_m, (Ort=='Berlin'), select = c(S_KM_FN)), 
        y=subset(df_wma_ort_skm_m, (Ort=='NewYork'), select = c(S_KM_FN)),
-       paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "less"
+       paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "greater"
 )
 
+# t-Test - Berlin ~ London
+t.test(x=subset(df_wma_ort_skm_m, (Ort=='Berlin'), select = c(S_KM_FN)), 
+       y=subset(df_wma_ort_skm_m, (Ort=='London'), select = c(S_KM_FN)),
+       paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "greater"
+)
 
+t.test(x=subset(df_wma_ort_skm_m, (Ort=='NewYork'), select = c(S_KM_FN)), 
+       y=subset(df_wma_ort_skm_m, (Ort=='Chicago'), select = c(S_KM_FN)),
+       paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "greater"
+)
