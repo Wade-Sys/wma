@@ -1,3 +1,9 @@
+
+library(psych)
+library(MESS)
+library(ggplot2)
+library(DescTools)
+
 ggsave(filename = "test.png", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
 ggplot(data = df_wetter_3, aes(x=TMP_MEAN_RND)) + geom_histogram(binwidth = 1, color="white", fill="skyblue") + labs(x="Temperatur (°C)", y="Häufigkeit (abs)", title = "Durchschn. Temperatur (ger.)") + scale_y_continuous(breaks = seq(0,11,1)) + scale_x_continuous(breaks = seq(0,25,1))
@@ -136,10 +142,6 @@ ggplot(subset(df_wma_wetter_2,(Geschlecht=='M')), aes(y=S_KM_FN, x=Ort, fill=Ort
   labs(y="Laufzeit", x="Ort", title = "Laufzeit (Männer) / Ort")
 ggsave(filename = "plt_box_lfz_m_ort", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "png")
 
-
-#install.packages("psych")
-#library(psych)
-
 df_wma_ort_skm_m <- subset(df_wma_2, (Geschlecht=='M'), select = c(S_KM_FN, Ort))
 
 describeBy(df_wma_ort_skm_m$S_KM_FN, df_wma_ort_skm_m$Ort)
@@ -194,3 +196,9 @@ t.test(x=subset(df_wma_ort_skm_m, (Ort=='NewYork'), select = c(S_KM_FN)),
        y=subset(df_wma_ort_skm_m, (Ort=='Chicago'), select = c(S_KM_FN)),
        paired = FALSE, conf.level = 0.95, var.equal = FALSE, alternative = "greater"
 )
+
+# Stichprobengröße
+power_t_test(delta = 0.5, sig.level = 0.05, power = 0.95, ratio = 1, type = "two.sample"
+             , alternative = "one.sided", df.method = "welch")
+
+
