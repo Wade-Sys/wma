@@ -37,6 +37,9 @@ df_ww3_w_top5 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 5))
 df_ww3_w_top3 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 3))
 
 # Alle: 2010,2011,2013-2019
+df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
+df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
+
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
 df_ww3y_m_top5 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 5))
 df_ww3y_m_top3 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 3))
@@ -128,7 +131,154 @@ df_ww3y_tokyo_w_top3 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W' & Platz 
 describeBy(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort)
 describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort)
 
+describeBy(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort)
+describeBy(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort)
+## --------------------------------------------------------------------------------------------
 
+# Boxplot: Ergebnisse / Wettbewerbsort (M)
+ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): Gesamt") +
+  scale_y_continuous(breaks = seq(7000,8350,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_m_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-5") +
+  scale_y_continuous(breaks = seq(7000,8350,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-3") +
+  scale_y_continuous(breaks = seq(7000,8350,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_m_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+# Boxplot: Ergebnisse / Wettbewerbsort (W)
+ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): Gesamt") +
+  scale_y_continuous(breaks = seq(8000,11000,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_w_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-5") +
+  scale_y_continuous(breaks = seq(8000,10000,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
+  geom_boxplot(alpha=0.7) +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-3") +
+  scale_y_continuous(breaks = seq(8000,10000,100)) +
+  theme(legend.position = "none") + 
+  scale_fill_brewer(palette="Set3")
+ggsave(filename = "bplt_ergb_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+## ----------------------------------------------------------------------
+# Histogramm: Verteilung der Ergebnisse
+# Männer
+ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 50, color="white", fill="orange") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): Gesamt") + 
+  scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_m_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(data = df_ww3y_m_top5, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 50, color="white", fill="orange") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-5") + 
+  scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_vert_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(data = df_ww3y_m_top3, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 50, color="white", fill="orange") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-3") + 
+  scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_vert_m_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+# Frauen
+ggplot(data = df_ww3y_w_all, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 100, color="white", fill="skyblue") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): Gesamt") + 
+  scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_vert_w_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(data = df_ww3y_w_top5, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 120, color="white", fill="skyblue") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-5") + 
+  scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_vert_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(data = df_ww3y_w_top3, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 140, color="white", fill="skyblue") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-3") + 
+  scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
+ggsave(filename = "hplt_ergb_vert_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+## --------------------------------------------------------------------------------------------------------------
+
+# Scatterplots:
+# Männer
+ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): Gesamt", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(7000,8500,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_m_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-5", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(7000,8500,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(7000,8500,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+# Frauen
+ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): Gesamt", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(8000,11000,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_w_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-5", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(8000,11000,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Ergebnisse ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(8000,11000,100)) + 
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")
+ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+## ----------------------------------------------------------------
 
 
 
