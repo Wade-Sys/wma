@@ -1,3 +1,9 @@
+library(psych)
+library(MESS)
+library(ggplot2)
+library(DescTools)
+library(corrplot)
+
 # df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
 # df_wetter_csv <- read.csv2(file = '../../data/wetter/daten_wetter_tmp_dew_sr.csv',header = TRUE,dec = ".",sep = ";")
 # as.Date(df_wma_csv$Datum, format = "%Y-%m-%d")
@@ -279,6 +285,11 @@ ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_poin
 ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ## ----------------------------------------------------------------
+
+create_reg_plots(df_ww3,"my_reg_plots")
+
+
+
 
 
 

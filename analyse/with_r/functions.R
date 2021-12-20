@@ -1,0 +1,62 @@
+#summary(lm(data = subset(df_ww3_m_all, ((TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 20) & (Platz >= 1 & Platz <= 10) & Ort == "Tokyo")), formula = S_KM_FN ~ TMP_MEAN_RND1))
+
+#ggplot(subset(df_ww3_m_all, ((TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 8) & (Platz >= 1 & Platz <= 10) & Ort == "Tokyo")), aes(y=S_KM_FN, TMP_MEAN_RND1)) + 
+#  geom_point() + geom_smooth(method = "lm", formula = y~x) +
+#  labs(title = "LR: Laufzeiten(m) ~ Temperatur (gerundet)", x="Temperatur (°C)", y="Zeiten (sek)")
+
+# Eigene Funktion für die Regression zwischen den Ergebnisse und Temperatur
+## ----------------------------------------------------------------------------------------------------------------------------------
+my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max, ort=NULL, geschlecht=NULL) {
+  if(!is.null(ort) && !is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Ort == ort & Geschlecht == geschlecht))  
+  }
+  else if(is.null(ort) && !is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Geschlecht == geschlecht))    
+  }
+  else if(!is.null(ort) && is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Ort == ort))    
+  }
+  
+  if(platz_min == platz_max) {
+    st_platz <- platz_min
+  }
+  else {
+    st_platz <- paste(platz_min," - ",platz_max)
+  }
+  
+  if(tmp_min == tmp_max) {
+    st_tmp <- tmp_min
+  }
+  else {
+    st_tmp <- paste(tmp_min," - ",tmp_max)
+  }
+  
+  sub_title <- paste("Wettbewerb: ",ort,"; Platz: ",st_platz, "; Temp.: ",st_tmp, sep = "")
+  
+  plot_reg <- ggplot(selection, aes(y=S_KM_FN, TMP_MEAN_RND1)) + 
+    geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+    labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+  plot(plot_reg)
+  
+  lm_reg_sum <- summary(lm(data = selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly)))
+  cat(paste(sub_title))
+  print(lm_reg_sum)
+  cat(paste("-----------------------------------------------------------------------------\n"))
+}
+## ----------------------------------------------------------------------------------------------------------------------------------
+
+create_reg_plots <- function(data_frame, file_name) {
+  pdf(file = paste(file_name,".pdf",sep = ""), width = 6, height = 6)
+  #sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+  for(g in unique(data_frame$Geschlecht)) {
+    for(o in unique(data_frame$Ort)) {
+      my_reg_skm_tmp(df_ww3,2,0,20,1,3, o,g)
+      sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+    }
+  }
+  sink()
+  dev.off()
+}
