@@ -42,7 +42,7 @@ my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, pl
   plot(plot_reg)
   
   lm_reg_sum <- summary(lm(data = selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly)))
-  cat(paste(sub_title))
+  cat(paste(sub_title, "; Geschlecht: ", geschlecht, sep=""))
   print(lm_reg_sum)
   cat(paste("-----------------------------------------------------------------------------\n"))
 }
@@ -50,11 +50,11 @@ my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, pl
 
 create_reg_plots <- function(data_frame, file_name) {
   pdf(file = paste(file_name,".pdf",sep = ""), width = 6, height = 6)
-  #sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+  sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
   for(g in unique(data_frame$Geschlecht)) {
     for(o in unique(data_frame$Ort)) {
       my_reg_skm_tmp(df_ww3,2,0,20,1,3, o,g)
-      sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+      #sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
     }
   }
   sink()
