@@ -1,0 +1,200 @@
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: M
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-303.65 -121.54    9.63   96.26  341.33 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    7587.18      17.77 426.959   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)    84.88     143.27   0.592    0.556    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 143.3 on 63 degrees of freedom
+Multiple R-squared:  0.00554,	Adjusted R-squared:  -0.01025 
+F-statistic: 0.351 on 1 and 63 DF,  p-value: 0.5557
+
+-----------------------------------------------------------------------------
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: M
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-251.26 -136.66  -34.72  106.34  359.40 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    7699.12      20.91  368.20  < 2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)   731.62     168.58    4.34 5.26e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 168.6 on 63 degrees of freedom
+Multiple R-squared:  0.2301,	Adjusted R-squared:  0.2179 
+F-statistic: 18.83 on 1 and 63 DF,  p-value: 5.263e-05
+
+-----------------------------------------------------------------------------
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: M
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-298.93  -85.79   16.64   92.69  212.90 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    7809.78      15.85 492.874   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)    65.72     122.74   0.535    0.594    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 122.7 on 58 degrees of freedom
+Multiple R-squared:  0.004919,	Adjusted R-squared:  -0.01224 
+F-statistic: 0.2867 on 1 and 58 DF,  p-value: 0.5944
+
+-----------------------------------------------------------------------------
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: M
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-284.62 -100.84  -41.21   73.02  446.53 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    7714.17      18.73 411.791   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)    91.53     151.03   0.606    0.547    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 151 on 63 degrees of freedom
+Multiple R-squared:  0.005796,	Adjusted R-squared:  -0.009985 
+F-statistic: 0.3673 on 1 and 63 DF,  p-value: 0.5467
+
+-----------------------------------------------------------------------------
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: M
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-213.77  -74.86   18.00   87.05  178.44 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    7571.94      13.43 563.843   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)    35.26      94.96   0.371    0.712    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 94.96 on 48 degrees of freedom
+Multiple R-squared:  0.002864,	Adjusted R-squared:  -0.01791 
+F-statistic: 0.1378 on 1 and 48 DF,  p-value: 0.7121
+
+-----------------------------------------------------------------------------
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: W
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-285.48 -167.47    2.99  123.57  358.52 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    8623.12      22.36 385.719   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)  -278.22     180.24  -1.544    0.128    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 180.2 on 63 degrees of freedom
+Multiple R-squared:  0.03644,	Adjusted R-squared:  0.02115 
+F-statistic: 2.383 on 1 and 63 DF,  p-value: 0.1277
+
+-----------------------------------------------------------------------------
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: W
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-597.92 -158.76  -27.96  139.47  558.30 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    8759.57      31.28 279.993  < 2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)   875.96     252.23   3.473 0.000936 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 252.2 on 63 degrees of freedom
+Multiple R-squared:  0.1607,	Adjusted R-squared:  0.1474 
+F-statistic: 12.06 on 1 and 63 DF,  p-value: 0.0009363
+
+-----------------------------------------------------------------------------
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: W
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-252.86  -81.84  -19.01  108.37  360.10 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    8811.80      17.68 498.308   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)    94.31     136.98   0.689    0.494    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 137 on 58 degrees of freedom
+Multiple R-squared:  0.008107,	Adjusted R-squared:  -0.008995 
+F-statistic: 0.474 on 1 and 58 DF,  p-value: 0.4939
+
+-----------------------------------------------------------------------------
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: W
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-617.8 -392.7 -224.9  269.7 1325.3 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    8972.03      68.11 131.733   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly) -1086.77     549.10  -1.979   0.0522 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 549.1 on 63 degrees of freedom
+Multiple R-squared:  0.05854,	Adjusted R-squared:  0.04359 
+F-statistic: 3.917 on 1 and 63 DF,  p-value: 0.05217
+
+-----------------------------------------------------------------------------
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; Geschlecht: W
+Call:
+lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = selection)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-316.34  -99.20   35.78   95.93  197.20 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                     8535.7       18.8 454.024   <2e-16 ***
+poly(TMP_MEAN_RND1, reg_poly)   -153.3      132.9  -1.154    0.254    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 132.9 on 48 degrees of freedom
+Multiple R-squared:  0.02697,	Adjusted R-squared:  0.006702 
+F-statistic: 1.331 on 1 and 48 DF,  p-value: 0.2544
+
+-----------------------------------------------------------------------------

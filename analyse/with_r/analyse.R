@@ -3,6 +3,7 @@ library(MESS)
 library(ggplot2)
 library(DescTools)
 library(corrplot)
+library(data.table) # für melt
 
 # df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
 # df_wetter_csv <- read.csv2(file = '../../data/wetter/daten_wetter_tmp_dew_sr.csv',header = TRUE,dec = ".",sep = ";")
@@ -285,7 +286,11 @@ ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_poin
 ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ## ----------------------------------------------------------------
+# Verteilung der Temperatur pro Geschlecht / Ort
 
+print_temps(df_ww3)
+
+## Regressionen: (bereinigte Jahre)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 3)
@@ -298,15 +303,51 @@ create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, 
 create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 2)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 1)
 
-## ----------------------------------------------------------------
-# Verteilung der Temperatur pro Geschlecht / Ort
-ggplot(data = df_ww3y, aes(x=TMP_MEAN_RND1)) + 
-  geom_histogram(color="white", fill="orange") + 
-  labs(x="Temperatur (in C°)", y="Häufigkeit (abs)", title = "Verteilung d. Temperatur") + 
-  scale_x_continuous(breaks = seq(0,25,1)) + scale_y_continuous(breaks = seq(0,100,5))
-#ggsave(filename = "hplt_ergb_m_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+## Regressionen: (alle Jahre)
+create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
+create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
+create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
+create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
+create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 
-print_temps(df_ww3)
-#table(df_ww3y$TMP_MEAN_RND1, df_ww3y$Ort, df_ww3y$Geschlecht)
-#table(df_ww3y$TMP_MEAN, df_ww3y$Ort, df_ww3y$Geschlecht)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
+## ----------------------------------------------------------------
+## Spezifische Regressionen
+my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=20, platz_min=1, platz_max=1, ort="Tokyo", geschlecht="M")
+
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 12 & TMP_MEAN_RND1 <= 16))), aes(y=FN_M_S, x=TMP_MEAN_RND1)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
+  #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & Jahr==2018))) +
+  geom_line(aes(y=S_KM_5, x=Platz)) +
+  geom_line(aes(y=S_KM_10, x=Platz)) +
+  geom_line(aes(y=S_KM_15, x=Platz)) +
+  scale_x_continuous(breaks = seq(0,5,1))
+
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & Jahr==2018))) +
+  geom_point(aes(y=S_KM_5, x=Platz)) +
+  geom_point(aes(y=S_KM_10, x=Platz)) + 
+  geom_point(aes(y=S_KM_15, x=Platz)) +
+  geom_point(aes(y=S_KM_20, x=Platz)) +
+  geom_point(aes(y=S_KM_HM, x=Platz)) +
+  geom_point(aes(y=S_KM_25, x=Platz)) +
+  geom_point(aes(y=S_KM_30, x=Platz)) +
+  geom_point(aes(y=S_KM_35, x=Platz)) +
+  geom_point(aes(y=S_KM_40, x=Platz)) +
+  geom_point(aes(y=S_KM_FN, x=Platz)) 
+
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3)), aes(fill=Platz)) +
+  geom_bar(stat = "identity", position = "dodge", aes(y=S_KM_5, x=Jahr)) +
+  geom_bar(stat = "identity", position = "dodge", aes(y=S_KM_10, x=Jahr)) +
+  scale_y_continuous(breaks = seq(0,1000,500)) +
+  facet_wrap(~Platz)
+
+
+
+
 
