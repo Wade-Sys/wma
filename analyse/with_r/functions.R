@@ -48,15 +48,35 @@ my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, pl
 }
 ## ----------------------------------------------------------------------------------------------------------------------------------
 
-create_reg_plots <- function(data_frame, file_name) {
+create_reg_plots <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max) {
+  file_name = paste("reg_p",reg_poly,"_tmp",tmp_min,"_",tmp_max,"_platz",platz_min,"_",platz_max,sep = "")
   pdf(file = paste(file_name,".pdf",sep = ""), width = 6, height = 6)
   sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
   for(g in unique(data_frame$Geschlecht)) {
     for(o in unique(data_frame$Ort)) {
-      my_reg_skm_tmp(df_ww3,2,0,20,1,3, o,g)
-      #sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+      my_reg_skm_tmp(data_frame,reg_poly,tmp_min,tmp_max,platz_min,platz_max, o,g)
     }
   }
   sink()
   dev.off()
+}
+
+## ----------------------------------------------------------------------------------------------------------------------------------
+print_temps <- function(data_frame) {
+  plaetze = c(1,3,5,10)
+  sink(file = "temperatur_verteilung.txt", append = TRUE)
+  for(g in unique(data_frame$Geschlecht)) {
+    for(o in unique(data_frame$Ort)) {
+      cat(paste("Ort: ", o, "; Geschlecht: ", g, "\n",sep = ""))
+      cat(paste("-----------------------------------------\n", sep = ""))
+      for(p in plaetze) {
+        cat(paste("Platz <= ",p,sep = ""))
+        print(table(subset(data_frame, (Ort==o & Geschlecht==g & Platz <= p), select = "TMP_MEAN_RND1", drop = TRUE)))
+      }
+      cat(paste("-----------------------------------------\n", sep = ""))
+    }
+  }
+  cat(paste("Gesamt (table): -----------------------------------------\n", sep = ""))
+  print(table(data_frame$TMP_MEAN_RND1, data_frame$Ort, data_frame$Geschlecht))
+  sink()
 }

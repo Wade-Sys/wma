@@ -286,11 +286,27 @@ ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",sc
 
 ## ----------------------------------------------------------------
 
-create_reg_plots(df_ww3,"my_reg_plots")
+create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 5)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 3)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 2)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 1)
 
+create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 5)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 3)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 2)
+create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 1)
 
+## ----------------------------------------------------------------
+# Verteilung der Temperatur pro Geschlecht / Ort
+ggplot(data = df_ww3y, aes(x=TMP_MEAN_RND1)) + 
+  geom_histogram(color="white", fill="orange") + 
+  labs(x="Temperatur (in C°)", y="Häufigkeit (abs)", title = "Verteilung d. Temperatur") + 
+  scale_x_continuous(breaks = seq(0,25,1)) + scale_y_continuous(breaks = seq(0,100,5))
+#ggsave(filename = "hplt_ergb_m_all.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-
-
-
+print_temps(df_ww3)
+#table(df_ww3y$TMP_MEAN_RND1, df_ww3y$Ort, df_ww3y$Geschlecht)
+#table(df_ww3y$TMP_MEAN, df_ww3y$Ort, df_ww3y$Geschlecht)
 
