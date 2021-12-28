@@ -80,3 +80,37 @@ print_temps <- function(data_frame) {
   print(table(data_frame$TMP_MEAN_RND1, data_frame$Ort, data_frame$Geschlecht))
   sink()
 }
+## ----------------------------------------------------------------------------------------------------------------------------------
+# Verlauf - alle Jahre pro Wettbewerbsort: Meter pro Sekunden / Streckenabschnitt
+plot_paces <- function() {
+  pdf(file = paste("plt_paces",".pdf",sep = ""), width = 9, height = 7)
+  for(g in unique(df_ww5rs$Geschlecht)) {
+    for(o in unique(df_ww5rs$Ort)) {
+      if(o != "Chicago") {
+        plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+          geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
+          #geom_point() + 
+          scale_color_continuous(breaks=seq(1,3,1)) +
+          scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+          scale_y_log10() +
+          labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-3", sep="")) + 
+          #theme(legend.position = "none") +
+          facet_wrap(~Jahr)
+      }
+      else if(o == "Chicago") { # Das Jahr 2012 und 2013 enthält inkorrekte Daten
+        plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE & Jahr!=2012 & Jahr!=2013)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+          geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
+          #geom_point() + 
+          scale_color_continuous(breaks=seq(1,3,1)) +
+          scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+          scale_y_log10() +
+          labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-3", sep="")) + 
+          #theme(legend.position = "none") +
+          facet_wrap(~Jahr)
+      }
+      print(plot_pace)
+    }
+  }
+  dev.off()
+}
+## ----------------------------------------------------------------------------------------------------------------------------------

@@ -323,31 +323,56 @@ ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
   #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
 
-ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & Jahr==2018))) +
-  geom_line(aes(y=S_KM_5, x=Platz)) +
-  geom_line(aes(y=S_KM_10, x=Platz)) +
-  geom_line(aes(y=S_KM_15, x=Platz)) +
-  scale_x_continuous(breaks = seq(0,5,1))
+## ----------------------------------------------------------------
+## Zeiten / Pace-Analysen
+df_ww4 <- df_ww3
+df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2)
+df_ww5 <- subset(df_ww4, select = c(Jahr, Ort, Geschlecht, Platz, S_KM_5, S_KM_10, S_KM_15, S_KM_20, S_KM_HM, S_KM_25, S_KM_30, S_KM_35, S_KM_40, S_KM_FN, TMP_MEAN_RND1, ZZ_INVALID))
+df_ww5rs <- reshape(df_ww5, direction = "long", varying = c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN"), idvar = c("SKM_ID"), v.names = "SKM_ZEIT", timevar = "SKM_TYP")
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 1] <- round(5000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 1], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 2] <- round(10000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 2], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 3] <- round(15000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 3], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 4] <- round(20000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 4], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 5] <- round(21097.5 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 5], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 6] <- round(25000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 6], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 7] <- round(30000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 7], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 8] <- round(35000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 8], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 9] <- round(40000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 9], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 10] <-round(42195 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 10], digits = 2)
 
-ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & Jahr==2018))) +
-  geom_point(aes(y=S_KM_5, x=Platz)) +
-  geom_point(aes(y=S_KM_10, x=Platz)) + 
-  geom_point(aes(y=S_KM_15, x=Platz)) +
-  geom_point(aes(y=S_KM_20, x=Platz)) +
-  geom_point(aes(y=S_KM_HM, x=Platz)) +
-  geom_point(aes(y=S_KM_25, x=Platz)) +
-  geom_point(aes(y=S_KM_30, x=Platz)) +
-  geom_point(aes(y=S_KM_35, x=Platz)) +
-  geom_point(aes(y=S_KM_40, x=Platz)) +
-  geom_point(aes(y=S_KM_FN, x=Platz)) 
+# Verlauf - alle Jahre pro Wettbewerbsort: Zeit / Streckenabschnitt
+ggplot(subset(df_ww5rs, (Geschlecht=="W" & Ort=="Tokyo" & Platz <=3 & SKM_TYP >= 5 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_ZEIT, group=Platz)) +
+  geom_line(stat = "identity", position = "dodge", aes(color=Platz))+ 
+  scale_x_continuous(breaks = seq(0,10,1)) +
+  #scale_y_continuous(breaks = seq(4000,9000,500)) +
+  scale_y_log10() +
+  facet_wrap(~Jahr)
 
-ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3)), aes(fill=Platz)) +
-  geom_bar(stat = "identity", position = "dodge", aes(y=S_KM_5, x=Jahr)) +
-  geom_bar(stat = "identity", position = "dodge", aes(y=S_KM_10, x=Jahr)) +
-  scale_y_continuous(breaks = seq(0,1000,500)) +
-  facet_wrap(~Platz)
+# Verlauf - einzeln: Zeit / Streckenabschnitt
+ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Berlin" & Jahr==2013 & Platz <=3 & SKM_TYP >= 5 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_ZEIT, group=Platz)) +
+  geom_line(aes(color=Platz))+
+  geom_point() +
+  scale_x_continuous(breaks = seq(0,10,1)) +
+  scale_y_continuous(breaks = seq(0,9000,500)) +
+  scale_fill_brewer(palette="Set3")
 
+ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Chicago" & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+  geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
+  #geom_point() + 
+  scale_color_continuous(breaks=seq(1,3,1)) +
+  scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+  scale_y_log10() +
+  labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = "Pace in ","ORT"," (GESCHLECT): TOP-3") + 
+  #theme(legend.position = "none") +
+  facet_wrap(~Jahr)
 
+# Verlauf - einzeln: Meter pro Sekunden / Streckenabschnitt
+ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Chicago" & Platz <=3 & Jahr==2012 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+  geom_line(stat = "identity", position = "dodge", aes(color=Platz))+ 
+  scale_color_continuous(breaks=seq(1,3,1)) +
+  scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+  labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = "Pace in ","ORT"," (GESCHLECT): TOP-3") + 
+  scale_y_log10()
 
-
-
+plot_paces()
+## ----------------------------------------------------------------
