@@ -47,6 +47,7 @@ my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, pl
   cat(paste("-----------------------------------------------------------------------------\n"))
 }
 ## ----------------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------------------------------------------
 
 create_reg_plots <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max) {
   file_name = paste("reg_p",reg_poly,"_tmp",tmp_min,"_",tmp_max,"_platz",platz_min,"_",platz_max,sep = "")
@@ -60,7 +61,119 @@ create_reg_plots <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, 
   sink()
   dev.off()
 }
+## ----------------------------------------------------------------------------------------------------------------------------------
+my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht=NULL, skm="S_KM_FN") {
+  if(!is.null(ort) && !is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Ort == ort & Geschlecht == geschlecht))  
+  }
+  else if(is.null(ort) && !is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Geschlecht == geschlecht))    
+  }
+  else if(!is.null(ort) && is.null(geschlecht)) {
+    selection <- subset(data_frame, ((TMP_MEAN_RND1 >= tmp_min & TMP_MEAN_RND1 <= tmp_max) & 
+                                       (Platz >= platz_min & Platz <= platz_max) & Ort == ort))    
+  }
+  
+  if(platz_min == platz_max) {
+    st_platz <- platz_min
+  }
+  else {
+    st_platz <- paste(platz_min," - ",platz_max)
+  }
+  
+  if(tmp_min == tmp_max) {
+    st_tmp <- tmp_min
+  }
+  else {
+    st_tmp <- paste(tmp_min," - ",tmp_max)
+  }
+  
+  sub_title <- paste("Wettbewerb: ",ort,"; Platz: ",st_platz, "; Temp.: ",st_tmp,"; KM-Abschnitt: ", skm, sep = "")
+  if(skm == 'S_KM_HM') {
+    final_selection <- subset(selection, S_KM_HM != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_HM, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_HM ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_FN') {
+    final_selection <- subset(selection, S_KM_FN != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_FN, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_5') {
+    final_selection <- subset(selection, S_KM_5 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_5, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_5 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_10') {
+    final_selection <- subset(selection, S_KM_10 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_10, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_10 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_15') {
+    final_selection <- subset(selection, S_KM_15 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_15, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_15 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_20') {
+    final_selection <- subset(selection, S_KM_20 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_20, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_20 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_25') {
+    final_selection <- subset(selection, S_KM_25 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_25, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_25 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_30') {
+    final_selection <- subset(selection, S_KM_30 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_30, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_30 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_35') {
+    final_selection <- subset(selection, S_KM_35 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_35, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_35 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  } else if(skm == 'S_KM_40') {
+    final_selection <- subset(selection, S_KM_40 != 0)
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_40, TMP_MEAN_RND1)) + 
+      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_40 ~ poly(TMP_MEAN_RND1,reg_poly)))
+  }
+  
+ 
+  plot(plot_reg)
+  cat(paste(sub_title, "; Geschlecht: ", geschlecht, sep=""))
+  print(lm_reg_sum)
+  cat(paste("-----------------------------------------------------------------------------\n"))
+}
 
+## ----------------------------------------------------------------------------------------------------------------------------------
+
+create_reg_plots <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max) {
+  file_name = paste("reg_p",reg_poly,"_tmp",tmp_min,"_",tmp_max,"_platz",platz_min,"_",platz_max,sep = "")
+  pdf(file = paste(file_name,".pdf",sep = ""), width = 6, height = 6)
+  sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+  for(g in unique(data_frame$Geschlecht)) {
+    for(o in unique(data_frame$Ort)) {
+      my_reg_skm_tmp(data_frame,reg_poly,tmp_min,tmp_max,platz_min,platz_max, o,g)
+    }
+  }
+  sink()
+  dev.off()
+}
 ## ----------------------------------------------------------------------------------------------------------------------------------
 print_temps <- function(data_frame) {
   plaetze = c(1,3,5,10)

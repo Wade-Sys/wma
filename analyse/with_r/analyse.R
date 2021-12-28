@@ -3,7 +3,7 @@ library(MESS)
 library(ggplot2)
 library(DescTools)
 library(corrplot)
-library(data.table) # für melt
+#library(data.table) # für melt
 
 # df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
 # df_wetter_csv <- read.csv2(file = '../../data/wetter/daten_wetter_tmp_dew_sr.csv',header = TRUE,dec = ".",sep = ";")
@@ -313,32 +313,38 @@ create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, p
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
-create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
+ create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 ## ----------------------------------------------------------------
+df_ww4 <- df_ww3
+df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2)
+df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2)
+## ----------------------------------------------------------------
 ## Spezifische Regressionen
-my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=20, platz_min=1, platz_max=1, ort="Tokyo", geschlecht="M")
+my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Chicago", geschlecht="M")
 
-ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 12 & TMP_MEAN_RND1 <= 16))), aes(y=FN_M_S, x=TMP_MEAN_RND1)) + 
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Chicago", geschlecht="M", skm="S_KM_HM")
+
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
   #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
 
+summary(lm(data = subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25 & S_KM_HM != 0)), formula = HM_M_S ~ poly(TMP_MEAN_RND1,2)))
+
 ## ----------------------------------------------------------------
 ## Zeiten / Pace-Analysen
-df_ww4 <- df_ww3
-df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2)
 df_ww5 <- subset(df_ww4, select = c(Jahr, Ort, Geschlecht, Platz, S_KM_5, S_KM_10, S_KM_15, S_KM_20, S_KM_HM, S_KM_25, S_KM_30, S_KM_35, S_KM_40, S_KM_FN, TMP_MEAN_RND1, ZZ_INVALID))
 df_ww5rs <- reshape(df_ww5, direction = "long", varying = c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN"), idvar = c("SKM_ID"), v.names = "SKM_ZEIT", timevar = "SKM_TYP")
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 1] <- round(5000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 1], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 2] <- round(10000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 2], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 3] <- round(15000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 3], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 4] <- round(20000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 4], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 5] <- round(21097.5 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 5], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 6] <- round(25000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 6], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 7] <- round(30000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 7], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 8] <- round(35000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 8], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 9] <- round(40000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 9], digits = 2)
-df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 10] <-round(42195 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 10], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 1 & df_ww5rs$SKM_ZEIT!=0] <- round(5000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 1 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 2 & df_ww5rs$SKM_ZEIT!=0] <- round(10000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 2 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 3 & df_ww5rs$SKM_ZEIT!=0] <- round(15000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 3 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 4 & df_ww5rs$SKM_ZEIT!=0] <- round(20000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 4 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 5 & df_ww5rs$SKM_ZEIT!=0] <- round(21097.5 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 5 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 6 & df_ww5rs$SKM_ZEIT!=0] <- round(25000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 6 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 7 & df_ww5rs$SKM_ZEIT!=0] <- round(30000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 7 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 8 & df_ww5rs$SKM_ZEIT!=0] <- round(35000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 8 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 9 & df_ww5rs$SKM_ZEIT!=0] <- round(40000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 9 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
+df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 10 & df_ww5rs$SKM_ZEIT!=0] <-round(42195 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 10 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
 
 # Verlauf - alle Jahre pro Wettbewerbsort: Zeit / Streckenabschnitt
 ggplot(subset(df_ww5rs, (Geschlecht=="W" & Ort=="Tokyo" & Platz <=3 & SKM_TYP >= 5 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_ZEIT, group=Platz)) +
