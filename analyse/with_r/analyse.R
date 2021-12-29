@@ -313,23 +313,31 @@ create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, p
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
- create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
+create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 ## ----------------------------------------------------------------
 df_ww4 <- df_ww3
-df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2)
-df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2)
+df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2) # Pace in m/s - FN
+df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
 ## ----------------------------------------------------------------
 ## Spezifische Regressionen
+## Manuell
 my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Chicago", geschlecht="M")
 
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Chicago", geschlecht="M", skm="S_KM_HM")
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="London", geschlecht="M", skm="S_KM_HM")
 
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
   #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
 
 summary(lm(data = subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25 & S_KM_HM != 0)), formula = HM_M_S ~ poly(TMP_MEAN_RND1,2)))
+
+## Automatisierte Erstellung der Regressionen: alle Jahre
+create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
+create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
+create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
+create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
+create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 
 ## ----------------------------------------------------------------
 ## Zeiten / Pace-Analysen
@@ -362,7 +370,7 @@ ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Berlin" & Jahr==2013 & Platz <=
   scale_y_continuous(breaks = seq(0,9000,500)) +
   scale_fill_brewer(palette="Set3")
 
-ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Chicago" & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Berlin" & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
   geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
   #geom_point() + 
   scale_color_continuous(breaks=seq(1,3,1)) +
@@ -373,11 +381,11 @@ ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Chicago" & Platz <=3 & SKM_TYP 
   facet_wrap(~Jahr)
 
 # Verlauf - einzeln: Meter pro Sekunden / Streckenabschnitt
-ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Chicago" & Platz <=3 & Jahr==2012 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Berlin" & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE & Jahr == 2019)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
   geom_line(stat = "identity", position = "dodge", aes(color=Platz))+ 
   scale_color_continuous(breaks=seq(1,3,1)) +
   scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
-  labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = "Pace in ","ORT"," (GESCHLECT): TOP-3") + 
+  #labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = "Pace in ","ORT"," (GESCHLECT): TOP-3") + 
   scale_y_log10()
 
 plot_paces()

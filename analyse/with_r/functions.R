@@ -90,6 +90,10 @@ my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_
     st_tmp <- paste(tmp_min," - ",tmp_max)
   }
   
+  if(ort == "Chicago" & skm != "S_KM_FN") {
+    selection <- subset(selection, (Jahr != 2012 & Jahr != 2013))
+  }
+  
   sub_title <- paste("Wettbewerb: ",ort,"; Platz: ",st_platz, "; Temp.: ",st_tmp,"; KM-Abschnitt: ", skm, sep = "")
   if(skm == 'S_KM_HM') {
     final_selection <- subset(selection, S_KM_HM != 0)
@@ -161,14 +165,16 @@ my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_
 }
 
 ## ----------------------------------------------------------------------------------------------------------------------------------
-
-create_reg_plots <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max) {
+create_reg_plots_2 <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max, ort=c("Berlin","London","NewYork","Chicago","Tokyo")) {
+  skms <- c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_HM")
   file_name = paste("reg_p",reg_poly,"_tmp",tmp_min,"_",tmp_max,"_platz",platz_min,"_",platz_max,sep = "")
-  pdf(file = paste(file_name,".pdf",sep = ""), width = 6, height = 6)
+  pdf(file = paste(file_name,".pdf",sep = ""), width = 8, height = 6)
   sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
   for(g in unique(data_frame$Geschlecht)) {
-    for(o in unique(data_frame$Ort)) {
-      my_reg_skm_tmp(data_frame,reg_poly,tmp_min,tmp_max,platz_min,platz_max, o,g)
+    for(o in ort) {
+      for(s in skms) {
+        my_reg_skm_tmp_2(data_frame,reg_poly,tmp_min, tmp_max, platz_min, platz_max, ort=o, geschlecht=g, skm=s) 
+      }
     }
   }
   sink()
