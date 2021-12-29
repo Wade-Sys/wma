@@ -322,9 +322,9 @@ df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
 ## ----------------------------------------------------------------
 ## Spezifische Regressionen
 ## Manuell
-my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Chicago", geschlecht="M")
+my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht="M")
 
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="London", geschlecht="M", skm="S_KM_HM")
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort=NULL, geschlecht="M", skm="S_KM_HM")
 
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
@@ -338,6 +338,9 @@ create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25,
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
+
+# Automatische Erstellung alle Plots: reg_poly = 2; tmp = 0-25; alle Orte; Plätze = 1,3,5,10, Geschlecht: alle
+create_reg_plots_3(data_frame = df_ww3)
 
 ## ----------------------------------------------------------------
 ## Zeiten / Pace-Analysen

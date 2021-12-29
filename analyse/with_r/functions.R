@@ -90,9 +90,16 @@ my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_
     st_tmp <- paste(tmp_min," - ",tmp_max)
   }
   
-  if(ort == "Chicago" & skm != "S_KM_FN") {
-    selection <- subset(selection, (Jahr != 2012 & Jahr != 2013))
-  }
+  if(skm != "S_KM_FN") {
+    if(is.null(ort)) {
+      selection_chicago <- subset(selection, (Ort == "Chicago" & Jahr != 2012 & Jahr != 2013))
+      selection_all <- subset(selection, (Ort!="Chicago"))
+      selection <- rbind(selection_all, selection_chicago)
+    } else if(ort == "Chicago") {
+      selection <- subset(selection, (Jahr != 2012 & Jahr != 2013)) 
+    }
+  } 
+  
   
   sub_title <- paste("Wettbewerb: ",ort,"; Platz: ",st_platz, "; Temp.: ",st_tmp,"; KM-Abschnitt: ", skm, sep = "")
   if(skm == 'S_KM_HM') {
@@ -165,8 +172,9 @@ my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_
 }
 
 ## ----------------------------------------------------------------------------------------------------------------------------------
+## Plots erstellen (2)
 create_reg_plots_2 <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, platz_max, ort=c("Berlin","London","NewYork","Chicago","Tokyo")) {
-  skms <- c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_HM")
+  skms <- c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN")
   file_name = paste("reg_p",reg_poly,"_tmp",tmp_min,"_",tmp_max,"_platz",platz_min,"_",platz_max,sep = "")
   pdf(file = paste(file_name,".pdf",sep = ""), width = 8, height = 6)
   sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
@@ -174,6 +182,26 @@ create_reg_plots_2 <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min
     for(o in ort) {
       for(s in skms) {
         my_reg_skm_tmp_2(data_frame,reg_poly,tmp_min, tmp_max, platz_min, platz_max, ort=o, geschlecht=g, skm=s) 
+      }
+    }
+  }
+  sink()
+  dev.off()
+}
+# Andere Reihenfolge der Plots: Plaetze bereits gesetzt
+create_reg_plots_3 <- function(data_frame) {
+  skms <- c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN")
+  ort <- c("Berlin","London","NewYork","Chicago","Tokyo")
+  plaetze <- c(10,5,3,1)
+  file_name = paste("reg_p2_alle_jahre",sep = "")
+  pdf(file = paste(file_name,".pdf",sep = ""), width = 8, height = 6)
+  sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+  for(g in unique(data_frame$Geschlecht)) {
+    for(o in ort) {
+      for(s in skms) {
+        for(p in plaetze) {
+          my_reg_skm_tmp_2(data_frame,reg_poly = 2,tmp_min = 1, tmp_max = 25, platz_min = 1, platz_max = p, ort=o, geschlecht=g, skm=s)  
+        }
       }
     }
   }
