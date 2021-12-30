@@ -3,6 +3,7 @@ library(MESS)
 library(ggplot2)
 library(DescTools)
 library(corrplot)
+library(dplyr)
 #library(data.table) # für melt
 
 # df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
@@ -324,7 +325,10 @@ df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
 ## Manuell
 my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht="M")
 
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort=NULL, geschlecht="M", skm="S_KM_HM")
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_35")
+
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter: W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=5, ort="Chicago", geschlecht="M", skm="S_KM_FN")
 
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
@@ -340,8 +344,21 @@ create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25,
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 
 # Automatische Erstellung alle Plots: reg_poly = 2; tmp = 0-25; alle Orte; Plätze = 1,3,5,10, Geschlecht: alle
-create_reg_plots_3(data_frame = df_ww3)
+lm_regs_from_reg_plots_3 <- create_reg_plots_3(data_frame = df_ww3)
 
+# Erzeugen eines Dataframes mit RSQ und ARSQ aus den LM-Summarys
+lm_regs_from_reg_plots_3_df <- create_reg_plots_3_to_df(lm_regs_from_reg_plots_3)
+
+# Aggregation
+lm_regs_from_reg_plots_3_df_agg <- aggregate(cbind(Ort, Platz, Geschlecht, SKM) ~ RSQ, lm_regs_from_reg_plots_3_df,max)
+
+lm_regs_from_reg_plots_3_df_agg_srt <- lm_regs_from_reg_plots_3_df_agg[order(lm_regs_from_reg_plots_3_df_agg$Ort,lm_regs_from_reg_plots_3_df_agg$Geschlecht,
+                                            lm_regs_from_reg_plots_3_df_agg$RSQ, decreasing = TRUE),]
+
+lm_regs_from_reg_plots_3_df_agg_srt$RSQ <- round(lm_regs_from_reg_plots_3_df_agg_srt$RSQ * 100, digits = 0)
+
+write.csv2(x=lm_regs_from_reg_plots_3_df_agg_srt, file = "lm_rquadrat.csv", sep=";", 
+           col.names = c("RSQ","Ort","Platz","Geschlecht","SKM"), dec = ".", quote = TRUE,row.names = FALSE)
 ## ----------------------------------------------------------------
 ## Zeiten / Pace-Analysen
 df_ww5 <- subset(df_ww4, select = c(Jahr, Ort, Geschlecht, Platz, S_KM_5, S_KM_10, S_KM_15, S_KM_20, S_KM_HM, S_KM_25, S_KM_30, S_KM_35, S_KM_40, S_KM_FN, TMP_MEAN_RND1, ZZ_INVALID))

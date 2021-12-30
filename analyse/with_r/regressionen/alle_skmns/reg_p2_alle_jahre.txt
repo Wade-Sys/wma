@@ -1,4 +1,4 @@
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -19,7 +19,7 @@ Multiple R-squared:  0.04517,	Adjusted R-squared:  0.02977
 F-statistic: 2.933 on 2 and 124 DF,  p-value: 0.05694
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -40,7 +40,7 @@ Multiple R-squared:  0.07076,	Adjusted R-squared:  0.0403
 F-statistic: 2.323 on 2 and 61 DF,  p-value: 0.1066
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -61,7 +61,7 @@ Multiple R-squared:  0.01449,	Adjusted R-squared:  -0.04026
 F-statistic: 0.2646 on 2 and 36 DF,  p-value: 0.769
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -82,7 +82,7 @@ Multiple R-squared:  0.311,	Adjusted R-squared:  0.1732
 F-statistic: 2.257 on 2 and 10 DF,  p-value: 0.1553
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -103,7 +103,7 @@ Multiple R-squared:  0.09828,	Adjusted R-squared:  0.08386
 F-statistic: 6.812 on 2 and 125 DF,  p-value: 0.001556
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -124,7 +124,7 @@ Multiple R-squared:  0.1541,	Adjusted R-squared:  0.1268
 F-statistic: 5.648 on 2 and 62 DF,  p-value: 0.005578
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -145,7 +145,7 @@ Multiple R-squared:  0.08895,	Adjusted R-squared:  0.03833
 F-statistic: 1.757 on 2 and 36 DF,  p-value: 0.187
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -166,7 +166,7 @@ Multiple R-squared:  0.1703,	Adjusted R-squared:  0.004332
 F-statistic: 1.026 on 2 and 10 DF,  p-value: 0.3932
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -187,7 +187,7 @@ Multiple R-squared:  0.05315,	Adjusted R-squared:  0.038
 F-statistic: 3.508 on 2 and 125 DF,  p-value: 0.03294
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -208,7 +208,7 @@ Multiple R-squared:  0.08894,	Adjusted R-squared:  0.05955
 F-statistic: 3.026 on 2 and 62 DF,  p-value: 0.05572
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -229,7 +229,7 @@ Multiple R-squared:  0.08191,	Adjusted R-squared:  0.03091
 F-statistic: 1.606 on 2 and 36 DF,  p-value: 0.2147
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -250,7 +250,7 @@ Multiple R-squared:  0.1365,	Adjusted R-squared:  -0.03622
 F-statistic: 0.7903 on 2 and 10 DF,  p-value: 0.4801
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -271,7 +271,7 @@ Multiple R-squared:  0.01999,	Adjusted R-squared:  0.00431
 F-statistic: 1.275 on 2 and 125 DF,  p-value: 0.2831
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -292,7 +292,7 @@ Multiple R-squared:  0.03813,	Adjusted R-squared:  0.007099
 F-statistic: 1.229 on 2 and 62 DF,  p-value: 0.2997
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -313,7 +313,7 @@ Multiple R-squared:  0.0405,	Adjusted R-squared:  -0.01281
 F-statistic: 0.7597 on 2 and 36 DF,  p-value: 0.4752
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -334,7 +334,7 @@ Multiple R-squared:  0.2501,	Adjusted R-squared:  0.1002
 F-statistic: 1.668 on 2 and 10 DF,  p-value: 0.2371
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -355,7 +355,7 @@ Multiple R-squared:  0.01832,	Adjusted R-squared:  0.002614
 F-statistic: 1.166 on 2 and 125 DF,  p-value: 0.3148
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -376,7 +376,7 @@ Multiple R-squared:  0.03608,	Adjusted R-squared:  0.004984
 F-statistic:  1.16 on 2 and 62 DF,  p-value: 0.3201
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -397,7 +397,7 @@ Multiple R-squared:  0.03936,	Adjusted R-squared:  -0.01401
 F-statistic: 0.7375 on 2 and 36 DF,  p-value: 0.4854
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -418,7 +418,7 @@ Multiple R-squared:  0.2569,	Adjusted R-squared:  0.1083
 F-statistic: 1.728 on 2 and 10 DF,  p-value: 0.2266
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -439,7 +439,7 @@ Multiple R-squared:  0.009778,	Adjusted R-squared:  -0.006065
 F-statistic: 0.6172 on 2 and 125 DF,  p-value: 0.5411
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -460,7 +460,7 @@ Multiple R-squared:  0.02267,	Adjusted R-squared:  -0.008855
 F-statistic: 0.7191 on 2 and 62 DF,  p-value: 0.4912
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -481,7 +481,7 @@ Multiple R-squared:  0.03298,	Adjusted R-squared:  -0.02075
 F-statistic: 0.6138 on 2 and 36 DF,  p-value: 0.5469
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -502,7 +502,7 @@ Multiple R-squared:  0.3299,	Adjusted R-squared:  0.1959
 F-statistic: 2.462 on 2 and 10 DF,  p-value: 0.1351
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -523,7 +523,7 @@ Multiple R-squared:  0.005404,	Adjusted R-squared:  -0.01051
 F-statistic: 0.3396 on 2 and 125 DF,  p-value: 0.7127
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -544,7 +544,7 @@ Multiple R-squared:  0.01808,	Adjusted R-squared:  -0.01359
 F-statistic: 0.5708 on 2 and 62 DF,  p-value: 0.568
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -565,7 +565,7 @@ Multiple R-squared:  0.03035,	Adjusted R-squared:  -0.02351
 F-statistic: 0.5635 on 2 and 36 DF,  p-value: 0.5742
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -586,7 +586,7 @@ Multiple R-squared:  0.3572,	Adjusted R-squared:  0.2286
 F-statistic: 2.779 on 2 and 10 DF,  p-value: 0.1097
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -607,7 +607,7 @@ Multiple R-squared:  0.001877,	Adjusted R-squared:  -0.01548
 F-statistic: 0.1081 on 2 and 115 DF,  p-value: 0.8976
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -628,7 +628,7 @@ Multiple R-squared:  0.0173,	Adjusted R-squared:  -0.01718
 F-statistic: 0.5017 on 2 and 57 DF,  p-value: 0.6081
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -649,7 +649,7 @@ Multiple R-squared:  0.04654,	Adjusted R-squared:  -0.01125
 F-statistic: 0.8054 on 2 and 33 DF,  p-value: 0.4555
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -670,7 +670,7 @@ Multiple R-squared:  0.1859,	Adjusted R-squared:  0.005037
 F-statistic: 1.028 on 2 and 9 DF,  p-value: 0.3962
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -691,7 +691,7 @@ Multiple R-squared:  0.01007,	Adjusted R-squared:  -0.00577
 F-statistic: 0.6357 on 2 and 125 DF,  p-value: 0.5313
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -712,7 +712,7 @@ Multiple R-squared:  0.02132,	Adjusted R-squared:  -0.01025
 F-statistic: 0.6752 on 2 and 62 DF,  p-value: 0.5128
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -733,7 +733,7 @@ Multiple R-squared:  0.03718,	Adjusted R-squared:  -0.0163
 F-statistic: 0.6952 on 2 and 36 DF,  p-value: 0.5056
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -754,7 +754,7 @@ Multiple R-squared:  0.1096,	Adjusted R-squared:  -0.06853
 F-statistic: 0.6152 on 2 and 10 DF,  p-value: 0.5598
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -775,7 +775,7 @@ Multiple R-squared:  0.009724,	Adjusted R-squared:  -0.00612
 F-statistic: 0.6137 on 2 and 125 DF,  p-value: 0.543
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -796,7 +796,7 @@ Multiple R-squared:  0.01631,	Adjusted R-squared:  -0.01543
 F-statistic: 0.5138 on 2 and 62 DF,  p-value: 0.6007
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -817,7 +817,7 @@ Multiple R-squared:  0.03087,	Adjusted R-squared:  -0.02298
 F-statistic: 0.5733 on 2 and 36 DF,  p-value: 0.5687
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -838,7 +838,7 @@ Multiple R-squared:  0.06682,	Adjusted R-squared:  -0.1198
 F-statistic: 0.358 on 2 and 10 DF,  p-value: 0.7077
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -859,7 +859,7 @@ Multiple R-squared:  0.1849,	Adjusted R-squared:  0.1681
 F-statistic:    11 on 2 and 97 DF,  p-value: 4.949e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -880,7 +880,7 @@ Multiple R-squared:  0.6325,	Adjusted R-squared:  0.6169
 F-statistic: 40.45 on 2 and 47 DF,  p-value: 6.07e-11
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -901,7 +901,7 @@ Multiple R-squared:  0.6091,	Adjusted R-squared:  0.5801
 F-statistic: 21.03 on 2 and 27 DF,  p-value: 3.116e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -922,7 +922,7 @@ Multiple R-squared:  0.6197,	Adjusted R-squared:  0.5111
 F-statistic: 5.704 on 2 and 7 DF,  p-value: 0.03391
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -943,7 +943,7 @@ Multiple R-squared:  0.1644,	Adjusted R-squared:  0.1472
 F-statistic: 9.544 on 2 and 97 DF,  p-value: 0.0001646
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -964,7 +964,7 @@ Multiple R-squared:  0.6049,	Adjusted R-squared:  0.5881
 F-statistic: 35.97 on 2 and 47 DF,  p-value: 3.337e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -985,7 +985,7 @@ Multiple R-squared:  0.5943,	Adjusted R-squared:  0.5643
 F-statistic: 19.78 on 2 and 27 DF,  p-value: 5.132e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1006,7 +1006,7 @@ Multiple R-squared:  0.5957,	Adjusted R-squared:  0.4802
 F-statistic: 5.157 on 2 and 7 DF,  p-value: 0.04202
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1027,7 +1027,7 @@ Multiple R-squared:  0.1289,	Adjusted R-squared:  0.1109
 F-statistic: 7.175 on 2 and 97 DF,  p-value: 0.001241
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1048,7 +1048,7 @@ Multiple R-squared:  0.5719,	Adjusted R-squared:  0.5537
 F-statistic: 31.39 on 2 and 47 DF,  p-value: 2.196e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1069,7 +1069,7 @@ Multiple R-squared:  0.5564,	Adjusted R-squared:  0.5235
 F-statistic: 16.93 on 2 and 27 DF,  p-value: 1.717e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1090,7 +1090,7 @@ Multiple R-squared:  0.5615,	Adjusted R-squared:  0.4362
 F-statistic: 4.481 on 2 and 7 DF,  p-value: 0.05585
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1111,7 +1111,7 @@ Multiple R-squared:  0.08148,	Adjusted R-squared:  0.06254
 F-statistic: 4.302 on 2 and 97 DF,  p-value: 0.01621
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1132,7 +1132,7 @@ Multiple R-squared:  0.5174,	Adjusted R-squared:  0.4969
 F-statistic:  25.2 on 2 and 47 DF,  p-value: 3.663e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1153,7 +1153,7 @@ Multiple R-squared:  0.5015,	Adjusted R-squared:  0.4646
 F-statistic: 13.58 on 2 and 27 DF,  p-value: 8.283e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1174,7 +1174,7 @@ Multiple R-squared:  0.508,	Adjusted R-squared:  0.3675
 F-statistic: 3.614 on 2 and 7 DF,  p-value: 0.08353
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1195,7 +1195,7 @@ Multiple R-squared:  0.07144,	Adjusted R-squared:  0.05229
 F-statistic: 3.731 on 2 and 97 DF,  p-value: 0.02747
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1216,7 +1216,7 @@ Multiple R-squared:  0.4812,	Adjusted R-squared:  0.4591
 F-statistic:  21.8 on 2 and 47 DF,  p-value: 2.005e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1237,7 +1237,7 @@ Multiple R-squared:  0.463,	Adjusted R-squared:  0.4233
 F-statistic: 11.64 on 2 and 27 DF,  p-value: 0.0002261
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1258,7 +1258,7 @@ Multiple R-squared:  0.4625,	Adjusted R-squared:  0.309
 F-statistic: 3.012 on 2 and 7 DF,  p-value: 0.1138
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1279,7 +1279,7 @@ Multiple R-squared:  0.02401,	Adjusted R-squared:  0.003884
 F-statistic: 1.193 on 2 and 97 DF,  p-value: 0.3077
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1300,7 +1300,7 @@ Multiple R-squared:  0.304,	Adjusted R-squared:  0.2744
 F-statistic: 10.26 on 2 and 47 DF,  p-value: 0.0002001
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1321,7 +1321,7 @@ Multiple R-squared:  0.3039,	Adjusted R-squared:  0.2523
 F-statistic: 5.893 on 2 and 27 DF,  p-value: 0.007519
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1342,7 +1342,7 @@ Multiple R-squared:  0.2848,	Adjusted R-squared:  0.0805
 F-statistic: 1.394 on 2 and 7 DF,  p-value: 0.3093
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1363,7 +1363,7 @@ Multiple R-squared:  0.006994,	Adjusted R-squared:  -0.01348
 F-statistic: 0.3416 on 2 and 97 DF,  p-value: 0.7115
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1384,7 +1384,7 @@ Multiple R-squared:  0.2217,	Adjusted R-squared:  0.1886
 F-statistic: 6.695 on 2 and 47 DF,  p-value: 0.002765
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1405,7 +1405,7 @@ Multiple R-squared:  0.303,	Adjusted R-squared:  0.2514
 F-statistic:  5.87 on 2 and 27 DF,  p-value: 0.007645
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1426,7 +1426,7 @@ Multiple R-squared:  0.2739,	Adjusted R-squared:  0.06646
 F-statistic:  1.32 on 2 and 7 DF,  p-value: 0.3262
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1447,7 +1447,7 @@ Multiple R-squared:  0.0001826,	Adjusted R-squared:  -0.02043
 F-statistic: 0.00886 on 2 and 97 DF,  p-value: 0.9912
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1468,7 +1468,7 @@ Multiple R-squared:  0.03651,	Adjusted R-squared:  -0.004486
 F-statistic: 0.8906 on 2 and 47 DF,  p-value: 0.4172
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1489,7 +1489,7 @@ Multiple R-squared:  0.1445,	Adjusted R-squared:  0.08117
 F-statistic: 2.281 on 2 and 27 DF,  p-value: 0.1215
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1510,7 +1510,7 @@ Multiple R-squared:  0.1374,	Adjusted R-squared:  -0.1091
 F-statistic: 0.5573 on 2 and 7 DF,  p-value: 0.5962
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1531,7 +1531,7 @@ Multiple R-squared:  0.002181,	Adjusted R-squared:  -0.01839
 F-statistic: 0.106 on 2 and 97 DF,  p-value: 0.8995
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1552,7 +1552,7 @@ Multiple R-squared:  0.008488,	Adjusted R-squared:  -0.0337
 F-statistic: 0.2012 on 2 and 47 DF,  p-value: 0.8185
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1573,7 +1573,7 @@ Multiple R-squared:  0.07457,	Adjusted R-squared:  0.006024
 F-statistic: 1.088 on 2 and 27 DF,  p-value: 0.3512
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1594,7 +1594,7 @@ Multiple R-squared:  0.1181,	Adjusted R-squared:  -0.1338
 F-statistic: 0.4689 on 2 and 7 DF,  p-value: 0.644
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1615,7 +1615,7 @@ Multiple R-squared:  0.005473,	Adjusted R-squared:  -0.01503
 F-statistic: 0.2669 on 2 and 97 DF,  p-value: 0.7663
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1636,7 +1636,7 @@ Multiple R-squared:  0.009187,	Adjusted R-squared:  -0.03298
 F-statistic: 0.2179 on 2 and 47 DF,  p-value: 0.805
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1657,7 +1657,7 @@ Multiple R-squared:  0.04785,	Adjusted R-squared:  -0.02268
 F-statistic: 0.6784 on 2 and 27 DF,  p-value: 0.5159
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1678,7 +1678,7 @@ Multiple R-squared:  0.1301,	Adjusted R-squared:  -0.1184
 F-statistic: 0.5235 on 2 and 7 DF,  p-value: 0.6139
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1699,7 +1699,7 @@ Multiple R-squared:  0.4037,	Adjusted R-squared:  0.3934
 F-statistic: 39.26 on 2 and 116 DF,  p-value: 9.506e-14
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1720,7 +1720,7 @@ Multiple R-squared:  0.3817,	Adjusted R-squared:  0.3596
 F-statistic: 17.28 on 2 and 56 DF,  p-value: 1.425e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1741,7 +1741,7 @@ Multiple R-squared:  0.3617,	Adjusted R-squared:  0.3218
 F-statistic: 9.068 on 2 and 32 DF,  p-value: 0.0007587
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1762,7 +1762,7 @@ Multiple R-squared:  0.437,	Adjusted R-squared:  0.3118
 F-statistic: 3.492 on 2 and 9 DF,  p-value: 0.07541
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1783,7 +1783,7 @@ Multiple R-squared:  0.5119,	Adjusted R-squared:  0.5035
 F-statistic: 60.83 on 2 and 116 DF,  p-value: < 2.2e-16
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1804,7 +1804,7 @@ Multiple R-squared:  0.5233,	Adjusted R-squared:  0.5063
 F-statistic: 30.74 on 2 and 56 DF,  p-value: 9.776e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1825,7 +1825,7 @@ Multiple R-squared:  0.5168,	Adjusted R-squared:  0.4866
 F-statistic: 17.11 on 2 and 32 DF,  p-value: 8.833e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1846,7 +1846,7 @@ Multiple R-squared:  0.5439,	Adjusted R-squared:  0.4426
 F-statistic: 5.367 on 2 and 9 DF,  p-value: 0.02922
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1867,7 +1867,7 @@ Multiple R-squared:  0.5491,	Adjusted R-squared:  0.5413
 F-statistic: 70.63 on 2 and 116 DF,  p-value: < 2.2e-16
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1888,7 +1888,7 @@ Multiple R-squared:  0.6282,	Adjusted R-squared:  0.6149
 F-statistic: 47.31 on 2 and 56 DF,  p-value: 9.301e-13
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1909,7 +1909,7 @@ Multiple R-squared:  0.6497,	Adjusted R-squared:  0.6278
 F-statistic: 29.68 on 2 and 32 DF,  p-value: 5.141e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1930,7 +1930,7 @@ Multiple R-squared:  0.6421,	Adjusted R-squared:  0.5626
 F-statistic: 8.074 on 2 and 9 DF,  p-value: 0.009814
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1951,7 +1951,7 @@ Multiple R-squared:  0.4081,	Adjusted R-squared:  0.3979
 F-statistic: 39.99 on 2 and 116 DF,  p-value: 6.171e-14
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1972,7 +1972,7 @@ Multiple R-squared:  0.4735,	Adjusted R-squared:  0.4547
 F-statistic: 25.18 on 2 and 56 DF,  p-value: 1.586e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -1993,7 +1993,7 @@ Multiple R-squared:  0.4847,	Adjusted R-squared:  0.4524
 F-statistic: 15.05 on 2 and 32 DF,  p-value: 2.475e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2014,7 +2014,7 @@ Multiple R-squared:  0.4605,	Adjusted R-squared:  0.3406
 F-statistic: 3.841 on 2 and 9 DF,  p-value: 0.06222
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2035,7 +2035,7 @@ Multiple R-squared:   0.36,	Adjusted R-squared:  0.3489
 F-statistic: 32.62 on 2 and 116 DF,  p-value: 5.745e-12
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2056,7 +2056,7 @@ Multiple R-squared:  0.4269,	Adjusted R-squared:  0.4064
 F-statistic: 20.85 on 2 and 56 DF,  p-value: 1.704e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2077,7 +2077,7 @@ Multiple R-squared:  0.4387,	Adjusted R-squared:  0.4036
 F-statistic:  12.5 on 2 and 32 DF,  p-value: 9.721e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2098,7 +2098,7 @@ Multiple R-squared:  0.4066,	Adjusted R-squared:  0.2748
 F-statistic: 3.084 on 2 and 9 DF,  p-value: 0.09549
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2119,7 +2119,7 @@ Multiple R-squared:  0.3822,	Adjusted R-squared:  0.3713
 F-statistic: 35.26 on 2 and 114 DF,  p-value: 1.2e-12
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2140,7 +2140,7 @@ Multiple R-squared:  0.4541,	Adjusted R-squared:  0.4346
 F-statistic: 23.29 on 2 and 56 DF,  p-value: 4.352e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2161,7 +2161,7 @@ Multiple R-squared:  0.4482,	Adjusted R-squared:  0.4137
 F-statistic:    13 on 2 and 32 DF,  p-value: 7.381e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2182,7 +2182,7 @@ Multiple R-squared:  0.4098,	Adjusted R-squared:  0.2786
 F-statistic: 3.124 on 2 and 9 DF,  p-value: 0.09325
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2203,7 +2203,7 @@ Multiple R-squared:   0.31,	Adjusted R-squared:  0.2979
 F-statistic: 25.61 on 2 and 114 DF,  p-value: 6.504e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2224,7 +2224,7 @@ Multiple R-squared:  0.3914,	Adjusted R-squared:  0.3696
 F-statistic:    18 on 2 and 56 DF,  p-value: 9.165e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2245,7 +2245,7 @@ Multiple R-squared:  0.3802,	Adjusted R-squared:  0.3415
 F-statistic: 9.817 on 2 and 32 DF,  p-value: 0.0004737
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2266,7 +2266,7 @@ Multiple R-squared:  0.3187,	Adjusted R-squared:  0.1672
 F-statistic: 2.105 on 2 and 9 DF,  p-value: 0.1779
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2287,7 +2287,7 @@ Multiple R-squared:  0.2402,	Adjusted R-squared:  0.227
 F-statistic: 18.18 on 2 and 115 DF,  p-value: 1.383e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2308,7 +2308,7 @@ Multiple R-squared:  0.3433,	Adjusted R-squared:  0.3202
 F-statistic:  14.9 on 2 and 57 DF,  p-value: 6.247e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2329,7 +2329,7 @@ Multiple R-squared:  0.3096,	Adjusted R-squared:  0.2678
 F-statistic:   7.4 on 2 and 33 DF,  p-value: 0.002212
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2350,7 +2350,7 @@ Multiple R-squared:  0.2779,	Adjusted R-squared:  0.1174
 F-statistic: 1.732 on 2 and 9 DF,  p-value: 0.2311
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2371,7 +2371,7 @@ Multiple R-squared:  0.1994,	Adjusted R-squared:  0.1854
 F-statistic:  14.2 on 2 and 114 DF,  p-value: 3.115e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2392,7 +2392,7 @@ Multiple R-squared:  0.2846,	Adjusted R-squared:  0.2591
 F-statistic: 11.14 on 2 and 56 DF,  p-value: 8.457e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2413,7 +2413,7 @@ Multiple R-squared:  0.2979,	Adjusted R-squared:  0.254
 F-statistic: 6.787 on 2 and 32 DF,  p-value: 0.00349
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2434,7 +2434,7 @@ Multiple R-squared:  0.3156,	Adjusted R-squared:  0.1635
 F-statistic: 2.075 on 2 and 9 DF,  p-value: 0.1815
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2455,7 +2455,7 @@ Multiple R-squared:  0.1516,	Adjusted R-squared:  0.1371
 F-statistic: 10.45 on 2 and 117 DF,  p-value: 6.669e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2476,7 +2476,7 @@ Multiple R-squared:  0.2318,	Adjusted R-squared:  0.2049
 F-statistic: 8.602 on 2 and 57 DF,  p-value: 0.0005437
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2497,7 +2497,7 @@ Multiple R-squared:  0.2727,	Adjusted R-squared:  0.2286
 F-statistic: 6.187 on 2 and 33 DF,  p-value: 0.005226
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2518,7 +2518,7 @@ Multiple R-squared:  0.2966,	Adjusted R-squared:  0.1402
 F-statistic: 1.897 on 2 and 9 DF,  p-value: 0.2054
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2539,7 +2539,7 @@ Multiple R-squared:  0.147,	Adjusted R-squared:  0.131
 F-statistic: 9.219 on 2 and 107 DF,  p-value: 0.0002023
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2560,7 +2560,7 @@ Multiple R-squared:  0.2174,	Adjusted R-squared:  0.1873
 F-statistic: 7.224 on 2 and 52 DF,  p-value: 0.001705
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2581,7 +2581,7 @@ Multiple R-squared:  0.2239,	Adjusted R-squared:  0.1721
 F-statistic: 4.326 on 2 and 30 DF,  p-value: 0.02234
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2602,7 +2602,7 @@ Multiple R-squared:  0.2264,	Adjusted R-squared:  0.03302
 F-statistic: 1.171 on 2 and 8 DF,  p-value: 0.3581
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2623,7 +2623,7 @@ Multiple R-squared:  0.1319,	Adjusted R-squared:  0.1157
 F-statistic: 8.132 on 2 and 107 DF,  p-value: 0.0005158
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2644,7 +2644,7 @@ Multiple R-squared:  0.172,	Adjusted R-squared:  0.1401
 F-statistic:   5.4 on 2 and 52 DF,  p-value: 0.0074
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2665,7 +2665,7 @@ Multiple R-squared:  0.1835,	Adjusted R-squared:  0.1291
 F-statistic: 3.371 on 2 and 30 DF,  p-value: 0.0478
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2686,7 +2686,7 @@ Multiple R-squared:  0.1818,	Adjusted R-squared:  -0.02276
 F-statistic: 0.8887 on 2 and 8 DF,  p-value: 0.4482
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2707,7 +2707,7 @@ Multiple R-squared:  0.1582,	Adjusted R-squared:  0.1424
 F-statistic: 10.05 on 2 and 107 DF,  p-value: 9.996e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2728,7 +2728,7 @@ Multiple R-squared:  0.1881,	Adjusted R-squared:  0.1568
 F-statistic: 6.023 on 2 and 52 DF,  p-value: 0.00444
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2749,7 +2749,7 @@ Multiple R-squared:  0.1925,	Adjusted R-squared:  0.1386
 F-statistic: 3.575 on 2 and 30 DF,  p-value: 0.04049
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2770,7 +2770,7 @@ Multiple R-squared:  0.1922,	Adjusted R-squared:  -0.009783
 F-statistic: 0.9516 on 2 and 8 DF,  p-value: 0.4259
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2791,7 +2791,7 @@ Multiple R-squared:  0.1456,	Adjusted R-squared:  0.1297
 F-statistic: 9.119 on 2 and 107 DF,  p-value: 0.0002205
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2812,7 +2812,7 @@ Multiple R-squared:  0.1591,	Adjusted R-squared:  0.1268
 F-statistic: 4.919 on 2 and 52 DF,  p-value: 0.01105
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2833,7 +2833,7 @@ Multiple R-squared:  0.1715,	Adjusted R-squared:  0.1162
 F-statistic: 3.104 on 2 and 30 DF,  p-value: 0.05951
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2854,7 +2854,7 @@ Multiple R-squared:  0.1554,	Adjusted R-squared:  -0.0558
 F-statistic: 0.7357 on 2 and 8 DF,  p-value: 0.509
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2875,7 +2875,7 @@ Multiple R-squared:  0.136,	Adjusted R-squared:  0.1198
 F-statistic: 8.421 on 2 and 107 DF,  p-value: 0.0004015
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2896,7 +2896,7 @@ Multiple R-squared:  0.1473,	Adjusted R-squared:  0.1145
 F-statistic: 4.491 on 2 and 52 DF,  p-value: 0.01587
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2917,7 +2917,7 @@ Multiple R-squared:  0.1672,	Adjusted R-squared:  0.1117
 F-statistic: 3.012 on 2 and 30 DF,  p-value: 0.06425
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2938,7 +2938,7 @@ Multiple R-squared:  0.1494,	Adjusted R-squared:  -0.06319
 F-statistic: 0.7028 on 2 and 8 DF,  p-value: 0.5234
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2959,7 +2959,7 @@ Multiple R-squared:  0.1413,	Adjusted R-squared:  0.1253
 F-statistic: 8.805 on 2 and 107 DF,  p-value: 0.0002884
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -2980,7 +2980,7 @@ Multiple R-squared:  0.1393,	Adjusted R-squared:  0.1062
 F-statistic: 4.209 on 2 and 52 DF,  p-value: 0.02022
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3001,7 +3001,7 @@ Multiple R-squared:   0.17,	Adjusted R-squared:  0.1147
 F-statistic: 3.072 on 2 and 30 DF,  p-value: 0.06111
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3022,7 +3022,7 @@ Multiple R-squared:  0.1487,	Adjusted R-squared:  -0.06419
 F-statistic: 0.6984 on 2 and 8 DF,  p-value: 0.5253
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3043,7 +3043,7 @@ Multiple R-squared:  0.138,	Adjusted R-squared:  0.1219
 F-statistic: 8.564 on 2 and 107 DF,  p-value: 0.000355
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3064,7 +3064,7 @@ Multiple R-squared:  0.1002,	Adjusted R-squared:  0.06564
 F-statistic: 2.897 on 2 and 52 DF,  p-value: 0.06416
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3085,7 +3085,7 @@ Multiple R-squared:  0.1249,	Adjusted R-squared:  0.06652
 F-statistic:  2.14 on 2 and 30 DF,  p-value: 0.1353
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3106,7 +3106,7 @@ Multiple R-squared:  0.1058,	Adjusted R-squared:  -0.1177
 F-statistic: 0.4735 on 2 and 8 DF,  p-value: 0.6392
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3127,7 +3127,7 @@ Multiple R-squared:  0.1991,	Adjusted R-squared:  0.1842
 F-statistic:  13.3 on 2 and 107 DF,  p-value: 6.925e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3148,7 +3148,7 @@ Multiple R-squared:  0.1226,	Adjusted R-squared:  0.08884
 F-statistic: 3.632 on 2 and 52 DF,  p-value: 0.03337
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3169,7 +3169,7 @@ Multiple R-squared:  0.1208,	Adjusted R-squared:  0.06222
 F-statistic: 2.062 on 2 and 30 DF,  p-value: 0.1449
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3190,7 +3190,7 @@ Multiple R-squared:  0.08993,	Adjusted R-squared:  -0.1376
 F-statistic: 0.3953 on 2 and 8 DF,  p-value: 0.686
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3211,7 +3211,7 @@ Multiple R-squared:  0.2564,	Adjusted R-squared:  0.2425
 F-statistic: 18.45 on 2 and 107 DF,  p-value: 1.308e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3232,7 +3232,7 @@ Multiple R-squared:  0.2127,	Adjusted R-squared:  0.1824
 F-statistic: 7.023 on 2 and 52 DF,  p-value: 0.001996
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3253,7 +3253,7 @@ Multiple R-squared:  0.1728,	Adjusted R-squared:  0.1177
 F-statistic: 3.134 on 2 and 30 DF,  p-value: 0.05808
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3274,7 +3274,7 @@ Multiple R-squared:  0.1368,	Adjusted R-squared:  -0.07905
 F-statistic: 0.6337 on 2 and 8 DF,  p-value: 0.5553
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3295,7 +3295,7 @@ Multiple R-squared:  0.298,	Adjusted R-squared:  0.2869
 F-statistic: 26.95 on 2 and 127 DF,  p-value: 1.751e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3316,7 +3316,7 @@ Multiple R-squared:  0.3008,	Adjusted R-squared:  0.2782
 F-statistic: 13.33 on 2 and 62 DF,  p-value: 1.526e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3337,7 +3337,7 @@ Multiple R-squared:  0.2738,	Adjusted R-squared:  0.2335
 F-statistic: 6.788 on 2 and 36 DF,  p-value: 0.003152
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3358,7 +3358,7 @@ Multiple R-squared:  0.2256,	Adjusted R-squared:  0.07069
 F-statistic: 1.456 on 2 and 10 DF,  p-value: 0.2785
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3379,7 +3379,7 @@ Multiple R-squared:  0.2047,	Adjusted R-squared:  0.1922
 F-statistic: 16.34 on 2 and 127 DF,  p-value: 4.836e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3400,7 +3400,7 @@ Multiple R-squared:  0.2272,	Adjusted R-squared:  0.2023
 F-statistic: 9.113 on 2 and 62 DF,  p-value: 0.0003392
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3421,7 +3421,7 @@ Multiple R-squared:  0.2258,	Adjusted R-squared:  0.1828
 F-statistic: 5.251 on 2 and 36 DF,  p-value: 0.009979
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: M
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3442,7 +3442,7 @@ Multiple R-squared:  0.2278,	Adjusted R-squared:  0.0734
 F-statistic: 1.475 on 2 and 10 DF,  p-value: 0.2745
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3463,7 +3463,7 @@ Multiple R-squared:  0.279,	Adjusted R-squared:  0.2676
 F-statistic: 24.57 on 2 and 127 DF,  p-value: 9.528e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3484,7 +3484,7 @@ Multiple R-squared:  0.3254,	Adjusted R-squared:  0.3036
 F-statistic: 14.95 on 2 and 62 DF,  p-value: 5.015e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3505,7 +3505,7 @@ Multiple R-squared:  0.3164,	Adjusted R-squared:  0.2784
 F-statistic: 8.332 on 2 and 36 DF,  p-value: 0.001062
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: M
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3526,7 +3526,7 @@ Multiple R-squared:  0.3224,	Adjusted R-squared:  0.1869
 F-statistic: 2.379 on 2 and 10 DF,  p-value: 0.1429
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3547,7 +3547,7 @@ Multiple R-squared:  0.3119,	Adjusted R-squared:  0.3011
 F-statistic: 28.79 on 2 and 127 DF,  p-value: 4.897e-11
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3568,7 +3568,7 @@ Multiple R-squared:  0.4157,	Adjusted R-squared:  0.3968
 F-statistic: 22.05 on 2 and 62 DF,  p-value: 5.839e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3589,7 +3589,7 @@ Multiple R-squared:  0.4065,	Adjusted R-squared:  0.3735
 F-statistic: 12.33 on 2 and 36 DF,  p-value: 8.348e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: M
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3610,7 +3610,7 @@ Multiple R-squared:  0.4068,	Adjusted R-squared:  0.2881
 F-statistic: 3.428 on 2 and 10 DF,  p-value: 0.07348
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3631,7 +3631,7 @@ Multiple R-squared:  0.2933,	Adjusted R-squared:  0.2822
 F-statistic: 26.36 on 2 and 127 DF,  p-value: 2.665e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3652,7 +3652,7 @@ Multiple R-squared:  0.4168,	Adjusted R-squared:  0.398
 F-statistic: 22.16 on 2 and 62 DF,  p-value: 5.498e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3673,7 +3673,7 @@ Multiple R-squared:  0.4051,	Adjusted R-squared:  0.3721
 F-statistic: 12.26 on 2 and 36 DF,  p-value: 8.706e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: M
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3694,7 +3694,7 @@ Multiple R-squared:  0.4023,	Adjusted R-squared:  0.2827
 F-statistic: 3.365 on 2 and 10 DF,  p-value: 0.0763
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3715,7 +3715,7 @@ Multiple R-squared:  0.2871,	Adjusted R-squared:  0.2758
 F-statistic: 25.57 on 2 and 127 DF,  p-value: 4.661e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3736,7 +3736,7 @@ Multiple R-squared:  0.4181,	Adjusted R-squared:  0.3993
 F-statistic: 22.27 on 2 and 62 DF,  p-value: 5.142e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3757,7 +3757,7 @@ Multiple R-squared:  0.4073,	Adjusted R-squared:  0.3744
 F-statistic: 12.37 on 2 and 36 DF,  p-value: 8.147e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: M
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3778,7 +3778,7 @@ Multiple R-squared:  0.4048,	Adjusted R-squared:  0.2858
 F-statistic: 3.401 on 2 and 10 DF,  p-value: 0.07468
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3799,7 +3799,7 @@ Multiple R-squared:  0.2649,	Adjusted R-squared:  0.2534
 F-statistic: 22.89 on 2 and 127 DF,  p-value: 3.245e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3820,7 +3820,7 @@ Multiple R-squared:  0.4146,	Adjusted R-squared:  0.3957
 F-statistic: 21.95 on 2 and 62 DF,  p-value: 6.191e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3841,7 +3841,7 @@ Multiple R-squared:  0.4048,	Adjusted R-squared:  0.3717
 F-statistic: 12.24 on 2 and 36 DF,  p-value: 8.8e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: M
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3862,7 +3862,7 @@ Multiple R-squared:  0.4036,	Adjusted R-squared:  0.2843
 F-statistic: 3.383 on 2 and 10 DF,  p-value: 0.07548
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3883,7 +3883,7 @@ Multiple R-squared:  0.2337,	Adjusted R-squared:  0.2217
 F-statistic: 19.37 on 2 and 127 DF,  p-value: 4.555e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3904,7 +3904,7 @@ Multiple R-squared:  0.4432,	Adjusted R-squared:  0.4252
 F-statistic: 24.67 on 2 and 62 DF,  p-value: 1.311e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3925,7 +3925,7 @@ Multiple R-squared:  0.446,	Adjusted R-squared:  0.4152
 F-statistic: 14.49 on 2 and 36 DF,  p-value: 2.415e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: M
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3946,7 +3946,7 @@ Multiple R-squared:  0.4643,	Adjusted R-squared:  0.3572
 F-statistic: 4.334 on 2 and 10 DF,  p-value: 0.04412
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3967,7 +3967,7 @@ Multiple R-squared:  0.2025,	Adjusted R-squared:  0.1899
 F-statistic: 16.12 on 2 and 127 DF,  p-value: 5.765e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -3988,7 +3988,7 @@ Multiple R-squared:  0.4285,	Adjusted R-squared:   0.41
 F-statistic: 23.24 on 2 and 62 DF,  p-value: 2.938e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4009,7 +4009,7 @@ Multiple R-squared:  0.458,	Adjusted R-squared:  0.4279
 F-statistic: 15.21 on 2 and 36 DF,  p-value: 1.63e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: M
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4030,7 +4030,7 @@ Multiple R-squared:  0.5316,	Adjusted R-squared:  0.4379
 F-statistic: 5.675 on 2 and 10 DF,  p-value: 0.02254
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4051,7 +4051,7 @@ Multiple R-squared:  0.1742,	Adjusted R-squared:  0.1612
 F-statistic: 13.39 on 2 and 127 DF,  p-value: 5.268e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4072,7 +4072,7 @@ Multiple R-squared:  0.3303,	Adjusted R-squared:  0.3087
 F-statistic: 15.29 on 2 and 62 DF,  p-value: 3.998e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4093,7 +4093,7 @@ Multiple R-squared:  0.3864,	Adjusted R-squared:  0.3523
 F-statistic: 11.34 on 2 and 36 DF,  p-value: 0.000152
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: M
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4114,7 +4114,7 @@ Multiple R-squared:  0.4482,	Adjusted R-squared:  0.3379
 F-statistic: 4.062 on 2 and 10 DF,  p-value: 0.05114
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4135,7 +4135,7 @@ Multiple R-squared:  0.1667,	Adjusted R-squared:  0.1535
 F-statistic:  12.7 on 2 and 127 DF,  p-value: 9.385e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4156,7 +4156,7 @@ Multiple R-squared:  0.2822,	Adjusted R-squared:  0.259
 F-statistic: 12.19 on 2 and 62 DF,  p-value: 3.441e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4177,7 +4177,7 @@ Multiple R-squared:  0.3567,	Adjusted R-squared:  0.321
 F-statistic: 9.982 on 2 and 36 DF,  p-value: 0.0003556
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: M
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4198,7 +4198,7 @@ Multiple R-squared:  0.4336,	Adjusted R-squared:  0.3203
 F-statistic: 3.827 on 2 and 10 DF,  p-value: 0.05831
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4219,7 +4219,7 @@ Multiple R-squared:  0.1235,	Adjusted R-squared:  0.1097
 F-statistic: 8.944 on 2 and 127 DF,  p-value: 0.0002323
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4240,7 +4240,7 @@ Multiple R-squared:  0.2231,	Adjusted R-squared:  0.1981
 F-statistic: 8.904 on 2 and 62 DF,  p-value: 0.0003986
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4261,7 +4261,7 @@ Multiple R-squared:  0.1749,	Adjusted R-squared:  0.1291
 F-statistic: 3.816 on 2 and 36 DF,  p-value: 0.03141
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4282,7 +4282,7 @@ Multiple R-squared:  0.1381,	Adjusted R-squared:  -0.03422
 F-statistic: 0.8015 on 2 and 10 DF,  p-value: 0.4755
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4303,7 +4303,7 @@ Multiple R-squared:  0.06744,	Adjusted R-squared:  0.05275
 F-statistic: 4.592 on 2 and 127 DF,  p-value: 0.01187
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4324,7 +4324,7 @@ Multiple R-squared:  0.1063,	Adjusted R-squared:  0.07745
 F-statistic: 3.686 on 2 and 62 DF,  p-value: 0.03071
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4345,7 +4345,7 @@ Multiple R-squared:  0.07062,	Adjusted R-squared:  0.01899
 F-statistic: 1.368 on 2 and 36 DF,  p-value: 0.2676
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4366,7 +4366,7 @@ Multiple R-squared:  0.02782,	Adjusted R-squared:  -0.1666
 F-statistic: 0.1431 on 2 and 10 DF,  p-value: 0.8684
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4387,7 +4387,7 @@ Multiple R-squared:  0.0552,	Adjusted R-squared:  0.04033
 F-statistic:  3.71 on 2 and 127 DF,  p-value: 0.02716
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4408,7 +4408,7 @@ Multiple R-squared:  0.07256,	Adjusted R-squared:  0.04264
 F-statistic: 2.425 on 2 and 62 DF,  p-value: 0.0968
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4429,7 +4429,7 @@ Multiple R-squared:  0.07519,	Adjusted R-squared:  0.02382
 F-statistic: 1.464 on 2 and 36 DF,  p-value: 0.2449
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4450,7 +4450,7 @@ Multiple R-squared:  0.04338,	Adjusted R-squared:  -0.1479
 F-statistic: 0.2267 on 2 and 10 DF,  p-value: 0.8011
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4471,7 +4471,7 @@ Multiple R-squared:  0.06269,	Adjusted R-squared:  0.04793
 F-statistic: 4.247 on 2 and 127 DF,  p-value: 0.01639
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4492,7 +4492,7 @@ Multiple R-squared:  0.07204,	Adjusted R-squared:  0.04211
 F-statistic: 2.407 on 2 and 62 DF,  p-value: 0.09848
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4513,7 +4513,7 @@ Multiple R-squared:  0.1017,	Adjusted R-squared:  0.0518
 F-statistic: 2.038 on 2 and 36 DF,  p-value: 0.145
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4534,7 +4534,7 @@ Multiple R-squared:  0.09897,	Adjusted R-squared:  -0.08124
 F-statistic: 0.5492 on 2 and 10 DF,  p-value: 0.5939
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4555,7 +4555,7 @@ Multiple R-squared:  0.06263,	Adjusted R-squared:  0.04787
 F-statistic: 4.243 on 2 and 127 DF,  p-value: 0.01645
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4576,7 +4576,7 @@ Multiple R-squared:  0.0705,	Adjusted R-squared:  0.04051
 F-statistic: 2.351 on 2 and 62 DF,  p-value: 0.1037
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4597,7 +4597,7 @@ Multiple R-squared:  0.0987,	Adjusted R-squared:  0.04863
 F-statistic: 1.971 on 2 and 36 DF,  p-value: 0.154
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4618,7 +4618,7 @@ Multiple R-squared:  0.09616,	Adjusted R-squared:  -0.08461
 F-statistic: 0.5319 on 2 and 10 DF,  p-value: 0.6032
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4639,7 +4639,7 @@ Multiple R-squared:  0.06487,	Adjusted R-squared:  0.05014
 F-statistic: 4.405 on 2 and 127 DF,  p-value: 0.01414
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4660,7 +4660,7 @@ Multiple R-squared:  0.06779,	Adjusted R-squared:  0.03772
 F-statistic: 2.254 on 2 and 62 DF,  p-value: 0.1135
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4681,7 +4681,7 @@ Multiple R-squared:  0.1107,	Adjusted R-squared:  0.06126
 F-statistic:  2.24 on 2 and 36 DF,  p-value: 0.1211
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4702,7 +4702,7 @@ Multiple R-squared:  0.1115,	Adjusted R-squared:  -0.06615
 F-statistic: 0.6277 on 2 and 10 DF,  p-value: 0.5536
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4723,7 +4723,7 @@ Multiple R-squared:  0.06468,	Adjusted R-squared:  0.04995
 F-statistic: 4.391 on 2 and 127 DF,  p-value: 0.01432
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4744,7 +4744,7 @@ Multiple R-squared:  0.05682,	Adjusted R-squared:  0.0264
 F-statistic: 1.868 on 2 and 62 DF,  p-value: 0.1631
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4765,7 +4765,7 @@ Multiple R-squared:  0.09184,	Adjusted R-squared:  0.04138
 F-statistic:  1.82 on 2 and 36 DF,  p-value: 0.1766
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4786,7 +4786,7 @@ Multiple R-squared:  0.1064,	Adjusted R-squared:  -0.07229
 F-statistic: 0.5955 on 2 and 10 DF,  p-value: 0.5697
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4807,7 +4807,7 @@ Multiple R-squared:  0.06164,	Adjusted R-squared:  0.04663
 F-statistic: 4.106 on 2 and 125 DF,  p-value: 0.01875
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4828,7 +4828,7 @@ Multiple R-squared:  0.06173,	Adjusted R-squared:  0.03045
 F-statistic: 1.974 on 2 and 60 DF,  p-value: 0.1479
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4849,7 +4849,7 @@ Multiple R-squared:  0.1387,	Adjusted R-squared:  0.08804
 F-statistic: 2.738 on 2 and 34 DF,  p-value: 0.07899
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4870,7 +4870,7 @@ Multiple R-squared:  0.3941,	Adjusted R-squared:  0.2595
 F-statistic: 2.927 on 2 and 9 DF,  p-value: 0.1049
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4891,7 +4891,7 @@ Multiple R-squared:  0.05612,	Adjusted R-squared:  0.04114
 F-statistic: 3.746 on 2 and 126 DF,  p-value: 0.02629
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4912,7 +4912,7 @@ Multiple R-squared:  0.05518,	Adjusted R-squared:  0.02421
 F-statistic: 1.781 on 2 and 61 DF,  p-value: 0.1771
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4933,7 +4933,7 @@ Multiple R-squared:  0.06428,	Adjusted R-squared:  0.01081
 F-statistic: 1.202 on 2 and 35 DF,  p-value: 0.3127
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4954,7 +4954,7 @@ Multiple R-squared:  0.1142,	Adjusted R-squared:  -0.06294
 F-statistic: 0.6447 on 2 and 10 DF,  p-value: 0.5453
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4975,7 +4975,7 @@ Multiple R-squared:  0.05786,	Adjusted R-squared:  0.04302
 F-statistic:   3.9 on 2 and 127 DF,  p-value: 0.02272
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -4996,7 +4996,7 @@ Multiple R-squared:  0.06574,	Adjusted R-squared:  0.0356
 F-statistic: 2.181 on 2 and 62 DF,  p-value: 0.1215
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5017,7 +5017,7 @@ Multiple R-squared:  0.07261,	Adjusted R-squared:  0.02109
 F-statistic: 1.409 on 2 and 36 DF,  p-value: 0.2575
 
 -----------------------------------------------------------------------------
-Wettbewerb: Berlin; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Berlin; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5038,7 +5038,7 @@ Multiple R-squared:  0.125,	Adjusted R-squared:  -0.05001
 F-statistic: 0.7142 on 2 and 10 DF,  p-value: 0.5129
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5059,7 +5059,7 @@ Multiple R-squared:  0.0715,	Adjusted R-squared:  0.05236
 F-statistic: 3.735 on 2 and 97 DF,  p-value: 0.02738
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5080,7 +5080,7 @@ Multiple R-squared:  0.2822,	Adjusted R-squared:  0.2516
 F-statistic: 9.238 on 2 and 47 DF,  p-value: 0.0004135
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5101,7 +5101,7 @@ Multiple R-squared:  0.1837,	Adjusted R-squared:  0.1232
 F-statistic: 3.038 on 2 and 27 DF,  p-value: 0.06455
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5122,7 +5122,7 @@ Multiple R-squared:  0.1199,	Adjusted R-squared:  -0.1316
 F-statistic: 0.4767 on 2 and 7 DF,  p-value: 0.6396
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5143,7 +5143,7 @@ Multiple R-squared:  0.01562,	Adjusted R-squared:  -0.00468
 F-statistic: 0.7694 on 2 and 97 DF,  p-value: 0.4661
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5164,7 +5164,7 @@ Multiple R-squared:  0.1432,	Adjusted R-squared:  0.1068
 F-statistic: 3.929 on 2 and 47 DF,  p-value: 0.02644
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5185,7 +5185,7 @@ Multiple R-squared:  0.0565,	Adjusted R-squared:  -0.01339
 F-statistic: 0.8084 on 2 and 27 DF,  p-value: 0.456
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5206,7 +5206,7 @@ Multiple R-squared:  0.02422,	Adjusted R-squared:  -0.2546
 F-statistic: 0.08688 on 2 and 7 DF,  p-value: 0.9178
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5227,7 +5227,7 @@ Multiple R-squared:  0.05642,	Adjusted R-squared:  0.03696
 F-statistic:   2.9 on 2 and 97 DF,  p-value: 0.05982
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5248,7 +5248,7 @@ Multiple R-squared:  0.2393,	Adjusted R-squared:  0.2069
 F-statistic: 7.393 on 2 and 47 DF,  p-value: 0.001616
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5269,7 +5269,7 @@ Multiple R-squared:  0.1486,	Adjusted R-squared:  0.0855
 F-statistic: 2.356 on 2 and 27 DF,  p-value: 0.114
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5290,7 +5290,7 @@ Multiple R-squared:  0.1223,	Adjusted R-squared:  -0.1285
 F-statistic: 0.4877 on 2 and 7 DF,  p-value: 0.6335
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5311,7 +5311,7 @@ Multiple R-squared:  0.05117,	Adjusted R-squared:  0.03161
 F-statistic: 2.616 on 2 and 97 DF,  p-value: 0.07828
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5332,7 +5332,7 @@ Multiple R-squared:  0.2343,	Adjusted R-squared:  0.2017
 F-statistic:  7.19 on 2 and 47 DF,  p-value: 0.001887
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5353,7 +5353,7 @@ Multiple R-squared:  0.1443,	Adjusted R-squared:  0.08089
 F-statistic: 2.276 on 2 and 27 DF,  p-value: 0.122
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5374,7 +5374,7 @@ Multiple R-squared:  0.1478,	Adjusted R-squared:  -0.09562
 F-statistic: 0.6073 on 2 and 7 DF,  p-value: 0.5712
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5395,7 +5395,7 @@ Multiple R-squared:  0.05602,	Adjusted R-squared:  0.03656
 F-statistic: 2.878 on 2 and 97 DF,  p-value: 0.06104
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5416,7 +5416,7 @@ Multiple R-squared:  0.2629,	Adjusted R-squared:  0.2315
 F-statistic:  8.38 on 2 and 47 DF,  p-value: 0.0007716
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5437,7 +5437,7 @@ Multiple R-squared:  0.1706,	Adjusted R-squared:  0.1092
 F-statistic: 2.777 on 2 and 27 DF,  p-value: 0.08
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5458,7 +5458,7 @@ Multiple R-squared:  0.1679,	Adjusted R-squared:  -0.06983
 F-statistic: 0.7063 on 2 and 7 DF,  p-value: 0.5255
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5479,7 +5479,7 @@ Multiple R-squared:  0.07549,	Adjusted R-squared:  0.05643
 F-statistic:  3.96 on 2 and 97 DF,  p-value: 0.02222
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5500,7 +5500,7 @@ Multiple R-squared:  0.3345,	Adjusted R-squared:  0.3062
 F-statistic: 11.81 on 2 and 47 DF,  p-value: 6.981e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5521,7 +5521,7 @@ Multiple R-squared:  0.2774,	Adjusted R-squared:  0.2239
 F-statistic: 5.183 on 2 and 27 DF,  p-value: 0.01244
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5542,7 +5542,7 @@ Multiple R-squared:  0.2653,	Adjusted R-squared:  0.05545
 F-statistic: 1.264 on 2 and 7 DF,  p-value: 0.3398
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5563,7 +5563,7 @@ Multiple R-squared:  0.06338,	Adjusted R-squared:  0.04407
 F-statistic: 3.282 on 2 and 97 DF,  p-value: 0.04176
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5584,7 +5584,7 @@ Multiple R-squared:  0.3616,	Adjusted R-squared:  0.3345
 F-statistic: 13.31 on 2 and 47 DF,  p-value: 2.625e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5605,7 +5605,7 @@ Multiple R-squared:  0.3793,	Adjusted R-squared:  0.3333
 F-statistic: 8.249 on 2 and 27 DF,  p-value: 0.0016
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5626,7 +5626,7 @@ Multiple R-squared:  0.3881,	Adjusted R-squared:  0.2132
 F-statistic: 2.219 on 2 and 7 DF,  p-value: 0.1793
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5647,7 +5647,7 @@ Multiple R-squared:  0.05204,	Adjusted R-squared:  0.03249
 F-statistic: 2.662 on 2 and 97 DF,  p-value: 0.07489
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5668,7 +5668,7 @@ Multiple R-squared:  0.3193,	Adjusted R-squared:  0.2904
 F-statistic: 11.02 on 2 and 47 DF,  p-value: 0.0001186
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5689,7 +5689,7 @@ Multiple R-squared:  0.4002,	Adjusted R-squared:  0.3558
 F-statistic: 9.009 on 2 and 27 DF,  p-value: 0.001007
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5710,7 +5710,7 @@ Multiple R-squared:  0.4623,	Adjusted R-squared:  0.3087
 F-statistic: 3.009 on 2 and 7 DF,  p-value: 0.114
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5731,7 +5731,7 @@ Multiple R-squared:  0.01958,	Adjusted R-squared:  -0.0006324
 F-statistic: 0.9687 on 2 and 97 DF,  p-value: 0.3832
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5752,7 +5752,7 @@ Multiple R-squared:  0.1247,	Adjusted R-squared:  0.08741
 F-statistic: 3.347 on 2 and 47 DF,  p-value: 0.04377
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5773,7 +5773,7 @@ Multiple R-squared:  0.2334,	Adjusted R-squared:  0.1766
 F-statistic:  4.11 on 2 and 27 DF,  p-value: 0.02766
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5794,7 +5794,7 @@ Multiple R-squared:  0.403,	Adjusted R-squared:  0.2324
 F-statistic: 2.362 on 2 and 7 DF,  p-value: 0.1644
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5815,7 +5815,7 @@ Multiple R-squared:  0.02169,	Adjusted R-squared:  0.001522
 F-statistic: 1.075 on 2 and 97 DF,  p-value: 0.3452
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5836,7 +5836,7 @@ Multiple R-squared:  0.06547,	Adjusted R-squared:  0.0257
 F-statistic: 1.646 on 2 and 47 DF,  p-value: 0.2037
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: London; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5857,7 +5857,7 @@ Multiple R-squared:  0.1711,	Adjusted R-squared:  0.1097
 F-statistic: 2.787 on 2 and 27 DF,  p-value: 0.07936
 
 -----------------------------------------------------------------------------
-Wettbewerb: London; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: London; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5878,7 +5878,7 @@ Multiple R-squared:  0.3765,	Adjusted R-squared:  0.1983
 F-statistic: 2.113 on 2 and 7 DF,  p-value: 0.1914
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5899,7 +5899,7 @@ Multiple R-squared:  0.05084,	Adjusted R-squared:  0.03462
 F-statistic: 3.134 on 2 and 117 DF,  p-value: 0.04724
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5920,7 +5920,7 @@ Multiple R-squared:  0.0636,	Adjusted R-squared:  0.03075
 F-statistic: 1.936 on 2 and 57 DF,  p-value: 0.1537
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5941,7 +5941,7 @@ Multiple R-squared:  0.08526,	Adjusted R-squared:  0.02983
 F-statistic: 1.538 on 2 and 33 DF,  p-value: 0.2298
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5962,7 +5962,7 @@ Multiple R-squared:  0.05345,	Adjusted R-squared:  -0.1569
 F-statistic: 0.2541 on 2 and 9 DF,  p-value: 0.781
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -5983,7 +5983,7 @@ Multiple R-squared:  0.03928,	Adjusted R-squared:  0.02286
 F-statistic: 2.392 on 2 and 117 DF,  p-value: 0.09592
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6004,7 +6004,7 @@ Multiple R-squared:  0.04979,	Adjusted R-squared:  0.01645
 F-statistic: 1.493 on 2 and 57 DF,  p-value: 0.2333
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6025,7 +6025,7 @@ Multiple R-squared:  0.07094,	Adjusted R-squared:  0.01463
 F-statistic:  1.26 on 2 and 33 DF,  p-value: 0.297
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6046,7 +6046,7 @@ Multiple R-squared:  0.03986,	Adjusted R-squared:  -0.1735
 F-statistic: 0.1868 on 2 and 9 DF,  p-value: 0.8327
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6067,7 +6067,7 @@ Multiple R-squared:  0.04772,	Adjusted R-squared:  0.03145
 F-statistic: 2.932 on 2 and 117 DF,  p-value: 0.05723
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6088,7 +6088,7 @@ Multiple R-squared:  0.06818,	Adjusted R-squared:  0.03549
 F-statistic: 2.085 on 2 and 57 DF,  p-value: 0.1336
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6109,7 +6109,7 @@ Multiple R-squared:  0.09366,	Adjusted R-squared:  0.03873
 F-statistic: 1.705 on 2 and 33 DF,  p-value: 0.1974
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6130,7 +6130,7 @@ Multiple R-squared:  0.05847,	Adjusted R-squared:  -0.1508
 F-statistic: 0.2794 on 2 and 9 DF,  p-value: 0.7625
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6151,7 +6151,7 @@ Multiple R-squared:  0.03926,	Adjusted R-squared:  0.02284
 F-statistic: 2.391 on 2 and 117 DF,  p-value: 0.09604
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6172,7 +6172,7 @@ Multiple R-squared:  0.08094,	Adjusted R-squared:  0.0487
 F-statistic:  2.51 on 2 and 57 DF,  p-value: 0.09021
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6193,7 +6193,7 @@ Multiple R-squared:  0.113,	Adjusted R-squared:  0.05922
 F-statistic: 2.102 on 2 and 33 DF,  p-value: 0.1383
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6214,7 +6214,7 @@ Multiple R-squared:  0.08311,	Adjusted R-squared:  -0.1206
 F-statistic: 0.4079 on 2 and 9 DF,  p-value: 0.6767
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6235,7 +6235,7 @@ Multiple R-squared:  0.04163,	Adjusted R-squared:  0.02525
 F-statistic: 2.541 on 2 and 117 DF,  p-value: 0.0831
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6256,7 +6256,7 @@ Multiple R-squared:  0.08829,	Adjusted R-squared:  0.0563
 F-statistic:  2.76 on 2 and 57 DF,  p-value: 0.07177
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6277,7 +6277,7 @@ Multiple R-squared:  0.1228,	Adjusted R-squared:  0.0696
 F-statistic: 2.309 on 2 and 33 DF,  p-value: 0.1152
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6298,7 +6298,7 @@ Multiple R-squared:  0.08964,	Adjusted R-squared:  -0.1127
 F-statistic: 0.4431 on 2 and 9 DF,  p-value: 0.6553
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6319,7 +6319,7 @@ Multiple R-squared:  0.03415,	Adjusted R-squared:  0.01764
 F-statistic: 2.069 on 2 and 117 DF,  p-value: 0.131
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6340,7 +6340,7 @@ Multiple R-squared:  0.1131,	Adjusted R-squared:  0.08202
 F-statistic: 3.636 on 2 and 57 DF,  p-value: 0.03265
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6361,7 +6361,7 @@ Multiple R-squared:  0.1534,	Adjusted R-squared:  0.102
 F-statistic: 2.989 on 2 and 33 DF,  p-value: 0.06413
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6382,7 +6382,7 @@ Multiple R-squared:  0.1386,	Adjusted R-squared:  -0.05279
 F-statistic: 0.7242 on 2 and 9 DF,  p-value: 0.5109
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6403,7 +6403,7 @@ Multiple R-squared:  0.02652,	Adjusted R-squared:  0.009883
 F-statistic: 1.594 on 2 and 117 DF,  p-value: 0.2075
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6424,7 +6424,7 @@ Multiple R-squared:  0.1265,	Adjusted R-squared:  0.09589
 F-statistic: 4.129 on 2 and 57 DF,  p-value: 0.02116
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6445,7 +6445,7 @@ Multiple R-squared:  0.1763,	Adjusted R-squared:  0.1263
 F-statistic: 3.531 on 2 and 33 DF,  p-value: 0.04079
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6466,7 +6466,7 @@ Multiple R-squared:  0.2099,	Adjusted R-squared:  0.03433
 F-statistic: 1.196 on 2 and 9 DF,  p-value: 0.3464
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6487,7 +6487,7 @@ Multiple R-squared:  0.01795,	Adjusted R-squared:  0.001165
 F-statistic: 1.069 on 2 and 117 DF,  p-value: 0.3465
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6508,7 +6508,7 @@ Multiple R-squared:  0.07173,	Adjusted R-squared:  0.03916
 F-statistic: 2.202 on 2 and 57 DF,  p-value: 0.1199
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6529,7 +6529,7 @@ Multiple R-squared:  0.1194,	Adjusted R-squared:  0.06605
 F-statistic: 2.238 on 2 and 33 DF,  p-value: 0.1227
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6550,7 +6550,7 @@ Multiple R-squared:  0.1879,	Adjusted R-squared:  0.007442
 F-statistic: 1.041 on 2 and 9 DF,  p-value: 0.3919
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6571,7 +6571,7 @@ Multiple R-squared:  0.03763,	Adjusted R-squared:  0.02118
 F-statistic: 2.288 on 2 and 117 DF,  p-value: 0.106
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6592,7 +6592,7 @@ Multiple R-squared:  0.03377,	Adjusted R-squared:  -0.0001356
 F-statistic: 0.996 on 2 and 57 DF,  p-value: 0.3757
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6613,7 +6613,7 @@ Multiple R-squared:  0.07388,	Adjusted R-squared:  0.01775
 F-statistic: 1.316 on 2 and 33 DF,  p-value: 0.2819
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6634,7 +6634,7 @@ Multiple R-squared:  0.1179,	Adjusted R-squared:  -0.07808
 F-statistic: 0.6017 on 2 and 9 DF,  p-value: 0.5685
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6655,7 +6655,7 @@ Multiple R-squared:  0.04124,	Adjusted R-squared:  0.02485
 F-statistic: 2.516 on 2 and 117 DF,  p-value: 0.08514
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6676,7 +6676,7 @@ Multiple R-squared:  0.02955,	Adjusted R-squared:  -0.004504
 F-statistic: 0.8677 on 2 and 57 DF,  p-value: 0.4254
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6697,7 +6697,7 @@ Multiple R-squared:  0.06928,	Adjusted R-squared:  0.01287
 F-statistic: 1.228 on 2 and 33 DF,  p-value: 0.3059
 
 -----------------------------------------------------------------------------
-Wettbewerb: NewYork; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: NewYork; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6718,7 +6718,7 @@ Multiple R-squared:  0.1122,	Adjusted R-squared:  -0.08509
 F-statistic: 0.5687 on 2 and 9 DF,  p-value: 0.5854
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6739,7 +6739,7 @@ Multiple R-squared:  0.2301,	Adjusted R-squared:  0.2157
 F-statistic: 15.99 on 2 and 107 DF,  p-value: 8.403e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6760,7 +6760,7 @@ Multiple R-squared:  0.3463,	Adjusted R-squared:  0.3212
 F-statistic: 13.78 on 2 and 52 DF,  p-value: 1.583e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6781,7 +6781,7 @@ Multiple R-squared:  0.3526,	Adjusted R-squared:  0.3094
 F-statistic: 8.168 on 2 and 30 DF,  p-value: 0.001472
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6802,7 +6802,7 @@ Multiple R-squared:  0.3207,	Adjusted R-squared:  0.1509
 F-statistic: 1.888 on 2 and 8 DF,  p-value: 0.2129
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6823,7 +6823,7 @@ Multiple R-squared:  0.234,	Adjusted R-squared:  0.2197
 F-statistic: 16.34 on 2 and 107 DF,  p-value: 6.408e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6844,7 +6844,7 @@ Multiple R-squared:  0.3912,	Adjusted R-squared:  0.3678
 F-statistic: 16.71 on 2 and 52 DF,  p-value: 2.488e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6865,7 +6865,7 @@ Multiple R-squared:  0.4099,	Adjusted R-squared:  0.3705
 F-statistic: 10.42 on 2 and 30 DF,  p-value: 0.0003665
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6886,7 +6886,7 @@ Multiple R-squared:  0.3686,	Adjusted R-squared:  0.2107
 F-statistic: 2.335 on 2 and 8 DF,  p-value: 0.159
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6907,7 +6907,7 @@ Multiple R-squared:  0.2497,	Adjusted R-squared:  0.2357
 F-statistic: 17.81 on 2 and 107 DF,  p-value: 2.112e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6928,7 +6928,7 @@ Multiple R-squared:  0.4332,	Adjusted R-squared:  0.4114
 F-statistic: 19.87 on 2 and 52 DF,  p-value: 3.876e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6949,7 +6949,7 @@ Multiple R-squared:  0.4701,	Adjusted R-squared:  0.4348
 F-statistic: 13.31 on 2 and 30 DF,  p-value: 7.285e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6970,7 +6970,7 @@ Multiple R-squared:  0.4216,	Adjusted R-squared:  0.277
 F-statistic: 2.915 on 2 and 8 DF,  p-value: 0.1119
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -6991,7 +6991,7 @@ Multiple R-squared:  0.2379,	Adjusted R-squared:  0.2237
 F-statistic: 16.71 on 2 and 107 DF,  p-value: 4.855e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7012,7 +7012,7 @@ Multiple R-squared:  0.4295,	Adjusted R-squared:  0.4076
 F-statistic: 19.57 on 2 and 52 DF,  p-value: 4.6e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7033,7 +7033,7 @@ Multiple R-squared:  0.4774,	Adjusted R-squared:  0.4425
 F-statistic:  13.7 on 2 and 30 DF,  p-value: 5.928e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7054,7 +7054,7 @@ Multiple R-squared:  0.4152,	Adjusted R-squared:  0.2691
 F-statistic: 2.841 on 2 and 8 DF,  p-value: 0.1169
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7075,7 +7075,7 @@ Multiple R-squared:  0.2354,	Adjusted R-squared:  0.2211
 F-statistic: 16.47 on 2 and 107 DF,  p-value: 5.791e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7096,7 +7096,7 @@ Multiple R-squared:  0.4283,	Adjusted R-squared:  0.4064
 F-statistic: 19.48 on 2 and 52 DF,  p-value: 4.848e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7117,7 +7117,7 @@ Multiple R-squared:  0.4807,	Adjusted R-squared:  0.446
 F-statistic: 13.88 on 2 and 30 DF,  p-value: 5.394e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7138,7 +7138,7 @@ Multiple R-squared:  0.4123,	Adjusted R-squared:  0.2654
 F-statistic: 2.806 on 2 and 8 DF,  p-value: 0.1193
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7159,7 +7159,7 @@ Multiple R-squared:  0.2327,	Adjusted R-squared:  0.2183
 F-statistic: 16.22 on 2 and 107 DF,  p-value: 7.033e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7180,7 +7180,7 @@ Multiple R-squared:  0.4366,	Adjusted R-squared:  0.4149
 F-statistic: 20.15 on 2 and 52 DF,  p-value: 3.319e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7201,7 +7201,7 @@ Multiple R-squared:  0.4941,	Adjusted R-squared:  0.4603
 F-statistic: 14.65 on 2 and 30 DF,  p-value: 3.643e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7222,7 +7222,7 @@ Multiple R-squared:  0.4097,	Adjusted R-squared:  0.2622
 F-statistic: 2.777 on 2 and 8 DF,  p-value: 0.1214
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7243,7 +7243,7 @@ Multiple R-squared:  0.2643,	Adjusted R-squared:  0.2506
 F-statistic: 19.22 on 2 and 107 DF,  p-value: 7.364e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7264,7 +7264,7 @@ Multiple R-squared:  0.4712,	Adjusted R-squared:  0.4508
 F-statistic: 23.16 on 2 and 52 DF,  p-value: 6.405e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7285,7 +7285,7 @@ Multiple R-squared:  0.522,	Adjusted R-squared:  0.4901
 F-statistic: 16.38 on 2 and 30 DF,  p-value: 1.556e-05
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7306,7 +7306,7 @@ Multiple R-squared:  0.4276,	Adjusted R-squared:  0.2845
 F-statistic: 2.989 on 2 and 8 DF,  p-value: 0.1073
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7327,7 +7327,7 @@ Multiple R-squared:  0.2969,	Adjusted R-squared:  0.2837
 F-statistic: 22.59 on 2 and 107 DF,  p-value: 6.544e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7348,7 +7348,7 @@ Multiple R-squared:  0.531,	Adjusted R-squared:  0.513
 F-statistic: 29.44 on 2 and 52 DF,  p-value: 2.819e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7369,7 +7369,7 @@ Multiple R-squared:  0.5948,	Adjusted R-squared:  0.5678
 F-statistic: 22.02 on 2 and 30 DF,  p-value: 1.303e-06
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7390,7 +7390,7 @@ Multiple R-squared:  0.5213,	Adjusted R-squared:  0.4016
 F-statistic: 4.356 on 2 and 8 DF,  p-value: 0.05252
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7411,7 +7411,7 @@ Multiple R-squared:  0.3112,	Adjusted R-squared:  0.2984
 F-statistic: 24.18 on 2 and 107 DF,  p-value: 2.171e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7432,7 +7432,7 @@ Multiple R-squared:  0.5487,	Adjusted R-squared:  0.5313
 F-statistic: 31.61 on 2 and 52 DF,  p-value: 1.04e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7453,7 +7453,7 @@ Multiple R-squared:  0.6386,	Adjusted R-squared:  0.6145
 F-statistic:  26.5 on 2 and 30 DF,  p-value: 2.348e-07
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7474,7 +7474,7 @@ Multiple R-squared:  0.5922,	Adjusted R-squared:  0.4902
 F-statistic: 5.808 on 2 and 8 DF,  p-value: 0.02766
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7495,7 +7495,7 @@ Multiple R-squared:  0.257,	Adjusted R-squared:  0.2453
 F-statistic: 21.97 on 2 and 127 DF,  p-value: 6.414e-09
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7516,7 +7516,7 @@ Multiple R-squared:  0.5008,	Adjusted R-squared:  0.4847
 F-statistic:  31.1 on 2 and 62 DF,  p-value: 4.425e-10
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7537,7 +7537,7 @@ Multiple R-squared:  0.6043,	Adjusted R-squared:  0.5823
 F-statistic: 27.49 on 2 and 36 DF,  p-value: 5.663e-08
 
 -----------------------------------------------------------------------------
-Wettbewerb: Chicago; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Chicago; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7558,7 +7558,7 @@ Multiple R-squared:  0.5911,	Adjusted R-squared:  0.5093
 F-statistic: 7.227 on 2 and 10 DF,  p-value: 0.01144
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7579,7 +7579,7 @@ Multiple R-squared:  0.1096,	Adjusted R-squared:  0.09554
 F-statistic: 7.813 on 2 and 127 DF,  p-value: 0.0006309
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7600,7 +7600,7 @@ Multiple R-squared:  0.1149,	Adjusted R-squared:  0.08637
 F-statistic: 4.025 on 2 and 62 DF,  p-value: 0.02272
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7621,7 +7621,7 @@ Multiple R-squared:  0.08943,	Adjusted R-squared:  0.03885
 F-statistic: 1.768 on 2 and 36 DF,  p-value: 0.1852
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_5; Geschlecht: W
 Call:
 lm(formula = S_KM_5 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7642,7 +7642,7 @@ Multiple R-squared:  0.1366,	Adjusted R-squared:  -0.03612
 F-statistic: 0.7908 on 2 and 10 DF,  p-value: 0.4799
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7663,7 +7663,7 @@ Multiple R-squared:  0.1022,	Adjusted R-squared:  0.08807
 F-statistic: 7.229 on 2 and 127 DF,  p-value: 0.001064
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7684,7 +7684,7 @@ Multiple R-squared:  0.1051,	Adjusted R-squared:  0.07625
 F-statistic: 3.641 on 2 and 62 DF,  p-value: 0.03197
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7705,7 +7705,7 @@ Multiple R-squared:  0.0804,	Adjusted R-squared:  0.02931
 F-statistic: 1.574 on 2 and 36 DF,  p-value: 0.2212
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_10; Geschlecht: W
 Call:
 lm(formula = S_KM_10 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7726,7 +7726,7 @@ Multiple R-squared:  0.1409,	Adjusted R-squared:  -0.03097
 F-statistic: 0.8198 on 2 and 10 DF,  p-value: 0.4681
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7747,7 +7747,7 @@ Multiple R-squared:  0.09158,	Adjusted R-squared:  0.07727
 F-statistic: 6.401 on 2 and 127 DF,  p-value: 0.002246
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7768,7 +7768,7 @@ Multiple R-squared:  0.09322,	Adjusted R-squared:  0.06397
 F-statistic: 3.187 on 2 and 62 DF,  p-value: 0.04814
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7789,7 +7789,7 @@ Multiple R-squared:  0.06898,	Adjusted R-squared:  0.01726
 F-statistic: 1.334 on 2 and 36 DF,  p-value: 0.2762
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_15; Geschlecht: W
 Call:
 lm(formula = S_KM_15 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7810,7 +7810,7 @@ Multiple R-squared:  0.1109,	Adjusted R-squared:  -0.06697
 F-statistic: 0.6234 on 2 and 10 DF,  p-value: 0.5557
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7831,7 +7831,7 @@ Multiple R-squared:  0.0979,	Adjusted R-squared:  0.0837
 F-statistic: 6.892 on 2 and 127 DF,  p-value: 0.001441
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7852,7 +7852,7 @@ Multiple R-squared:  0.1004,	Adjusted R-squared:  0.07134
 F-statistic: 3.458 on 2 and 62 DF,  p-value: 0.03768
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7873,7 +7873,7 @@ Multiple R-squared:  0.07864,	Adjusted R-squared:  0.02745
 F-statistic: 1.536 on 2 and 36 DF,  p-value: 0.229
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_20; Geschlecht: W
 Call:
 lm(formula = S_KM_20 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7894,7 +7894,7 @@ Multiple R-squared:  0.125,	Adjusted R-squared:  -0.04997
 F-statistic: 0.7145 on 2 and 10 DF,  p-value: 0.5128
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7915,7 +7915,7 @@ Multiple R-squared:  0.1007,	Adjusted R-squared:  0.08658
 F-statistic: 7.114 on 2 and 127 DF,  p-value: 0.00118
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7936,7 +7936,7 @@ Multiple R-squared:  0.1027,	Adjusted R-squared:  0.07372
 F-statistic: 3.547 on 2 and 62 DF,  p-value: 0.0348
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7957,7 +7957,7 @@ Multiple R-squared:  0.08185,	Adjusted R-squared:  0.03084
 F-statistic: 1.605 on 2 and 36 DF,  p-value: 0.215
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_HM; Geschlecht: W
 Call:
 lm(formula = S_KM_HM ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7978,7 +7978,7 @@ Multiple R-squared:  0.1311,	Adjusted R-squared:  -0.04271
 F-statistic: 0.7542 on 2 and 10 DF,  p-value: 0.4954
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -7999,7 +7999,7 @@ Multiple R-squared:  0.1087,	Adjusted R-squared:  0.09468
 F-statistic: 7.745 on 2 and 127 DF,  p-value: 0.0006701
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8020,7 +8020,7 @@ Multiple R-squared:  0.1122,	Adjusted R-squared:  0.08355
 F-statistic: 3.917 on 2 and 62 DF,  p-value: 0.025
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8041,7 +8041,7 @@ Multiple R-squared:  0.09494,	Adjusted R-squared:  0.04466
 F-statistic: 1.888 on 2 and 36 DF,  p-value: 0.166
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_25; Geschlecht: W
 Call:
 lm(formula = S_KM_25 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8062,7 +8062,7 @@ Multiple R-squared:  0.1556,	Adjusted R-squared:  -0.01327
 F-statistic: 0.9214 on 2 and 10 DF,  p-value: 0.4293
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8083,7 +8083,7 @@ Multiple R-squared:  0.1162,	Adjusted R-squared:  0.1023
 F-statistic: 8.349 on 2 and 127 DF,  p-value: 0.0003922
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8104,7 +8104,7 @@ Multiple R-squared:  0.1191,	Adjusted R-squared:  0.09066
 F-statistic:  4.19 on 2 and 62 DF,  p-value: 0.01964
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8125,7 +8125,7 @@ Multiple R-squared:  0.1103,	Adjusted R-squared:  0.06087
 F-statistic: 2.231 on 2 and 36 DF,  p-value: 0.122
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_30; Geschlecht: W
 Call:
 lm(formula = S_KM_30 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8146,7 +8146,7 @@ Multiple R-squared:  0.1637,	Adjusted R-squared:  -0.003507
 F-statistic: 0.979 on 2 and 10 DF,  p-value: 0.409
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8167,7 +8167,7 @@ Multiple R-squared:  0.1205,	Adjusted R-squared:  0.1067
 F-statistic: 8.702 on 2 and 127 DF,  p-value: 0.0002872
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8188,7 +8188,7 @@ Multiple R-squared:  0.1262,	Adjusted R-squared:  0.09805
 F-statistic: 4.479 on 2 and 62 DF,  p-value: 0.01525
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8209,7 +8209,7 @@ Multiple R-squared:  0.1306,	Adjusted R-squared:  0.08234
 F-statistic: 2.705 on 2 and 36 DF,  p-value: 0.08047
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_35; Geschlecht: W
 Call:
 lm(formula = S_KM_35 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8230,7 +8230,7 @@ Multiple R-squared:  0.2126,	Adjusted R-squared:  0.05515
 F-statistic:  1.35 on 2 and 10 DF,  p-value: 0.3026
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8251,7 +8251,7 @@ Multiple R-squared:  0.1243,	Adjusted R-squared:  0.1105
 F-statistic: 9.013 on 2 and 127 DF,  p-value: 0.0002186
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8272,7 +8272,7 @@ Multiple R-squared:  0.1322,	Adjusted R-squared:  0.1042
 F-statistic: 4.721 on 2 and 62 DF,  p-value: 0.01235
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8293,7 +8293,7 @@ Multiple R-squared:  0.143,	Adjusted R-squared:  0.09536
 F-statistic: 3.003 on 2 and 36 DF,  p-value: 0.06221
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_40; Geschlecht: W
 Call:
 lm(formula = S_KM_40 ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8314,7 +8314,7 @@ Multiple R-squared:  0.2301,	Adjusted R-squared:  0.07615
 F-statistic: 1.495 on 2 and 10 DF,  p-value: 0.2705
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  10; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8335,7 +8335,7 @@ Multiple R-squared:  0.1285,	Adjusted R-squared:  0.1147
 F-statistic: 9.361 on 2 and 127 DF,  p-value: 0.0001614
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  5; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8356,7 +8356,7 @@ Multiple R-squared:  0.1369,	Adjusted R-squared:  0.1091
 F-statistic: 4.917 on 2 and 62 DF,  p-value: 0.01042
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1  -  3; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 
@@ -8377,7 +8377,7 @@ Multiple R-squared:  0.1474,	Adjusted R-squared:    0.1
 F-statistic: 3.111 on 2 and 36 DF,  p-value: 0.05672
 
 -----------------------------------------------------------------------------
-Wettbewerb: Tokyo; Platz: 1; Temp.: 1  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
+Wettbewerb: Tokyo; Platz: 1; Temp.: 0  -  25; KM-Abschnitt: S_KM_FN; Geschlecht: W
 Call:
 lm(formula = S_KM_FN ~ poly(TMP_MEAN_RND1, reg_poly), data = final_selection)
 

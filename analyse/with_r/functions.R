@@ -102,73 +102,67 @@ my_reg_skm_tmp_2 <- function(data_frame,reg_poly=1,tmp_min=0, tmp_max=25, platz_
   
   
   sub_title <- paste("Wettbewerb: ",ort,"; Platz: ",st_platz, "; Temp.: ",st_tmp,"; KM-Abschnitt: ", skm, sep = "")
+  sub_title_list <- list(ort,st_platz,st_tmp,skm, geschlecht)
+  names(sub_title_list) <- c("Ort","Platz","Temperatur","SKM","Geschlecht")
+  
   if(skm == 'S_KM_HM') {
     final_selection <- subset(selection, S_KM_HM != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_HM, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_HM ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_HM, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_HM ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_FN') {
     final_selection <- subset(selection, S_KM_FN != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_FN, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_FN, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_5') {
     final_selection <- subset(selection, S_KM_5 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_5, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_5 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_5, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_5 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_10') {
     final_selection <- subset(selection, S_KM_10 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_10, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_10 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_10, TMP_MEAN_RND1)) 
+    lm_reg <- lm(data = final_selection, formula = S_KM_10 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_15') {
     final_selection <- subset(selection, S_KM_15 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_15, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_15 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_15, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_15 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_20') {
     final_selection <- subset(selection, S_KM_20 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_20, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_20 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_20, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_20 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_25') {
     final_selection <- subset(selection, S_KM_25 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_25, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_25 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_25, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_25 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_30') {
     final_selection <- subset(selection, S_KM_30 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_30, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_30 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_30, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_30 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_35') {
     final_selection <- subset(selection, S_KM_35 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_35, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_35 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_35, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_35 ~ poly(TMP_MEAN_RND1,reg_poly))
   } else if(skm == 'S_KM_40') {
     final_selection <- subset(selection, S_KM_40 != 0)
-    plot_reg <- ggplot(final_selection, aes(y=S_KM_40, TMP_MEAN_RND1)) + 
-      geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-      labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-    lm_reg_sum <- summary(lm(data = final_selection, formula = S_KM_40 ~ poly(TMP_MEAN_RND1,reg_poly)))
+    plot_reg <- ggplot(final_selection, aes(y=S_KM_40, TMP_MEAN_RND1))
+    lm_reg <- lm(data = final_selection, formula = S_KM_40 ~ poly(TMP_MEAN_RND1,reg_poly))
   }
   
- 
+  plot_reg <- plot_reg + geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
+    labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+  
+  lm_reg_sum <- summary(lm_reg)
   plot(plot_reg)
   cat(paste(sub_title, "; Geschlecht: ", geschlecht, sep=""))
   print(lm_reg_sum)
   cat(paste("-----------------------------------------------------------------------------\n"))
+  
+  # Return Summary mit Wettbewerbsparameteren
+  lm_reg_list <- list()
+  lm_reg_list[[1]] <- sub_title_list
+  lm_reg_list[[2]] <- lm_reg_sum
+  names(lm_reg_list) <- c("Wettbewerb","Regression")
+  
+  return(lm_reg_list)
 }
 
 ## ----------------------------------------------------------------------------------------------------------------------------------
@@ -196,17 +190,45 @@ create_reg_plots_3 <- function(data_frame) {
   file_name = paste("reg_p2_alle_jahre",sep = "")
   pdf(file = paste(file_name,".pdf",sep = ""), width = 8, height = 6)
   sink(file = paste(file_name,".txt",sep = ""), append = TRUE)
+  lm_regs <- list()
+  i <- 1
   for(g in unique(data_frame$Geschlecht)) {
     for(o in ort) {
       for(s in skms) {
         for(p in plaetze) {
-          my_reg_skm_tmp_2(data_frame,reg_poly = 2,tmp_min = 1, tmp_max = 25, platz_min = 1, platz_max = p, ort=o, geschlecht=g, skm=s)  
+          lm_reg <-my_reg_skm_tmp_2(data_frame,reg_poly = 2,tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = p, ort=o, geschlecht=g, skm=s)
+          lm_regs[[i]] <- lm_reg
+          i <- i + 1
         }
       }
     }
   }
   sink()
   dev.off()
+  return(lm_regs)
+}
+## Funktion um aus dem Return aus create_reg_plots_3 eine Dataframe zu erzeugen
+create_reg_plots_3_to_df <- function(lmsummary) {
+  n <- 1
+  for(i in lmsummary) {
+    ort <- i$Wettbewerb$Ort
+    platz <- i$Wettbewerb$Platz
+    temperatur <- i$Wettbewerb$Temperatur
+    geschlecht <- i$Wettbewerb$Geschlecht
+    skm <- i$Wettbewerb$SKM
+    rsq <- i$Regression$r.squared
+    arsq <- i$Regression$adj.r.squared
+    if(n == 1) {
+      df_return <- data.frame(ort, platz, temperatur, geschlecht, skm, rsq, arsq)
+      n <- 2
+    } else {
+      
+      df_new <- data.frame(ort, platz, temperatur, geschlecht, skm, rsq, arsq)
+      df_return <- rbind(df_return, df_new)
+    }
+  }
+  colnames(df_return) <- c("Ort","Platz","Temperatur","Geschlecht","SKM","RSQ","ARSQ")
+  return(df_return)
 }
 ## ----------------------------------------------------------------------------------------------------------------------------------
 print_temps <- function(data_frame) {
@@ -233,29 +255,31 @@ plot_paces <- function() {
   pdf(file = paste("plt_paces",".pdf",sep = ""), width = 9, height = 7)
   for(g in unique(df_ww5rs$Geschlecht)) {
     for(o in unique(df_ww5rs$Ort)) {
-      if(o != "Chicago") {
-        plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
-          geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
-          #geom_point() + 
-          scale_color_continuous(breaks=seq(1,3,1)) +
-          scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
-          scale_y_log10() +
-          labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-3", sep="")) + 
-          #theme(legend.position = "none") +
-          facet_wrap(~Jahr)
+      for(p in c(1,3,5,10)) {
+        if(o != "Chicago") {
+          plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=p & SKM_TYP >= 1 & ZZ_INVALID == FALSE)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+            geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
+            #geom_point() + 
+            scale_color_continuous(breaks=seq(1,p,1)) +
+            scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+            scale_y_log10() +
+            labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-",p, sep="")) + 
+            #theme(legend.position = "none") +
+            facet_wrap(~Jahr)
+        }
+        else if(o == "Chicago") { # Das Jahr 2012 und 2013 enthält inkorrekte Daten
+          plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=p & SKM_TYP >= 1 & ZZ_INVALID == FALSE & Jahr!=2012 & Jahr!=2013)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
+            geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
+            #geom_point() + 
+            scale_color_continuous(breaks=seq(1,p,1)) +
+            scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
+            scale_y_log10() +
+            labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-",p, sep="")) + 
+            #theme(legend.position = "none") +
+            facet_wrap(~Jahr)
+        }
+        print(plot_pace)
       }
-      else if(o == "Chicago") { # Das Jahr 2012 und 2013 enthält inkorrekte Daten
-        plot_pace <- ggplot(subset(df_ww5rs, (Geschlecht==g & Ort==o & Platz <=3 & SKM_TYP >= 1 & ZZ_INVALID == FALSE & Jahr!=2012 & Jahr!=2013)), aes(x=SKM_TYP, y=SKM_PACE, group=Platz)) +
-          geom_line(stat = "identity", position = "dodge", aes(color=Platz)) + 
-          #geom_point() + 
-          scale_color_continuous(breaks=seq(1,3,1)) +
-          scale_x_continuous(breaks = seq(1,10,1), labels = c("5","10","15","20","21","25","30","35","40","42")) +
-          scale_y_log10() +
-          labs(y="Geschwindikeit (in m/s)", x="Kilometerabschnitt", title = paste("Pace in ",o," (",g,"): TOP-3", sep="")) + 
-          #theme(legend.position = "none") +
-          facet_wrap(~Jahr)
-      }
-      print(plot_pace)
     }
   }
   dev.off()
