@@ -1,0 +1,321 @@
+##---------------------------------------------------------------------------------------------
+## Alle M:
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_all$S_KM_FN and df_ww3y_m_all$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.11109 -       -       -      
+London  1.00000 0.00432 -       -      
+NewYork 1.4e-09 0.00063 8.4e-14 -      
+Tokyo   1.00000 0.31366 0.65024 4.8e-11
+
+P value adjustment method: bonferroni 
+
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_all$S_KM_FN and df_ww3y_m_all$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.0000 -       -      -      
+London  1.0000 0.0022  -      -      
+NewYork 1.0000 1.0000  1.0000 -      
+Tokyo   1.0000 0.1568  1.0000 2.4e-11
+
+P value adjustment method: bonferroni 
+
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_all$S_KM_FN and df_ww3y_m_all$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.05555 -       -       -      
+London  1.00000 1.00000 -       -      
+NewYork 6.8e-10 0.00031 4.2e-14 -      
+Tokyo   1.00000 1.00000 0.32512 1.00000
+
+P value adjustment method: bonferroni 
+
+##---------------------------------------------------------------------------------------------
+## Alle W:
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_all$S_KM_FN and df_ww3y_w_all$Ort 
+
+        Berlin Chicago London  NewYork
+Chicago 0.404  -       -       -      
+London  0.023  5.9e-07 -       -      
+NewYork 0.183  1.000   1.1e-11 -      
+Tokyo   0.042  1.000   9.8e-08 1.000  
+
+P value adjustment method: bonferroni  
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_all$S_KM_FN and df_ww3y_w_all$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.000  -       -      -      
+London  0.011  2.9e-07 -      -      
+NewYork 1.000  1.000   1.000  -      
+Tokyo   1.000  1.000   1.000  1.000  
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_all$S_KM_FN and df_ww3y_w_all$Ort 
+
+        Berlin Chicago London  NewYork
+Chicago 0.202  -       -       -      
+London  1.000  1.000   -       -      
+NewYork 0.091  1.000   5.6e-12 -      
+Tokyo   0.021  1.000   4.9e-08 0.884  
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+Top5 M:
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: two.sided
+> pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top5$S_KM_FN and df_ww3y_m_top5$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.01089 -       -       -      
+London  1.00000 0.00417 -       -      
+NewYork 1.8e-11 0.00072 4.6e-14 -      
+Tokyo   0.00396 1.00000 0.00065 5.1e-05
+
+P value adjustment method: bonferroni 
+
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: less
+> pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top5$S_KM_FN and df_ww3y_m_top5$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.0000 -       -      -      
+London  1.0000 0.0021  -      -      
+NewYork 1.0000 1.0000  1.0000 -      
+Tokyo   1.0000 1.0000  1.0000 2.5e-05
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: greater
+> pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top5$S_KM_FN and df_ww3y_m_top5$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.00545 -       -       -      
+London  1.00000 1.00000 -       -      
+NewYork 8.9e-12 0.00036 2.3e-14 -      
+Tokyo   0.00198 1.00000 0.00033 1.00000
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+## TOP5 W:
+##---------------------------------------------------------------------------------------------
+> ## pairwise-test: W TOP5
+> # pairwise-test: two.sided
+> pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top5$S_KM_FN and df_ww3y_w_top5$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.5244  -       -       -      
+London  1.0000  0.0135  -       -      
+NewYork 1.3e-07 0.0090  2.0e-13 -      
+Tokyo   0.0216  1.0000  0.0008  1.0000 
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: less
+> pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top5$S_KM_FN and df_ww3y_w_top5$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.0000 -       -      -      
+London  1.0000 0.0068  -      -      
+NewYork 1.0000 1.0000  1.0000 -      
+Tokyo   1.0000 1.0000  1.0000 1.0000 
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: greater
+> pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top5$S_KM_FN and df_ww3y_w_top5$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.2622  -       -       -      
+London  1.0000  1.0000  -       -      
+NewYork 6.7e-08 0.0045  9.9e-14 -      
+Tokyo   0.0108  0.5912  0.0004  1.0000 
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+## TOP3 M:
+##---------------------------------------------------------------------------------------------
+> ## pairwise-test: M TOP3
+> # pairwise-test: two.sided
+> pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top3$S_KM_FN and df_ww3y_m_top3$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.00279 -       -       -      
+London  1.00000 0.01873 -       -      
+NewYork 6.2e-10 0.02758 1.6e-09 -      
+Tokyo   0.00021 1.00000 0.00141 0.02144
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: less
+> pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top3$S_KM_FN and df_ww3y_m_top3$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.0000 -       -      -      
+London  1.0000 0.0094  -      -      
+NewYork 1.0000 1.0000  1.0000 -      
+Tokyo   1.0000 1.0000  1.0000 0.0107 
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: greater
+> pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_m_top3$S_KM_FN and df_ww3y_m_top3$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.00139 -       -       -      
+London  1.00000 1.00000 -       -      
+NewYork 3.1e-10 0.01379 8.1e-10 -      
+Tokyo   0.00011 1.00000 0.00070 1.00000
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+## TOP3 W:
+##---------------------------------------------------------------------------------------------
+> ## pairwise-test: W TOP3
+> ## pairwise-test: two-sided
+> pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "two.sided",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top3$S_KM_FN and df_ww3y_w_top3$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 1.00000 -       -       -      
+London  1.00000 0.92528 -       -      
+NewYork 1.2e-08 0.00059 2.7e-09 -      
+Tokyo   0.03960 0.67502 0.02493 1.00000
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: less
+> pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "less",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top3$S_KM_FN and df_ww3y_w_top3$Ort 
+
+        Berlin Chicago London NewYork
+Chicago 1.00   -       -      -      
+London  1.00   0.46    -      -      
+NewYork 1.00   1.00    1.00   -      
+Tokyo   1.00   1.00    1.00   1.00   
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+> # pairwise-test: greater
+> pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
++                 p.adjust.method = "bonferroni", alternative = "greater",
++                 paired = FALSE, pool.sd = FALSE)
+
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  df_ww3y_w_top3$S_KM_FN and df_ww3y_w_top3$Ort 
+
+        Berlin  Chicago London  NewYork
+Chicago 0.73199 -       -       -      
+London  1.00000 1.00000 -       -      
+NewYork 5.9e-09 0.00029 1.4e-09 -      
+Tokyo   0.01980 0.33751 0.01246 1.00000
+
+P value adjustment method: bonferroni 
+##---------------------------------------------------------------------------------------------
+

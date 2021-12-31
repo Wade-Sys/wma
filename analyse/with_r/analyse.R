@@ -430,7 +430,100 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
   geom_text(aes(x=Var1, y=Var2, label=value), color="white")
 
 ## ----------------------------------------------------------------
+## pairwise-test: M TOP10
 # pairwise-test: two.sided
 pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
                 p.adjust.method = "bonferroni", alternative = "two.sided",
                 paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+## pairwise-test: W TOP10
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+## pairwise-test: M TOP5
+# pairwise-test: two.sided
+pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+## pairwise-test: W TOP5
+# pairwise-test: two.sided
+pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+## pairwise-test: M TOP3
+# pairwise-test: two.sided
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+
+## pairwise-test: W TOP3
+## pairwise-test: two-sided
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: less
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "less",
+                paired = FALSE, pool.sd = FALSE)
+
+# pairwise-test: greater
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
+                p.adjust.method = "bonferroni", alternative = "greater",
+                paired = FALSE, pool.sd = FALSE)
+## ----------------------------------------------------------------
+# Einseitiger Test
+t.test(x=subset(df_ww3y_m_all, (Ort=='Berlin'), select = c(S_KM_FN)), 
+       y=subset(df_ww3y_m_all, (Ort=='Chicago'), select = c(S_KM_FN)),
+       paired = FALSE, conf.level = 0.975, var.equal = FALSE, alternative = "less"
+)
+## ----------------------------------------------------------------
