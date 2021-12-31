@@ -4,6 +4,7 @@ library(ggplot2)
 library(DescTools)
 library(corrplot)
 library(dplyr)
+library(reshape2)
 #library(data.table) # für melt
 
 # df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
@@ -327,7 +328,10 @@ my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1
 
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_35")
 
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter: W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p2): W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=0, tmp_max=12.5, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
+
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=5, ort="Chicago", geschlecht="M", skm="S_KM_FN")
 
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
@@ -349,7 +353,7 @@ lm_regs_from_reg_plots_3 <- create_reg_plots_3(data_frame = df_ww3)
 # Erzeugen eines Dataframes mit RSQ und ARSQ aus den LM-Summarys
 lm_regs_from_reg_plots_3_df <- create_reg_plots_3_to_df(lm_regs_from_reg_plots_3)
 
-# Aggregation
+# Aggregation für R-Quadrat Analyse
 lm_regs_from_reg_plots_3_df_agg <- aggregate(cbind(Ort, Platz, Geschlecht, SKM) ~ RSQ, lm_regs_from_reg_plots_3_df,max)
 
 lm_regs_from_reg_plots_3_df_agg_srt <- lm_regs_from_reg_plots_3_df_agg[order(lm_regs_from_reg_plots_3_df_agg$Ort,lm_regs_from_reg_plots_3_df_agg$Geschlecht,
@@ -410,3 +414,23 @@ ggplot(subset(df_ww5rs, (Geschlecht=="M" & Ort=="Berlin" & Platz <=3 & SKM_TYP >
 
 plot_paces()
 ## ----------------------------------------------------------------
+# Korrelation
+# Subset-Test
+subset(df_ww5, (Ort=="Berlin" & Geschlecht=="M" & ZZ_INVALID==FALSE), 
+       c("TMP_MEAN_RND1","S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN"))
+
+# Korrelation
+cor_ww5rs <- round(cor(subset(df_ww5, (Ort=="Chicago" & Geschlecht=="W" & Platz<=1 & ZZ_INVALID==FALSE), 
+                 c("TMP_MEAN_RND1","S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN"))),2)
+# Triangle
+cor_ww5rs[upper.tri(cor_ww5rs)] <- NA
+# Cor-Plot
+ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) + 
+  geom_tile(aes(x=Var1, y=Var2, fill=value)) +
+  geom_text(aes(x=Var1, y=Var2, label=value), color="white")
+
+## ----------------------------------------------------------------
+# pairwise-test: two.sided
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
+                p.adjust.method = "bonferroni", alternative = "two.sided",
+                paired = FALSE, pool.sd = FALSE)
