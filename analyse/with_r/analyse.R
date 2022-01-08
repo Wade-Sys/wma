@@ -147,11 +147,11 @@ describeBy(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort)
 # Boxplot: Ergebnisse / Wettbewerbsort (M)
 ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-10") +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-10 (N=450)") +
   scale_y_continuous(breaks = seq(7000,8350,100)) +
   theme(legend.position = "none") + 
   scale_fill_brewer(palette="Set3")
-ggsave(filename = "bplt_ergb_m_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+ggsave(filename = "bplt_ergb_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
@@ -172,11 +172,11 @@ ggsave(filename = "bplt_ergb_m_top3.pdf", plot = last_plot(),units = "px",scale 
 # Boxplot: Ergebnisse / Wettbewerbsort (W)
 ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-10") +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-10 (N=450)") +
   scale_y_continuous(breaks = seq(8000,11000,100)) +
   theme(legend.position = "none") + 
   scale_fill_brewer(palette="Set3")
-ggsave(filename = "bplt_ergb_w_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+ggsave(filename = "bplt_ergb_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
@@ -199,9 +199,9 @@ ggsave(filename = "bplt_ergb_w_top3.pdf", plot = last_plot(),units = "px",scale 
 # Männer
 ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10 (N=450)") + 
   scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
-ggsave(filename = "hplt_ergb_vert_m_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+ggsave(filename = "hplt_ergb_vert_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_m_top5, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
@@ -218,9 +218,9 @@ ggsave(filename = "hplt_ergb_vert_m_top3.pdf", plot = last_plot(),units = "px",s
 # Frauen
 ggplot(data = df_ww3y_w_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 100, color="white", fill="skyblue") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10") + 
+  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10 (N=450)") + 
   scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
-ggsave(filename = "hplt_ergb_vert_w_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+ggsave(filename = "hplt_ergb_vert_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_w_top5, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 120, color="white", fill="skyblue") + 
@@ -431,8 +431,12 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
 
 ## ----------------------------------------------------------------
 describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort)
+describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort)
+
+describeBy(df_ww3_m_all$S_KM_FN, df_ww3_m_all$Ort)
 
 describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort)
+describeBy(df_ww3_w_all$S_KM_FN, df_ww3_w_all$Ort)
 ## ----------------------------------------------------------------
 ## pairwise-test: M TOP10
 # pairwise-test: two.sided
