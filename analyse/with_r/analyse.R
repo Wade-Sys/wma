@@ -200,7 +200,7 @@ ggsave(filename = "bplt_ergb_w_top3.pdf", plot = last_plot(),units = "px",scale 
 ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
   labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10 (N=450)") + 
-  scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
+  scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_m_top5, aes(x=S_KM_FN)) + 
@@ -219,7 +219,7 @@ ggsave(filename = "hplt_ergb_vert_m_top3.pdf", plot = last_plot(),units = "px",s
 ggplot(data = df_ww3y_w_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 100, color="white", fill="skyblue") + 
   labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10 (N=450)") + 
-  scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
+  scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_w_top5, aes(x=S_KM_FN)) + 
@@ -431,11 +431,15 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
 
 ## ----------------------------------------------------------------
 describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort)
+describeBy(df_ww3y_m_all$S_KM_FN)
+
 describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort)
 
 describeBy(df_ww3_m_all$S_KM_FN, df_ww3_m_all$Ort)
 
 describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort)
+describeBy(df_ww3y_w_all$S_KM_FN)
+
 describeBy(df_ww3_w_all$S_KM_FN, df_ww3_w_all$Ort)
 ## ----------------------------------------------------------------
 ## pairwise-test: M TOP10

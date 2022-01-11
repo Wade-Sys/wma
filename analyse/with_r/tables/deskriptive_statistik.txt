@@ -1,3 +1,7 @@
+> describeBy(df_ww3y_m_all$S_KM_FN)
+   vars   n    mean     sd median trimmed    mad  min  max range skew kurtosis   se
+X1    1 450 7761.66 183.05 7753.5 7761.54 203.12 7299 8269   970 0.02    -0.46 8.63
+------------------------------------------------------------------------------------------------------------------------------
 > describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort)
 
  Descriptive statistics by group 
@@ -66,6 +70,10 @@ group: Tokyo
    vars   n    mean     sd median trimmed    mad  min  max range skew kurtosis    se
 X1    1 130 7784.85 170.84 7744.5  7770.3 169.02 7438 8300   862  0.8     0.41 14.98
 > 
+## ------------------------------------------------------------------------------------------------------------------------------ 
+> describeBy(df_ww3y_w_all$S_KM_FN)
+   vars   n mean     sd median trimmed    mad  min   max range skew kurtosis   se
+X1    1 450 8853 301.24 8815.5 8836.89 275.76 8044 10052  2008 0.65     0.88 14.2
 ## ------------------------------------------------------------------------------------------------------------------------------ 
 > describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort)
 
