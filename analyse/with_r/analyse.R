@@ -430,17 +430,16 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
   geom_text(aes(x=Var1, y=Var2, label=value), color="white")
 
 ## ----------------------------------------------------------------
-describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort)
-describeBy(df_ww3y_m_all$S_KM_FN)
 
-describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort)
+describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
+describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 
-describeBy(df_ww3_m_all$S_KM_FN, df_ww3_m_all$Ort)
+describe(df_ww3y_m_top3$S_KM_FN,quant = c(.25,.75), skew=TRUE)
 
-describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort)
-describeBy(df_ww3y_w_all$S_KM_FN)
+describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
+describeBy(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 
-describeBy(df_ww3_w_all$S_KM_FN, df_ww3_w_all$Ort)
+describe(df_ww3y_w_top3$S_KM_FN,quant = c(.25,.75), skew=TRUE)
 ## ----------------------------------------------------------------
 ## pairwise-test: M TOP10
 # pairwise-test: two.sided
