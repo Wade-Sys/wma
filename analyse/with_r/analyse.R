@@ -49,6 +49,21 @@ df_ww3_w_top3 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 3))
 df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
 df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
 
+
+#df_ww3y_top3_temp <- df_ww3y_top3
+#df_ww3y_top3_temp$TOP <-c("TOP3")
+#df_ww3y_top10_temp <- df_ww3y
+#df_ww3y_top10_temp$TOP <-c("TOP10")
+#df_ww3y_top3_10_combined <- rbind(df_ww3y_top3_temp, df_ww3y_top10_temp)
+#rm(df_ww3y_top3_temp,df_ww3y_top10_temp)
+#rm(df_ww3y_top3_10_combined)
+
+#df_ww3y_tops <- df_ww3y_top3
+#df_ww3y_tops$TOP3 <- NA
+#df_ww3y_tops$TOP3[df_ww3y_tops$Platz == c(1,2,3)] <- "TOP3"
+#df_ww3y_tops$TOP10 <- "TOP10"
+#rm(df_ww3y_tops)
+
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
 df_ww3y_m_top5 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 5))
 df_ww3y_m_top3 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 3))
@@ -150,7 +165,8 @@ ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-10 (N=450)") +
   scale_y_continuous(breaks = seq(7000,8350,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
@@ -158,16 +174,18 @@ ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-5") +
   scale_y_continuous(breaks = seq(7000,8350,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-3") +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-3 (N=135)") +
   scale_y_continuous(breaks = seq(7000,8350,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
-ggsave(filename = "bplt_ergb_m_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
+ggsave(filename = "bplt_ergb_m_n135_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 # Boxplot: Ergebnisse / Wettbewerbsort (W)
 ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
@@ -175,7 +193,8 @@ ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-10 (N=450)") +
   scale_y_continuous(breaks = seq(8000,11000,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
@@ -183,16 +202,18 @@ ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-5") +
   scale_y_continuous(breaks = seq(8000,10000,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-3") +
+  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-3 (N=135)") +
   scale_y_continuous(breaks = seq(8000,10000,100)) +
   theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3")
-ggsave(filename = "bplt_ergb_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_fill_brewer(palette="Set3") +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
+ggsave(filename = "bplt_ergb_w_n135_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ## ----------------------------------------------------------------------
 # Histogramm: Verteilung der Ergebnisse
