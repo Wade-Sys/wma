@@ -7,36 +7,50 @@ library(dplyr)
 library(reshape2)
 #library(data.table) # für melt
 
-# df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
-# df_wetter_csv <- read.csv2(file = '../../data/wetter/daten_wetter_tmp_dew_sr.csv',header = TRUE,dec = ".",sep = ";")
+# Daten einlesen & formatieren
+df_wma_csv <- read.csv2(file = '../../data/wmm_data/daten_wmm_all_prepared.csv',header = TRUE,dec = ".",sep = ";")
+df_wetter_csv <- read.csv2(file = '../../data/wetter/daten_wetter_tmp_dew_sr.csv',header = TRUE,dec = ".",sep = ";")
 # as.Date(df_wma_csv$Datum, format = "%Y-%m-%d")
 # as.Date(df_wma_csv$Datum, format = "%Y-%m-%d")
-# df_wma_1 <- df_wma_csv
-# df_wetter_1 <- df_wetter_csv
-# df_wma_1$Datum <- strptime(x = as.character(df_wma_1$Datum),"%Y-%m-%d")
-# df_wetter_1$Datum <- strptime(x = as.character(df_wetter_1$Datum),"%Y-%m-%d")
-# df_wma_2 <- subset(df_wma_1, select = -c(T_KM_5,T_KM_10,T_KM_15,T_KM_20,T_KM_HM,T_KM_25,T_KM_30,T_KM_35,T_KM_40,T_KM_FN,Startzeit,Datum_Startzeit_UTC))
-# df_wetter_2_mean <- subset(df_wetter_1, select = c(Jahr,Ort,Datum,WND_SR_MEAN,TMP_MEAN,DEW_MEAN))
-# df_wma_wetter <- merge(x = df_wma_2, y = df_wetter_2_mean, by = c("Jahr","Ort","Datum"))
-# df_wetter_2 <- df_wetter_1
-# df_wetter_2$TMP_MEAN_RND <- round(df_wetter_2$TMP_MEAN/5,1)*5
-# df_wetter_2$DEW_MEAN_RND <- round(df_wetter_2$DEW_MEAN/5,1)*5
-# df_wetter_2$WND_SR_MEAN_RND <- round(df_wetter_2$WND_SR_MEAN,1)
-# df_wetter_3 <- subset(df_wetter_2, select = -c(WND_SR_MIN, WND_SR_MAX, WND_SR_MEDIAN, DEW_MIN, DEW_MAX, DEW_MEDIAN, TMP_MIN, TMP_MAX, TMP_MEDIAN))
-# df_wma_wetter_2 <- merge(x=df_wma_2, y=df_wetter_3, by.x = c("Jahr", "Ort", "Datum"), by.y = c("Jahr", "Ort", "Datum"))
+df_wma_1 <- df_wma_csv
+df_wetter_1 <- df_wetter_csv
+df_wma_1$Datum <- strptime(x = as.character(df_wma_1$Datum),"%Y-%m-%d")
+df_wetter_1$Datum <- strptime(x = as.character(df_wetter_1$Datum),"%Y-%m-%d")
+
+# Nicht benötigte spalten entfernen (Marathondaten)
+df_wma_2 <- subset(df_wma_1, select = -c(T_KM_5,T_KM_10,T_KM_15,T_KM_20,T_KM_HM,T_KM_25,T_KM_30,T_KM_35,T_KM_40,T_KM_FN,Startzeit,Datum_Startzeit_UTC))
+
+# Wetterdaten: Runden (auf 0.5)
+df_wetter_2 <- df_wetter_1
+df_wetter_2$TMP_MEAN_RND <- round(df_wetter_2$TMP_MEAN/5,1)*5 # Auf 0.5 
+df_wetter_2$DEW_MEAN_RND <- round(df_wetter_2$DEW_MEAN/5,1)*5 # Auf 0.5
+df_wetter_2$WND_SR_MEAN_RND <- round(df_wetter_2$WND_SR_MEAN,1) # Normal
+
+# Nicht benötigte spalten entfernen (Wetterdaten)
+df_wetter_3 <- subset(df_wetter_2, select = -c(WND_SR_MIN, WND_SR_MAX, WND_SR_MEDIAN, DEW_MIN, DEW_MAX, DEW_MEDIAN, TMP_MIN, TMP_MAX, TMP_MEDIAN))
+
+# Wetterdaten und Marathondaten mergen (1)
+df_wma_wetter_2 <- merge(x=df_wma_2, y=df_wetter_3, by.x = c("Jahr", "Ort", "Datum"), by.y = c("Jahr", "Ort", "Datum"))
 
 
-#
+# Wetterdaten: Runden (normal) 
+df_wetter_4 <- df_wetter_3
 df_wetter_4$TMP_MEAN_RND1 <- round(df_wetter_4$TMP_MEAN, digits = 1)
 df_wetter_4$DEW_MEAN_RND1 <- round(df_wetter_4$DEW_MEAN, digits = 1)
 df_wetter_4$WND_SR_MEAN_RND1 <- round(df_wetter_4$WND_SR_MEAN, digits = 1)
+# Wetter um Jahr bereinigt
+df_wetter_4y <- subset(df_wetter_4, (Jahr >= 2010))
+df_wetter_4y <- subset(df_wetter_4y, (Jahr != 2012))
 
-
+# Wetterdaten und Marathondaten mergen (2)
 df_wma_wetter_3 <- merge(df_wma_2, df_wetter_4, by = c("Jahr","Ort","Datum"))
 
+# Neues Dataframe (normal und um die Jahre bereinigt)
 df_ww3 <- df_wma_wetter_3
 df_ww3y <- subset(df_ww3, (Jahr==2010 | Jahr==2011 | Jahr > 2012))
 
+
+# Neue Dataframes nach Geschlecht und Platzierung
 # Alle
 df_ww3_m_all <- subset(df_ww3, (Geschlecht=='M'))
 df_ww3_m_top5 <- subset(df_ww3, (Geschlecht=='M' & Platz <= 5))
@@ -48,21 +62,6 @@ df_ww3_w_top3 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 3))
 # Alle: 2010,2011,2013-2019
 df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
 df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
-
-
-#df_ww3y_top3_temp <- df_ww3y_top3
-#df_ww3y_top3_temp$TOP <-c("TOP3")
-#df_ww3y_top10_temp <- df_ww3y
-#df_ww3y_top10_temp$TOP <-c("TOP10")
-#df_ww3y_top3_10_combined <- rbind(df_ww3y_top3_temp, df_ww3y_top10_temp)
-#rm(df_ww3y_top3_temp,df_ww3y_top10_temp)
-#rm(df_ww3y_top3_10_combined)
-
-#df_ww3y_tops <- df_ww3y_top3
-#df_ww3y_tops$TOP3 <- NA
-#df_ww3y_tops$TOP3[df_ww3y_tops$Platz == c(1,2,3)] <- "TOP3"
-#df_ww3y_tops$TOP10 <- "TOP10"
-#rm(df_ww3y_tops)
 
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
 df_ww3y_m_top5 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 5))
@@ -152,13 +151,6 @@ df_ww3y_tokyo_w_top5 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W' & Platz 
 df_ww3y_tokyo_w_top3 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W' & Platz <= 3))
 ## --------------------------------------------------------------------------------------------
 
-describeBy(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort)
-describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort)
-
-describeBy(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort)
-describeBy(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort)
-## --------------------------------------------------------------------------------------------
-
 # Boxplot: Ergebnisse / Wettbewerbsort (M)
 ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
@@ -220,7 +212,7 @@ ggsave(filename = "bplt_ergb_w_n135_top3.pdf", plot = last_plot(),units = "px",s
 # Männer
 ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10 (N=450)") + 
+  labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10 (N=450)") + 
   scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
@@ -239,7 +231,7 @@ ggsave(filename = "hplt_ergb_vert_m_top3.pdf", plot = last_plot(),units = "px",s
 # Frauen
 ggplot(data = df_ww3y_w_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 100, color="white", fill="skyblue") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10 (N=450)") + 
+  labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10 (N=450)") + 
   scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
@@ -260,7 +252,7 @@ ggsave(filename = "hplt_ergb_vert_w_top3.pdf", plot = last_plot(),units = "px",s
 # Scatterplots:
 # Männer
 ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-10", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-10", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -268,7 +260,7 @@ ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point
 ggsave(filename = "sctr_ergb_tmp_m_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-5", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-5", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -276,7 +268,7 @@ ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_poin
 ggsave(filename = "sctr_ergb_tmp_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -285,7 +277,7 @@ ggsave(filename = "sctr_ergb_tmp_m_top3.pdf", plot = last_plot(),units = "px",sc
 
 # Frauen
 ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-10", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-10", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -293,7 +285,7 @@ ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point
 ggsave(filename = "sctr_ergb_tmp_w_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-5", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-5", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -301,13 +293,50 @@ ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_poin
 ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Ergebnisse ~ Temperatur") + 
+  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
   scale_color_discrete("Wettbewerbsort")
 ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
+## Temperatur - Liniendiagramme
+
+ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) + 
+  geom_line(alpha=0.5, size=1) + geom_point() +
+  labs(y="Temperatur (°C)", x="Jahr", title = "Temperaturverlauf (ausgewählte Jahre)") + 
+  scale_y_continuous(breaks = seq(0,25,1.0)) + 
+  scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort") #+ facet_wrap(~Ort, ncol=5)
+ggsave(filename = "line_tmp_y_ort.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
+ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) + 
+  geom_line(alpha=0.5, size=1) + geom_point() +
+  labs(y="Temperatur (°C)", x="Jahr", title = "Temperaturverlauf (ausgewählte Jahre)") + 
+  scale_y_continuous(breaks = seq(0,25,1.0)) + 
+  scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort") + 
+  theme(axis.text.x = element_text(angle = 90),legend.position = "none") + 
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "line_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) + 
+  geom_bar(stat = "identity") +
+  #geom_hline(yintercept = mean(df_wetter_4$DEW_MEAN_RND1)) + 
+  labs(y="Temperatur (°C)", x="Jahr", title = "Temperaturverlauf (ausgewählte Jahre)") + 
+  scale_y_continuous(breaks = seq(0,25,1.0)) + 
+  scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort") + 
+  theme(axis.text.x = element_text(angle = 90),legend.position = "none") + 
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "bar_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
+## ----------------------------------------------------------------
 ## ----------------------------------------------------------------
 # Verteilung der Temperatur pro Geschlecht / Ort
 
@@ -451,7 +480,7 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
   geom_text(aes(x=Var1, y=Var2, label=value), color="white")
 
 ## ----------------------------------------------------------------
-
+# Finale Zeiten
 describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 
@@ -461,6 +490,10 @@ describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, quant = c(.25,.75), skew=TR
 describeBy(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 
 describe(df_ww3y_w_top3$S_KM_FN,quant = c(.25,.75), skew=TRUE)
+
+# Wetter
+describeBy(df_wetter_4$TMP_MEAN_RND1, df_wetter_4$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
+describeBy(df_wetter_4y$TMP_MEAN_RND1, df_wetter_4y$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 ## ----------------------------------------------------------------
 ## pairwise-test: M TOP10
 # pairwise-test: two.sided
