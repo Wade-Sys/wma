@@ -251,54 +251,60 @@ ggsave(filename = "hplt_ergb_vert_w_top3.pdf", plot = last_plot(),units = "px",s
 
 # Scatterplots:
 # Männer
-ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-10", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_m_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_m_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-5", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_m_top5.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 # Frauen
-ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-10", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_w_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_w_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-5", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=1) + 
+ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
   labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort")
-ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+  scale_color_discrete("Wettbewerbsort:") +
+  theme(legend.position = "bottom")
+ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ## Temperatur - Liniendiagramme
 
