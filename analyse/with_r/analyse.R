@@ -298,7 +298,7 @@ ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_poin
 ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=0.5, size=3) + 
-  labs(y="Ergebnisse (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(8000,11000,100)) + 
   scale_x_continuous(breaks = seq(0,22,1)) +
   scale_fill_brewer(palette="Set3") +
@@ -331,7 +331,7 @@ ggsave(filename = "line_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",sca
 
 ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) + 
   geom_bar(stat = "identity") +
-  #geom_hline(yintercept = mean(df_wetter_4$DEW_MEAN_RND1)) + 
+  geom_hline(data=aggregate(x=df_wetter_4y$TMP_MEAN_RND1, by=list(Ort=df_wetter_4y$Ort), FUN="mean"), aes(yintercept = x), color="red") + 
   labs(y="Temperatur (°C)", x="Jahr", title = "Temperaturverlauf (ausgewählte Jahre)") + 
   scale_y_continuous(breaks = seq(0,25,1.0)) + 
   scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
@@ -340,7 +340,6 @@ ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) +
   theme(axis.text.x = element_text(angle = 90),legend.position = "none") + 
   facet_wrap(~Ort, ncol=5)
 ggsave(filename = "bar_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
 
 ## ----------------------------------------------------------------
 ## ----------------------------------------------------------------
