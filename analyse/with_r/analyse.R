@@ -424,7 +424,7 @@ df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2) # Pace in m/s - FN
 df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
 ## ----------------------------------------------------------------
 ## Spezifische Regressionen
-## Manuell
+## Manuell mit Funktion
 my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht="M")
 
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_35")
@@ -433,8 +433,35 @@ my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=0, tmp_max=12.5, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
 
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=5, ort="Chicago", geschlecht="M", skm="S_KM_FN")
+my_reg_skm_tmp_2(data_frame = df_ww3y,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Berlin", geschlecht="M", skm="S_KM_FN")
 
+
+## Manuel: ohne Funktio
+## Alle Orte je Geschlecht
+ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
+  labs(title = "Ergebnisse (M): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(7100,8300,100)) + 
+  scale_x_continuous(breaks = seq(0,22,2)) +
+  scale_fill_brewer(palette="Set3") +
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "reg_p2_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
+  labs(title = "Ergebnisse (W): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(8000,9500,100)) + 
+  scale_x_continuous(breaks = seq(0,22,2)) +
+  scale_fill_brewer(palette="Set3") +
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "reg_p2_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
+summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
+
+## Pace analyse: Nur ein Test
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
   #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)

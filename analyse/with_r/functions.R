@@ -38,7 +38,7 @@ my_reg_skm_tmp <- function(data_frame,reg_poly=1,tmp_min, tmp_max, platz_min, pl
   
   plot_reg <- ggplot(selection, aes(y=S_KM_FN, TMP_MEAN_RND1)) + 
     geom_point() + geom_smooth(method = "lm", formula = y~poly(x,reg_poly)) +
-    labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+    labs(title = paste("LM: Zeit (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = sub_title)
   plot(plot_reg)
   
   lm_reg_sum <- summary(lm(data = selection, formula = S_KM_FN ~ poly(TMP_MEAN_RND1,reg_poly)))
