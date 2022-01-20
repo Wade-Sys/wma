@@ -471,6 +471,8 @@ summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Chicago" & Platz <= 3
 summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="NewYork" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
 summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
 
+summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ TMP_MEAN_RND1))
+
 
 ## Pace analyse: Nur ein Test
 ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
