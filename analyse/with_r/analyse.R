@@ -5,6 +5,8 @@ library(DescTools)
 library(corrplot)
 library(dplyr)
 library(reshape2)
+library(car)
+library(robustbase)
 #library(data.table) # für melt
 
 # Daten einlesen & formatieren
@@ -51,103 +53,45 @@ df_ww3y <- subset(df_ww3, (Jahr==2010 | Jahr==2011 | Jahr > 2012))
 
 
 # Neue Dataframes nach Geschlecht und Platzierung
-# Alle
-df_ww3_m_all <- subset(df_ww3, (Geschlecht=='M'))
-df_ww3_m_top5 <- subset(df_ww3, (Geschlecht=='M' & Platz <= 5))
-df_ww3_m_top3 <- subset(df_ww3, (Geschlecht=='M' & Platz <= 3))
-df_ww3_w_all <- subset(df_ww3, (Geschlecht=='W'))
-df_ww3_w_top5 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 5))
-df_ww3_w_top3 <- subset(df_ww3, (Geschlecht=='W' & Platz <= 3))
 
 # Alle: 2010,2011,2013-2019
 df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
 df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
 
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
-df_ww3y_m_top5 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 5))
 df_ww3y_m_top3 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 3))
 df_ww3y_w_all <- subset(df_ww3y, (Geschlecht=='W'))
-df_ww3y_w_top5 <- subset(df_ww3y, (Geschlecht=='W' & Platz <= 5))
 df_ww3y_w_top3 <- subset(df_ww3y, (Geschlecht=='W' & Platz <= 3))
 
-# London: 2010 - 2019
-df_ww3_london_m_all <- subset(df_ww3, (Ort=='London' & Geschlecht=='M'))
-df_ww3_london_m_top5 <- subset(df_ww3, (Ort=='London' & Geschlecht=='M' & Platz <= 5))
-df_ww3_london_m_top3 <- subset(df_ww3, (Ort=='London' & Geschlecht=='M' & Platz <= 3))
-df_ww3_london_w_all <- subset(df_ww3, (Ort=='London' & Geschlecht=='W'))
-df_ww3_london_w_top5 <- subset(df_ww3, (Ort=='London' & Geschlecht=='W' & Platz <= 5))
-df_ww3_london_w_top3 <- subset(df_ww3, (Ort=='London' & Geschlecht=='W' & Platz <= 3))
 
 # London: 2010,2011,2013-2019
 df_ww3y_london_m_all <- subset(df_ww3y, (Ort=='London' & Geschlecht=='M'))
-df_ww3y_london_m_top5 <- subset(df_ww3y, (Ort=='London' & Geschlecht=='M' & Platz <= 5))
 df_ww3y_london_m_top3 <- subset(df_ww3y, (Ort=='London' & Geschlecht=='M' & Platz <= 3))
 df_ww3y_london_w_all <- subset(df_ww3y, (Ort=='London' & Geschlecht=='W'))
-df_ww3y_london_w_top5 <- subset(df_ww3y, (Ort=='London' & Geschlecht=='W' & Platz <= 5))
 df_ww3y_london_w_top3 <- subset(df_ww3y, (Ort=='London' & Geschlecht=='W' & Platz <= 3))
-
-# Berlin: 2007 - 2019
-df_ww3_berlin_m_all <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='M'))
-df_ww3_berlin_m_top5 <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='M' & Platz <= 5))
-df_ww3_berlin_m_top3 <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='M' & Platz <= 3))
-df_ww3_berlin_w_all <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='W'))
-df_ww3_berlin_w_top5 <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='W' & Platz <= 5))
-df_ww3_berlin_w_top3 <- subset(df_ww3, (Ort=='Berlin' & Geschlecht=='W' & Platz <= 3))
 
 # Berlin: 2010,2011,2013-2019
 df_ww3y_berlin_m_all <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='M'))
-df_ww3y_berlin_m_top5 <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='M' & Platz <= 5))
 df_ww3y_berlin_m_top3 <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='M' & Platz <= 3))
 df_ww3y_berlin_w_all <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='W'))
-df_ww3y_berlin_w_top5 <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='W' & Platz <= 5))
 df_ww3y_berlin_w_top3 <- subset(df_ww3y, (Ort=='Berlin' & Geschlecht=='W' & Platz <= 3))
-
-# Chicago: 2007 - 2019
-df_ww3_chicago_m_all <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='M'))
-df_ww3_chicago_m_top5 <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='M' & Platz <= 5))
-df_ww3_chicago_m_top3 <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='M' & Platz <= 3))
-df_ww3_chicago_w_all <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='W'))
-df_ww3_chicago_w_top5 <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='W' & Platz <= 5))
-df_ww3_chicago_w_top3 <- subset(df_ww3, (Ort=='Chicago' & Geschlecht=='W' & Platz <= 3))
 
 # Chicago: 2010,2011,2013-2019
 df_ww3y_chicago_m_all <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='M'))
-df_ww3y_chicago_m_top5 <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='M' & Platz <= 5))
 df_ww3y_chicago_m_top3 <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='M' & Platz <= 3))
 df_ww3y_chicago_w_all <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='W'))
-df_ww3y_chicago_w_top5 <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='W' & Platz <= 5))
 df_ww3y_chicago_w_top3 <- subset(df_ww3y, (Ort=='Chicago' & Geschlecht=='W' & Platz <= 3))
-
-# NewYork: 2007 - 2011; 2013 - 2019
-df_ww3_newyork_m_all <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='M'))
-df_ww3_newyork_m_top5 <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='M' & Platz <= 5))
-df_ww3_newyork_m_top3 <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='M' & Platz <= 3))
-df_ww3_newyork_w_all <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='W'))
-df_ww3_newyork_w_top5 <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='W' & Platz <= 5))
-df_ww3_newyork_w_top3 <- subset(df_ww3, (Ort=='NewYork' & Geschlecht=='W' & Platz <= 3))
 
 # NewYork: 2010,2011,2013-2019
 df_ww3y_newyork_m_all <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='M'))
-df_ww3y_newyork_m_top5 <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='M' & Platz <= 5))
 df_ww3y_newyork_m_top3 <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='M' & Platz <= 3))
 df_ww3y_newyork_w_all <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='W'))
-df_ww3y_newyork_w_top5 <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='W' & Platz <= 5))
 df_ww3y_newyork_w_top3 <- subset(df_ww3y, (Ort=='NewYork' & Geschlecht=='W' & Platz <= 3))
-
-# Tokyo: 2007 - 2019
-df_ww3_tokyo_m_all <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='M'))
-df_ww3_tokyo_m_top5 <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='M' & Platz <= 5))
-df_ww3_tokyo_m_top3 <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='M' & Platz <= 3))
-df_ww3_tokyo_w_all <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='W'))
-df_ww3_tokyo_w_top5 <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='W' & Platz <= 5))
-df_ww3_tokyo_w_top3 <- subset(df_ww3, (Ort=='Tokyo' & Geschlecht=='W' & Platz <= 3))
 
 # Tokyo: 2010,2011,2013-2019
 df_ww3y_tokyo_m_all <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='M'))
-df_ww3y_tokyo_m_top5 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='M' & Platz <= 5))
 df_ww3y_tokyo_m_top3 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='M' & Platz <= 3))
 df_ww3y_tokyo_w_all <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W'))
-df_ww3y_tokyo_w_top5 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W' & Platz <= 5))
 df_ww3y_tokyo_w_top3 <- subset(df_ww3y, (Ort=='Tokyo' & Geschlecht=='W' & Platz <= 3))
 ## --------------------------------------------------------------------------------------------
 
@@ -160,15 +104,6 @@ ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   scale_fill_brewer(palette="Set3") +
   stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
-ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
-  geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (M): TOP-5") +
-  scale_y_continuous(breaks = seq(7000,8350,100)) +
-  theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3") +
-  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
-ggsave(filename = "bplt_ergb_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
@@ -189,15 +124,6 @@ ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=Ort, fill=Ort)) +
   stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
 ggsave(filename = "bplt_ergb_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
-  geom_boxplot(alpha=0.7) +
-  labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-5") +
-  scale_y_continuous(breaks = seq(8000,10000,100)) +
-  theme(legend.position = "none") + 
-  scale_fill_brewer(palette="Set3") +
-  stat_summary(fun.y=mean, geom="point", shape=18, size=3, color="red") 
-ggsave(filename = "bplt_ergb_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
 ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=Ort, fill=Ort)) + 
   geom_boxplot(alpha=0.7) +
   labs(y="Zeit (in Sek.)", x="Wettbewerbsort", title = "Ergebnisse (W): TOP-3 (N=135)") +
@@ -216,12 +142,6 @@ ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) +
   scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(data = df_ww3y_m_top5, aes(x=S_KM_FN)) + 
-  geom_histogram(binwidth = 50, color="white", fill="orange") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-5") + 
-  scale_x_continuous(breaks = seq(7000,9000,100)) + scale_y_continuous(breaks = seq(0,70,5))
-ggsave(filename = "hplt_ergb_vert_m_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
 ggplot(data = df_ww3y_m_top3, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
   labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-3") + 
@@ -234,12 +154,6 @@ ggplot(data = df_ww3y_w_all, aes(x=S_KM_FN)) +
   labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-10 (N=450)") + 
   scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_w_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
-ggplot(data = df_ww3y_w_top5, aes(x=S_KM_FN)) + 
-  geom_histogram(binwidth = 120, color="white", fill="skyblue") + 
-  labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-5") + 
-  scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
-ggsave(filename = "hplt_ergb_vert_w_top5.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_w_top3, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 140, color="white", fill="skyblue") + 
@@ -260,15 +174,6 @@ ggplot(df_ww3y_m_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort)) + geom_point(a
   theme(legend.position = "bottom")
 ggsave(filename = "sctr_ergb_tmp_m_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(df_ww3y_m_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort)) + geom_point(alpha=1, size=3) + 
-  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-5", subtitle = "Zeit ~ Temperatur") + 
-  scale_y_continuous(breaks = seq(7000,8500,100)) + 
-  scale_x_continuous(breaks = seq(0,22,1)) +
-  scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort:") +
-  theme(legend.position = "bottom")
-ggsave(filename = "sctr_ergb_tmp_m_top5.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
 ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort)) + geom_point(alpha=1, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Zeit ~ Temperatur") + 
   scale_y_continuous(breaks = seq(7000,8500,100)) + 
@@ -287,15 +192,6 @@ ggplot(df_ww3y_w_all, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point
   scale_color_discrete("Wettbewerbsort:") +
   theme(legend.position = "bottom")
 ggsave(filename = "sctr_ergb_tmp_w_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
-ggplot(df_ww3y_w_top5, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=1, size=3) + 
-  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-5", subtitle = "Zeit ~ Temperatur") + 
-  scale_y_continuous(breaks = seq(8000,11000,100)) + 
-  scale_x_continuous(breaks = seq(0,22,1)) +
-  scale_fill_brewer(palette="Set3") +
-  scale_color_discrete("Wettbewerbsort:") +
-  theme(legend.position = "bottom")
-ggsave(filename = "sctr_ergb_tmp_w_top5.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort), ) + geom_point(alpha=1, size=3) + 
   labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
@@ -388,10 +284,77 @@ ggplot(df_wetter_4y, aes(y=TMP_MEAN_RND1, x=Jahr, color=Ort)) +
 ggsave(filename = "bar_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ## ----------------------------------------------------------------
-## ----------------------------------------------------------------
 # Verteilung der Temperatur pro Geschlecht / Ort
-
 print_temps(df_ww3)
+## ----------------------------------------------------------------
+## ----------------------------------------------------------------
+## Korrelation
+round(cor(df_ww3y_berlin_m_top3$TMP_MEAN_RND1, df_ww3y_berlin_m_top3$S_KM_FN), 2)
+round(cor(df_ww3y_london_m_top3$TMP_MEAN_RND1, df_ww3y_london_m_top3$S_KM_FN), 2)
+round(cor(df_ww3y_chicago_m_top3$TMP_MEAN_RND1, df_ww3y_chicago_m_top3$S_KM_FN), 2)
+round(cor(df_ww3y_newyork_m_top3$TMP_MEAN_RND1, df_ww3y_newyork_m_top3$S_KM_FN), 2)
+round(cor(df_ww3y_tokyo_m_top3$TMP_MEAN_RND1, df_ww3y_tokyo_m_top3$S_KM_FN), 2)
+
+round(cor(df_ww3y_berlin_w_top3$TMP_MEAN_RND1, df_ww3y_berlin_w_top3$S_KM_FN), 2)
+round(cor(df_ww3y_london_w_top3$TMP_MEAN_RND1, df_ww3y_london_w_top3$S_KM_FN), 2)
+round(cor(df_ww3y_chicago_w_top3$TMP_MEAN_RND1, df_ww3y_chicago_w_top3$S_KM_FN), 2)
+round(cor(df_ww3y_newyork_w_top3$TMP_MEAN_RND1, df_ww3y_newyork_w_top3$S_KM_FN), 2)
+round(cor(df_ww3y_tokyo_w_top3$TMP_MEAN_RND1, df_ww3y_tokyo_w_top3$S_KM_FN), 2)
+
+## Spezifische Regressionen
+## Manuell mit Funktion
+my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht="M")
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_35")
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p2): W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=0, tmp_max=12.5, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
+my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): Wmy_reg_skm_tmp_2(data_frame = df_ww3y,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Berlin", geschlecht="M", skm="S_KM_FN")
+
+## Manuel: ohne Funktio
+## Alle Orte je Geschlecht
+ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
+  labs(title = "Ergebnisse (M): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(7100,8300,100)) + 
+  scale_x_continuous(breaks = seq(0,22,2)) +
+  scale_fill_brewer(palette="Set3") +
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "reg_p2_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
+  labs(title = "Ergebnisse (W): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(8000,9500,100)) + 
+  scale_x_continuous(breaks = seq(0,22,2)) +
+  scale_fill_brewer(palette="Set3") +
+  facet_wrap(~Ort, ncol=5)
+ggsave(filename = "reg_p2_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+# Regressionen Summary:
+lm_berlin_m_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_london_m_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="London" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_chicago_m_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Chicago" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_newyork_m_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="NewYork" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_tokyo_m_top3_poly2 <-lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+
+summary(lm_berlin_m_top3_poly2)
+summary(lm_london_m_top3_poly2)
+summary(lm_chicago_m_top3_poly2)
+summary(lm_newyork_m_top3_poly2)
+summary(lm_tokyo_m_top3_poly2)
+
+lm_berlin_w_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_london_w_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="London" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_chicago_w_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Chicago" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_newyork_w_top3_poly2 <- lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="NewYork" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+lm_tokyo_w_top3_poly2 <-lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2))
+
+summary(lm_berlin_w_top3_poly2)
+summary(lm_london_w_top3_poly2)
+summary(lm_chicago_w_top3_poly2)
+summary(lm_newyork_w_top3_poly2)
+summary(lm_tokyo_w_top3_poly2)
 
 ## Regressionen: (bereinigte Jahre)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
@@ -419,67 +382,6 @@ create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, p
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 ## ----------------------------------------------------------------
-df_ww4 <- df_ww3
-df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2) # Pace in m/s - FN
-df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
-## ----------------------------------------------------------------
-## Spezifische Regressionen
-## Manuell mit Funktion
-my_reg_skm_tmp(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=10, ort=NULL, geschlecht="M")
-
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_35")
-
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p2): W
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=0, tmp_max=12.5, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
-my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
-
-my_reg_skm_tmp_2(data_frame = df_ww3y,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Berlin", geschlecht="M", skm="S_KM_FN")
-
-
-## Manuel: ohne Funktio
-## Alle Orte je Geschlecht
-ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
-  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
-  labs(title = "Ergebnisse (M): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
-  theme(legend.position = "none") +
-  scale_y_continuous(breaks = seq(7100,8300,100)) + 
-  scale_x_continuous(breaks = seq(0,22,2)) +
-  scale_fill_brewer(palette="Set3") +
-  facet_wrap(~Ort, ncol=5)
-ggsave(filename = "reg_p2_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
-ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
-  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
-  labs(title = "Ergebnisse (W): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
-  theme(legend.position = "none") +
-  scale_y_continuous(breaks = seq(8000,9500,100)) + 
-  scale_x_continuous(breaks = seq(0,22,2)) +
-  scale_fill_brewer(palette="Set3") +
-  facet_wrap(~Ort, ncol=5)
-ggsave(filename = "reg_p2_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
-
-# Regressionen Summary:
-summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="London" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Chicago" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="NewYork" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="M" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="London" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Chicago" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="NewYork" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ poly(TMP_MEAN_RND1,2)))
-
-summary(lm(data = subset(df_ww3y, (Geschlecht=="W" & Ort=="Tokyo" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), formula = S_KM_FN ~ TMP_MEAN_RND1))
-
-
-## Pace analyse: Nur ein Test
-ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
-  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
-  #labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
-
-summary(lm(data = subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25 & S_KM_HM != 0)), formula = HM_M_S ~ poly(TMP_MEAN_RND1,2)))
 
 ## Automatisierte Erstellung der Regressionen: alle Jahre
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
@@ -500,12 +402,20 @@ lm_regs_from_reg_plots_3_df_agg <- aggregate(cbind(Ort, Platz, Geschlecht, SKM) 
 lm_regs_from_reg_plots_3_df_agg_srt <- lm_regs_from_reg_plots_3_df_agg[order(lm_regs_from_reg_plots_3_df_agg$Ort,lm_regs_from_reg_plots_3_df_agg$Geschlecht,
                                             lm_regs_from_reg_plots_3_df_agg$RSQ, decreasing = TRUE),]
 
-lm_regs_from_reg_plots_3_df_agg_srt$RSQ <- round(lm_regs_from_reg_plots_3_df_agg_srt$RSQ * 100, digits = 0)
-
 write.csv2(x=lm_regs_from_reg_plots_3_df_agg_srt, file = "lm_rquadrat.csv", sep=";", 
            col.names = c("RSQ","Ort","Platz","Geschlecht","SKM"), dec = ".", quote = TRUE,row.names = FALSE)
 ## ----------------------------------------------------------------
 ## Zeiten / Pace-Analysen
+df_ww4 <- df_ww3
+df_ww4$FN_M_S <- round(42195 / df_ww4$S_KM_FN, digits = 2) # Pace in m/s - FN
+df_ww4$HM_M_S <- round(21097.5 / df_ww4$S_KM_HM, digits = 2) # Pace in m/s - HM
+
+## Pace analyse: Nur ein Test
+ggplot(subset(df_ww4, (Geschlecht=="M" & Ort=="Berlin" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=HM_M_S, x=TMP_MEAN_RND1)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2))
+#labs(title = paste("LM: Ergebnisse (",geschlecht,") ~ Temperatur (x^", reg_poly,")", sep = ""), x="Temperatur (°C)", y="Ergebnisse (in Sek.)", subtitle = sub_title)
+
+
 df_ww5 <- subset(df_ww4, select = c(Jahr, Ort, Geschlecht, Platz, S_KM_5, S_KM_10, S_KM_15, S_KM_20, S_KM_HM, S_KM_25, S_KM_30, S_KM_35, S_KM_40, S_KM_FN, TMP_MEAN_RND1, ZZ_INVALID))
 df_ww5rs <- reshape(df_ww5, direction = "long", varying = c("S_KM_5","S_KM_10","S_KM_15","S_KM_20","S_KM_HM","S_KM_25","S_KM_30","S_KM_35","S_KM_40","S_KM_FN"), idvar = c("SKM_ID"), v.names = "SKM_ZEIT", timevar = "SKM_TYP")
 df_ww5rs$SKM_PACE[df_ww5rs$SKM_TYP == 1 & df_ww5rs$SKM_ZEIT!=0] <- round(5000 / df_ww5rs$SKM_ZEIT[df_ww5rs$SKM_TYP == 1 & df_ww5rs$SKM_ZEIT!=0], digits = 2)
