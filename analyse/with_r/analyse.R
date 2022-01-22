@@ -6,7 +6,7 @@ library(corrplot)
 library(dplyr)
 library(reshape2)
 library(car)
-library(robustbase)
+#library(robustbase)
 #library(data.table) # für melt
 
 # Daten einlesen & formatieren
@@ -289,11 +289,17 @@ print_temps(df_ww3)
 ## ----------------------------------------------------------------
 ## ----------------------------------------------------------------
 ## Korrelation
+round(cor(df_ww3y_top3$TMP_MEAN_RND1, df_ww3y_top3$S_KM_FN), 2)
+
+round(cor(df_ww3y_m_top3$TMP_MEAN_RND1, df_ww3y_m_top3$S_KM_FN), 2)
+
 round(cor(df_ww3y_berlin_m_top3$TMP_MEAN_RND1, df_ww3y_berlin_m_top3$S_KM_FN), 2)
 round(cor(df_ww3y_london_m_top3$TMP_MEAN_RND1, df_ww3y_london_m_top3$S_KM_FN), 2)
 round(cor(df_ww3y_chicago_m_top3$TMP_MEAN_RND1, df_ww3y_chicago_m_top3$S_KM_FN), 2)
 round(cor(df_ww3y_newyork_m_top3$TMP_MEAN_RND1, df_ww3y_newyork_m_top3$S_KM_FN), 2)
 round(cor(df_ww3y_tokyo_m_top3$TMP_MEAN_RND1, df_ww3y_tokyo_m_top3$S_KM_FN), 2)
+
+round(cor(df_ww3y_w_top3$TMP_MEAN_RND1, df_ww3y_w_top3$S_KM_FN), 2)
 
 round(cor(df_ww3y_berlin_w_top3$TMP_MEAN_RND1, df_ww3y_berlin_w_top3$S_KM_FN), 2)
 round(cor(df_ww3y_london_w_top3$TMP_MEAN_RND1, df_ww3y_london_w_top3$S_KM_FN), 2)
