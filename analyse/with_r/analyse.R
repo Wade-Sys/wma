@@ -364,37 +364,22 @@ summary(lm_tokyo_w_top3_poly2)
 
 ## Regressionen: (bereinigte Jahre)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 3)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 2)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 2, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 1)
 
 create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 10)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 3)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 2)
-create_reg_plots(data_frame = df_ww3y, reg_poly = 1, tmp_min = 0, tmp_max = 22, platz_min = 1, platz_max = 1)
 
 ## Regressionen: (alle Jahre)
 create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
-create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
-create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
-create_reg_plots(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
-create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
 create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
-create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
-create_reg_plots(data_frame = df_ww3, reg_poly = 1, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 ## ----------------------------------------------------------------
 
 ## Automatisierte Erstellung der Regressionen: alle Jahre
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 10)
-create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 5)
 create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 3)
-create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 2)
-create_reg_plots_2(data_frame = df_ww3, reg_poly = 2, tmp_min = 0, tmp_max = 25, platz_min = 1, platz_max = 1)
 
 # Automatische Erstellung alle Plots: reg_poly = 2; tmp = 0-25; alle Orte; Plätze = 1,3,5,10, Geschlecht: alle
 lm_regs_from_reg_plots_3 <- create_reg_plots_3(data_frame = df_ww3)
@@ -504,94 +489,35 @@ describeBy(df_wetter_4y$TMP_MEAN_RND1, df_wetter_4y$Ort, quant = c(.25,.75), ske
 ## ----------------------------------------------------------------
 ## pairwise-test: M TOP10
 # pairwise-test: two.sided
-pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE)
 # pairwise-test: less
-pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE)
 # pairwise-test: greater
-pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
+pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE)
+## --------------------------------------------------------------------
 ## pairwise-test: W TOP10
-pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
-# pairwise-test: less
-pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
-# pairwise-test: greater
-pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
-## pairwise-test: M TOP5
 # pairwise-test: two.sided
-pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE)
 # pairwise-test: less
-pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE)
 # pairwise-test: greater
-pairwise.t.test(df_ww3y_m_top5$S_KM_FN, df_ww3y_m_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
-## pairwise-test: W TOP5
-# pairwise-test: two.sided
-pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
-# pairwise-test: less
-pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
-# pairwise-test: greater
-pairwise.t.test(df_ww3y_w_top5$S_KM_FN, df_ww3y_w_top5$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
+pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE)
+## --------------------------------------------------------------------
 ## pairwise-test: M TOP3
 # pairwise-test: two.sided
-pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: less
-pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: greater
-pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
+## --------------------------------------------------------------------
 ## pairwise-test: W TOP3
 ## pairwise-test: two-sided
-pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "two.sided",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: less
-pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "less",
-                paired = FALSE, pool.sd = FALSE)
-
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: greater
-pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, 
-                p.adjust.method = "bonferroni", alternative = "greater",
-                paired = FALSE, pool.sd = FALSE)
+pairwise.t.test(df_ww3y_w_top3$S_KM_FN, df_ww3y_w_top3$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 ## ----------------------------------------------------------------
 # Einseitiger Test
 t.test(x=subset(df_ww3y_m_all, (Ort=='Berlin'), select = c(S_KM_FN)), 
