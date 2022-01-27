@@ -59,9 +59,12 @@ df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
 df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
 
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
+df_ww3y_m_top1 <- subset(df_ww3y, (Geschlecht=='M' & Platz == 1))
 df_ww3y_m_top3 <- subset(df_ww3y, (Geschlecht=='M' & Platz <= 3))
 df_ww3y_w_all <- subset(df_ww3y, (Geschlecht=='W'))
+df_ww3y_w_top1 <- subset(df_ww3y, (Geschlecht=='W' & Platz == 1))
 df_ww3y_w_top3 <- subset(df_ww3y, (Geschlecht=='W' & Platz <= 3))
+
 
 
 # London: 2010,2011,2013-2019
@@ -510,6 +513,8 @@ pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "b
 pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: greater
 pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
+
+pairwise.t.test(df_ww3y_m_top1$S_KM_FN, df_ww3y_m_top1$Ort, p.adjust.method = "bonferroni", alternative = "greater", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 ## --------------------------------------------------------------------
 ## pairwise-test: W TOP3
 ## pairwise-test: two-sided
