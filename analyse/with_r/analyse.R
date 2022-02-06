@@ -22,20 +22,11 @@ df_wetter_1$Datum <- strptime(x = as.character(df_wetter_1$Datum),"%Y-%m-%d")
 # Nicht benötigte spalten entfernen (Marathondaten)
 df_wma_2 <- subset(df_wma_1, select = -c(T_KM_5,T_KM_10,T_KM_15,T_KM_20,T_KM_HM,T_KM_25,T_KM_30,T_KM_35,T_KM_40,T_KM_FN,Startzeit,Datum_Startzeit_UTC))
 
-# Wetterdaten: Runden (auf 0.5)
-df_wetter_2 <- df_wetter_1
-df_wetter_2$TMP_MEAN_RND <- round(df_wetter_2$TMP_MEAN/5,1)*5 # Auf 0.5 
-df_wetter_2$DEW_MEAN_RND <- round(df_wetter_2$DEW_MEAN/5,1)*5 # Auf 0.5
-df_wetter_2$WND_SR_MEAN_RND <- round(df_wetter_2$WND_SR_MEAN,1) # Normal
-
 # Nicht benötigte spalten entfernen (Wetterdaten)
+df_wetter_2 <- df_wetter_1
 df_wetter_3 <- subset(df_wetter_2, select = -c(WND_SR_MIN, WND_SR_MAX, WND_SR_MEDIAN, DEW_MIN, DEW_MAX, DEW_MEDIAN, TMP_MIN, TMP_MAX, TMP_MEDIAN))
 
-# Wetterdaten und Marathondaten mergen (1)
-df_wma_wetter_2 <- merge(x=df_wma_2, y=df_wetter_3, by.x = c("Jahr", "Ort", "Datum"), by.y = c("Jahr", "Ort", "Datum"))
-
-
-# Wetterdaten: Runden (normal) 
+# Wetterdaten: Runden
 df_wetter_4 <- df_wetter_3
 df_wetter_4$TMP_MEAN_RND1 <- round(df_wetter_4$TMP_MEAN, digits = 1)
 df_wetter_4$DEW_MEAN_RND1 <- round(df_wetter_4$DEW_MEAN, digits = 1)
@@ -55,7 +46,6 @@ df_ww3y <- subset(df_ww3, (Jahr==2010 | Jahr==2011 | Jahr > 2012))
 # Neue Dataframes nach Geschlecht und Platzierung
 
 # Alle: 2010,2011,2013-2019
-df_ww3y_top5 <- subset(df_ww3y, (Platz <= 5))
 df_ww3y_top3 <- subset(df_ww3y, (Platz <= 3))
 
 df_ww3y_m_all <- subset(df_ww3y, (Geschlecht=='M'))
@@ -320,7 +310,7 @@ my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_
 
 ## Manuel: ohne Funktio
 ## Alle Orte je Geschlecht
-ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
   labs(title = "Ergebnisse (M): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
   theme(legend.position = "none") +
@@ -330,7 +320,7 @@ ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP
   facet_wrap(~Ort, ncol=5)
 ggsave(filename = "reg_p2_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
-ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3 & (TMP_MEAN_RND1 >= 0 & TMP_MEAN_RND1 <= 25))), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
+ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
   labs(title = "Ergebnisse (W): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
   theme(legend.position = "none") +
@@ -479,6 +469,7 @@ ggplot(data = melt(cor_ww5rs, na.rm = TRUE)) +
 describeBy(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 
+describeBy(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 describe(df_ww3y_m_top3$S_KM_FN,quant = c(.25,.75), skew=TRUE)
 
 describeBy(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
