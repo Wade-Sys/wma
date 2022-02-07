@@ -481,6 +481,49 @@ describe(df_ww3y_w_top3$S_KM_FN,quant = c(.25,.75), skew=TRUE)
 describeBy(df_wetter_4$TMP_MEAN_RND1, df_wetter_4$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 describeBy(df_wetter_4y$TMP_MEAN_RND1, df_wetter_4y$Ort, quant = c(.25,.75), skew=TRUE, mat=TRUE, digits = 2)
 ## ----------------------------------------------------------------
+## Leven-Test
+leveneTest(S_KM_FN~Ort, data = df_ww3y_m_top3)
+leveneTest(S_KM_FN~Ort, data = df_ww3y_w_top3)
+
+## QQ-Plot
+ggplot(df_ww3y_m_top3, aes(sample=scale(S_KM_FN), color=factor(Ort))) + stat_qq() + stat_qq_line() +
+  labs(y="Stichprobe", x="Theoretisch", title = "Prüfung auf Normalverteilung (Zeit)", 
+       subtitle = "Ergebnisse (M): TOP-3") +
+  scale_fill_brewer(palette="Set3") +
+  theme(legend.position = "none") +
+  facet_wrap(~Ort, ncol = 3)
+ggsave(filename = "qq_norm_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_all, aes(sample=scale(S_KM_FN), color=factor(Ort))) + stat_qq() + stat_qq_line() +
+  labs(y="Stichprobe", x="Theoretisch", title = "Prüfung auf Normalverteilung (Zeit)", 
+       subtitle = "Ergebnisse (M): TOP-10") +
+  scale_fill_brewer(palette="Set3") +
+  theme(legend.position = "none") +
+  facet_wrap(~Ort, ncol = 3)
+ggsave(filename = "qq_norm_m_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
+ggplot(df_ww3y_w_top3, aes(sample=scale(S_KM_FN), color=factor(Ort))) + stat_qq() + stat_qq_line() +
+  labs(y="Stichprobe", x="Theoretisch", title = "Prüfung auf Normalverteilung (Zeit)", 
+       subtitle = "Ergebnisse (W): TOP-3") +
+  scale_fill_brewer(palette="Set3") +
+  theme(legend.position = "none") +
+  facet_wrap(~Ort, ncol = 3)
+ggsave(filename = "qq_norm_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
+ggplot(df_ww3y_w_all, aes(sample=scale(S_KM_FN), color=factor(Ort))) + stat_qq() + stat_qq_line() +
+  labs(y="Stichprobe", x="Theoretisch", title = "Prüfung auf Normalverteilung (Zeit)", 
+       subtitle = "Ergebnisse (W): TOP-10") +
+  scale_fill_brewer(palette="Set3") +
+  theme(legend.position = "none") +
+  facet_wrap(~Ort, ncol = 3)
+ggsave(filename = "qq_norm_w_top10.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+#qqnorm(scale(subset(df_ww3y_m_top3, (Ort=="Berlin"), select = S_KM_FN)))
+#qqline(scale(subset(df_ww3y_m_top3, (Ort=="Berlin"), select = S_KM_FN)))
+
+
 ## pairwise-test: M TOP10
 # pairwise-test: two.sided
 pairwise.t.test(df_ww3y_m_all$S_KM_FN, df_ww3y_m_all$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE)
@@ -499,7 +542,7 @@ pairwise.t.test(df_ww3y_w_all$S_KM_FN, df_ww3y_w_all$Ort, p.adjust.method = "bon
 ## --------------------------------------------------------------------
 ## pairwise-test: M TOP3
 # pairwise-test: two.sided
-pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
+pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "two.sided", paired = FALSE, pool.sd = TRUE, conf.level = 0.95)
 # pairwise-test: less
 pairwise.t.test(df_ww3y_m_top3$S_KM_FN, df_ww3y_m_top3$Ort, p.adjust.method = "bonferroni", alternative = "less", paired = FALSE, pool.sd = FALSE, conf.level = 0.95)
 # pairwise-test: greater
