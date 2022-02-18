@@ -214,7 +214,7 @@ ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort)) + geom_point(
   scale_fill_brewer(palette="Set3") +
   scale_color_discrete("Geschlecht:") +
   theme(legend.position = "bottom") +
-  facet_wrap(~Ort, ncol=5) +
+  facet_wrap(~Ort, ncol=3) +
   theme(legend.position = "none") 
 ggsave(filename = "sctr_ergb_tmp_m_top3_grp.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
@@ -225,7 +225,7 @@ ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Ort)) + geom_point(
   scale_fill_brewer(palette="Set3") +
   scale_color_discrete("Geschlecht:") +
   theme(legend.position = "bottom") +
-  facet_wrap(~Ort, ncol=5) +
+  facet_wrap(~Ort, ncol=2) +
   theme(legend.position = "none") 
 ggsave(filename = "sctr_ergb_tmp_w_top3_grp.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
@@ -238,8 +238,17 @@ ggplot(df_ww3y_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Geschlecht)) + geom_p
   scale_color_discrete("Geschlecht:") +
   theme(legend.position = "bottom") 
 ggsave(filename = "sctr_ergb_tmp_mw_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+## -----------------------------------------------------------------
 
-
+#ggplot(subset(df_ww3y,(Geschlecht=="M" & Platz==1)), aes(y=S_KM_FN, x=Jahr, color=Ort)) + 
+#  geom_line(stat = "identity") +
+#  labs(y="Zeit (in Sek.)", x="Jahr", title = "Zeitverlauf (ausgewählte Jahre)") + 
+#  scale_y_continuous(breaks = seq(7200,8000,100)) + 
+#  coord_cartesian(ylim = c(7200,8000)) +
+#  scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
+#  scale_fill_brewer(palette="Set3") +
+#  scale_color_discrete("Wettbewerbsort") + 
+#  theme(axis.text.x = element_text(angle = 90),legend.position = "none") +facet_wrap(~Ort, ncol=5)
 ## -----------------------------------------------------------------
 ## Temperatur - Liniendiagramme
 
@@ -279,6 +288,15 @@ ggsave(filename = "bar_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scal
 ## ----------------------------------------------------------------
 # Verteilung der Temperatur pro Geschlecht / Ort
 print_temps(df_ww3)
+
+aggregate(S_KM_FN ~ Ort + Geschlecht, data = df_ww3y, FUN = "min")
+
+subset(df_ww3y, (Platz==1), select = c(Ort, Geschlecht, S_KM_FN, TMP_MEAN_RND1, Jahr)) %>% 
+  group_by(Ort, Geschlecht) %>% 
+  slice(which.max(S_KM_FN)) %>%
+  #slice(which.min(S_KM_FN)) %>%
+  arrange(Geschlecht)
+
 ## ----------------------------------------------------------------
 ## ----------------------------------------------------------------
 ## Korrelation
@@ -308,7 +326,16 @@ my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=2,tmp_min=0, tmp_max=25, platz_min
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=0, tmp_max=12.5, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): W
 my_reg_skm_tmp_2(data_frame = df_ww3,reg_poly=1,tmp_min=12.5, tmp_max=25, platz_min=1, platz_max=1, ort=NULL, geschlecht="W", skm="S_KM_40") # Best Parameter (p1): Wmy_reg_skm_tmp_2(data_frame = df_ww3y,reg_poly=2,tmp_min=0, tmp_max=25, platz_min=1, platz_max=3, ort="Berlin", geschlecht="M", skm="S_KM_FN")
 
-## Manuel: ohne Funktio
+## Manuel: ohne Funktion
+# Test alle Strecken, Männer; unterschiedliche Temperaturen
+ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3 & (TMP_MEAN_RND1 >=10 & TMP_MEAN_RND1<=20))), aes(y=S_KM_FN, x=TMP_MEAN_RND1)) + 
+  geom_point() + geom_smooth(method = "lm", formula = y~x) +
+  labs(title = "Ergebnisse (M): TOP-3", x="Temperatur (°C)", y="Zeit (in Sek.)", subtitle = "Zeit ~ Temperatur(x^2)") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(7100,8300,100)) + 
+  scale_x_continuous(breaks = seq(0,22,2)) +
+  scale_fill_brewer(palette="Set3") 
+
 ## Alle Orte je Geschlecht
 ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
   geom_point() + geom_smooth(method = "lm", formula = y~poly(x,2)) +
@@ -317,7 +344,7 @@ ggplot(subset(df_ww3y, (Geschlecht=="M" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEA
   scale_y_continuous(breaks = seq(7100,8300,100)) + 
   scale_x_continuous(breaks = seq(0,22,2)) +
   scale_fill_brewer(palette="Set3") +
-  facet_wrap(~Ort, ncol=5)
+  facet_wrap(~Ort, ncol=2)
 ggsave(filename = "reg_p2_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEAN_RND1, fill=Ort)) + 
@@ -327,7 +354,7 @@ ggplot(subset(df_ww3y, (Geschlecht=="W" & Platz <= 3)), aes(y=S_KM_FN, x=TMP_MEA
   scale_y_continuous(breaks = seq(8000,9500,100)) + 
   scale_x_continuous(breaks = seq(0,22,2)) +
   scale_fill_brewer(palette="Set3") +
-  facet_wrap(~Ort, ncol=5)
+  facet_wrap(~Ort, ncol=2)
 ggsave(filename = "reg_p2_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 # Regressionen Summary:
