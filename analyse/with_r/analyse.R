@@ -132,7 +132,7 @@ ggsave(filename = "bplt_ergb_w_n135_top3.pdf", plot = last_plot(),units = "px",s
 ggplot(data = df_ww3y_m_all, aes(x=S_KM_FN)) + 
   geom_histogram(binwidth = 50, color="white", fill="orange") + 
   labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (M): TOP-10 (N=450)") + 
-  scale_x_continuous(breaks = seq(7000,11000,200)) + scale_y_continuous(breaks = seq(0,70,5))
+  scale_x_continuous(breaks = seq(7000,11000,100)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_m_n450_top10.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
 
 ggplot(data = df_ww3y_m_top3, aes(x=S_KM_FN)) + 
@@ -153,6 +153,18 @@ ggplot(data = df_ww3y_w_top3, aes(x=S_KM_FN)) +
   labs(x="Ergebnisse (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (W): TOP-3") + 
   scale_x_continuous(breaks = seq(7000,11000,500)) + scale_y_continuous(breaks = seq(0,70,5))
 ggsave(filename = "hplt_ergb_vert_w_top3.pdf", plot = last_plot(),units = "px",scale = 1, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+# Kummulierte Verteilung
+ggplot(data = df_ww3y_m_top3, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 100, color="white", fill="orange", aes(y=cumsum(..count..))) + 
+  labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (kum.) (M): TOP-10 (N=450)") +
+  scale_x_continuous(breaks = seq(7000,11000,100)) + scale_y_continuous(breaks = seq(0,250,10))
+
+ggplot(data = df_ww3y_w_top3, aes(x=S_KM_FN)) + 
+  geom_histogram(binwidth = 100, color="white", fill="skyblue", aes(y=cumsum(..count..))) + 
+  labs(x="Zeit (in Sek.)", y="Häufigkeit (abs)", title = "Verteilung d. Ergebnisse (kum.) (W): TOP-10 (N=450)") +
+  scale_x_continuous(breaks = seq(8000,11000,100)) + scale_y_continuous(breaks = seq(0,250,10))
+
 
 ## --------------------------------------------------------------------------------------------------------------
 
@@ -238,17 +250,38 @@ ggplot(df_ww3y_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1, color=Geschlecht)) + geom_p
   scale_color_discrete("Geschlecht:") +
   theme(legend.position = "bottom") 
 ggsave(filename = "sctr_ergb_tmp_mw_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_m_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1)) + geom_point(alpha=0.8, size=3, color="orange") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (M): TOP-3", subtitle = "Zeit ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(7100,10000,100)) + 
+  scale_x_continuous(breaks = seq(0,25,1)) +
+  scale_fill_brewer(palette="Set3") +
+  #scale_color_discrete("Geschlecht:") +
+  theme(legend.position = "none") 
+ggsave(filename = "sctr_ergb_tmp_m_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+ggplot(df_ww3y_w_top3, aes(y=S_KM_FN, x=TMP_MEAN_RND1)) + geom_point(alpha=0.8, size=3, color="skyblue") + 
+  labs(y="Zeit (in Sek.)", x="Temperatur (°C)", title = "Ergebnisse (W): TOP-3", subtitle = "Zeit ~ Temperatur") + 
+  scale_y_continuous(breaks = seq(7100,10000,100)) + 
+  scale_x_continuous(breaks = seq(0,25,1)) +
+  scale_fill_brewer(palette="Set3") +
+  #scale_color_discrete("Geschlecht:") +
+  theme(legend.position = "none") 
+ggsave(filename = "sctr_ergb_tmp_w_top3.pdf", plot = last_plot(),units = "px",scale = 1.5, limitsize = FALSE, device = "pdf", dpi=300, width = 1920, height = 1080)
+
+
 ## -----------------------------------------------------------------
 
-#ggplot(subset(df_ww3y,(Geschlecht=="M" & Platz==1)), aes(y=S_KM_FN, x=Jahr, color=Ort)) + 
-#  geom_line(stat = "identity") +
-#  labs(y="Zeit (in Sek.)", x="Jahr", title = "Zeitverlauf (ausgewählte Jahre)") + 
-#  scale_y_continuous(breaks = seq(7200,8000,100)) + 
-#  coord_cartesian(ylim = c(7200,8000)) +
-#  scale_x_continuous(breaks = c(2010,2011,2013,2014,2015,2016,2017,2018,2019)) +
-#  scale_fill_brewer(palette="Set3") +
-#  scale_color_discrete("Wettbewerbsort") + 
-#  theme(axis.text.x = element_text(angle = 90),legend.position = "none") +facet_wrap(~Ort, ncol=5)
+ggplot(subset(df_ww3y,(Geschlecht=="M" & Platz<=3)), aes(y=S_KM_FN, x=TMP_MEAN_RND1)) + 
+  geom_segment(aes(xend=TMP_MEAN_RND1, yend=7200), size=10, lineend = "butt")+
+  #labs(y="Zeit (in Sek.)", x="Jahr", title = "Zeitverlauf (ausgewählte Jahre)") + 
+  #scale_y_continuous(breaks = seq(7200,8500,100)) + 
+  coord_cartesian(ylim = c(7000,8500)) +
+  #coord_flip() +
+  scale_x_continuous(breaks = seq(0,22,1)) +
+  scale_fill_brewer(palette="Set3") +
+  scale_color_discrete("Wettbewerbsort")  
+  #theme(axis.text.x = element_text(angle = 90),legend.position = "none") #+facet_wrap(~Ort, ncol=5)
 ## -----------------------------------------------------------------
 ## Temperatur - Liniendiagramme
 
@@ -290,6 +323,8 @@ ggsave(filename = "bar_tmp_y_ort_wrap.pdf", plot = last_plot(),units = "px",scal
 print_temps(df_ww3)
 
 aggregate(S_KM_FN ~ Ort + Geschlecht, data = df_ww3y, FUN = "min")
+
+unique(subset(df_wma_1, select = c(Ort,Startzeit)))
 
 subset(df_ww3y, (Platz==1), select = c(Ort, Geschlecht, S_KM_FN, TMP_MEAN_RND1, Jahr)) %>% 
   group_by(Ort, Geschlecht) %>% 
