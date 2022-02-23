@@ -1,2 +1,2 @@
-data/wetter/downloaded/*
+data/wetter/downloaded/*.csv
 .Rproj.user
